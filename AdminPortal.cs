@@ -8,21 +8,11 @@ using System.Windows.Forms;
 
 namespace dashboard
 {
-    public partial class AdminRegistory : Form
+    public partial class AdminPortal : Form
     {
-        public AdminRegistory()
+        public AdminPortal()
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }
