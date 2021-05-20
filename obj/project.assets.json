@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hp\\Documents\\dashboard\\dashboard.csproj",
+      "projectUniqueName": "C:\\Users\\hp\\OneDrive\\Documents\\2nd semester\\OOP\\Final OOP PROJECT\\-CS162S21GID25\\-CS162S21GID25\\dashboard.csproj",
       "projectName": "dashboard",
-      "projectPath": "C:\\Users\\hp\\Documents\\dashboard\\dashboard.csproj",
+      "projectPath": "C:\\Users\\hp\\OneDrive\\Documents\\2nd semester\\OOP\\Final OOP PROJECT\\-CS162S21GID25\\-CS162S21GID25\\dashboard.csproj",
       "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hp\\Documents\\dashboard\\obj\\",
+      "outputPath": "C:\\Users\\hp\\OneDrive\\Documents\\2nd semester\\OOP\\Final OOP PROJECT\\-CS162S21GID25\\-CS162S21GID25\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -63,7 +63,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
