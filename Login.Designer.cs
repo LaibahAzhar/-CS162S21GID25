@@ -69,23 +69,34 @@ namespace dashboard
             // 
             // UserName
             // 
+            this.UserName.AccessibleDescription = "";
+            this.UserName.BackColor = System.Drawing.SystemColors.Info;
+            this.UserName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.UserName.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.UserName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.UserName.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.UserName.Location = new System.Drawing.Point(551, 236);
             this.UserName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.UserName.Name = "UserName";
-            this.UserName.Size = new System.Drawing.Size(267, 19);
+            this.UserName.PlaceholderText = "enter your username";
+            this.UserName.Size = new System.Drawing.Size(260, 19);
             this.UserName.TabIndex = 2;
-            this.UserName.UseWaitCursor = true;
             // 
             // password
             // 
-            this.password.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.password.Location = new System.Drawing.Point(551, 334);
+            this.password.BackColor = System.Drawing.SystemColors.Info;
+            this.password.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.password.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.password.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.password.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.password.Location = new System.Drawing.Point(551, 329);
             this.password.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.password.Name = "password";
+            this.password.PasswordChar = '*';
+            this.password.PlaceholderText = "enter your password";
             this.password.Size = new System.Drawing.Size(267, 19);
             this.password.TabIndex = 2;
             this.password.Tag = "";
-            this.password.UseWaitCursor = true;
             // 
             // label1
             // 
@@ -105,10 +116,11 @@ namespace dashboard
             this.label2.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(551, 200);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(108, 23);
+            this.label2.Size = new System.Drawing.Size(102, 23);
             this.label2.TabIndex = 4;
-            this.label2.Text = "User Name";
+            this.label2.Text = "Username";
             this.label2.UseWaitCursor = true;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -135,16 +147,24 @@ namespace dashboard
             // 
             // logbtn
             // 
+            this.logbtn.AutoEllipsis = true;
+            this.logbtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.logbtn.BackColor = System.Drawing.Color.White;
             this.logbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.logbtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.logbtn.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.logbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.logbtn.Font = new System.Drawing.Font("Constantia", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.logbtn.Location = new System.Drawing.Point(606, 454);
+            this.logbtn.Location = new System.Drawing.Point(606, 433);
             this.logbtn.Name = "logbtn";
             this.logbtn.Size = new System.Drawing.Size(144, 41);
             this.logbtn.TabIndex = 1;
             this.logbtn.Text = "Login";
             this.logbtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.logbtn.UseCompatibleTextRendering = true;
+            this.logbtn.UseMnemonic = false;
             this.logbtn.UseVisualStyleBackColor = false;
+            this.logbtn.Click += new System.EventHandler(this.logbtn_Click);
             // 
             // Login
             // 

@@ -32,5 +32,16 @@ namespace dashboard
         {
 
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void logbtn_Click(object sender, EventArgs e)
+        {
+            AdminPortal admn = new AdminPortal();
+            admn.Show();
+        }
     }
 }
