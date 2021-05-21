@@ -9,10 +9,12 @@ using System.Windows.Forms;
 namespace dashboard
 {
     public partial class AdminPortal : Form
-    {
+    {   
         public AdminPortal()
         {
+          
             InitializeComponent();
+           
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -21,6 +23,16 @@ namespace dashboard
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
 
         }
