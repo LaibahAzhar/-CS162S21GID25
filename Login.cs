@@ -15,7 +15,7 @@ namespace dashboard
         public Login()
         {
             InitializeComponent();
-          
+
         }
 
         private void Login_Load(object sender, EventArgs e)
