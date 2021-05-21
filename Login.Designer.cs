@@ -130,6 +130,7 @@ namespace dashboard
             this.logbtn.Text = "Login";
             this.logbtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.logbtn.UseVisualStyleBackColor = false;
+            this.logbtn.Click += new System.EventHandler(this.logbtn_Click_1);
             // 
             // textBox1
             // 

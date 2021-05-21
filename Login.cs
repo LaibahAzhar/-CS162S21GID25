@@ -43,5 +43,11 @@ namespace dashboard
             AdminPortal admn = new AdminPortal();
             admn.Show();
         }
+
+        private void logbtn_Click_1(object sender, EventArgs e)
+        {
+            AdminPortal admn = new AdminPortal();
+            admn.Show();
+        }
     }
 }
