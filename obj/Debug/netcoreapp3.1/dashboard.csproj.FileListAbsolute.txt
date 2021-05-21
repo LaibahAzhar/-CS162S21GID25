@@ -33,3 +33,4 @@ C:\Users\hp\OneDrive\Documents\-CS162S21GID25\obj\Debug\netcoreapp3.1\dashboard.
 C:\Users\hp\OneDrive\Documents\-CS162S21GID25\obj\Debug\netcoreapp3.1\dashboard.AssemblyInfo.cs
 C:\Users\hp\OneDrive\Documents\-CS162S21GID25\obj\Debug\netcoreapp3.1\dashboard.csproj.CoreCompileInputs.cache
 C:\Users\hp\OneDrive\Documents\-CS162S21GID25\obj\Debug\netcoreapp3.1\dashboard.genruntimeconfig.cache
+C:\Users\hp\OneDrive\Documents\2nd semester\OOP\Final OOP PROJECT\-CS162S21GID25\-CS162S21GID25\obj\Debug\netcoreapp3.1\dashboard.AdminPortal.resources
