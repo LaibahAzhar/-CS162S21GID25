@@ -31,9 +31,7 @@ namespace dashboard
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Medicine));
             this.button6 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -49,12 +47,9 @@ namespace dashboard
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -62,13 +57,23 @@ namespace dashboard
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // button6
@@ -88,14 +93,6 @@ namespace dashboard
             this.button6.Text = "Add Medicine";
             this.button6.UseVisualStyleBackColor = false;
             // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox3.Location = new System.Drawing.Point(445, 151);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(411, 26);
-            this.textBox3.TabIndex = 42;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -106,16 +103,6 @@ namespace dashboard
             this.label6.TabIndex = 41;
             this.label6.Text = "Medicine Status";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(287, 149);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(152, 24);
-            this.label5.TabIndex = 40;
-            this.label5.Text = "Chemical Name";
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.GrayText;
@@ -124,6 +111,8 @@ namespace dashboard
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.pictureBox3);
+            this.panel1.Controls.Add(this.button9);
+            this.panel1.Controls.Add(this.button8);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1005, 47);
@@ -176,7 +165,7 @@ namespace dashboard
             // pictureBox3
             // 
             this.pictureBox3.Image = global::dashboard.Properties.Resources.medicine1;
-            this.pictureBox3.Location = new System.Drawing.Point(51, 3);
+            this.pictureBox3.Location = new System.Drawing.Point(44, 3);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(64, 38);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -314,27 +303,16 @@ namespace dashboard
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.Image = global::dashboard.Properties.Resources.medicine1;
+            this.button1.Image = global::dashboard.Properties.Resources.Webp_net_resizeimage_2_;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.Location = new System.Drawing.Point(0, 203);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(259, 45);
             this.button1.TabIndex = 4;
-            this.button1.Text = "Medicine";
+            this.button1.Text = "Create Bill";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.button1.UseVisualStyleBackColor = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(290, 105);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(118, 24);
-            this.label4.TabIndex = 34;
-            this.label4.Text = "Medicine ID";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
@@ -361,24 +339,6 @@ namespace dashboard
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(411, 26);
             this.textBox1.TabIndex = 37;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label10.Location = new System.Drawing.Point(648, 103);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(88, 24);
-            this.label10.TabIndex = 34;
-            this.label10.Text = "Quantity";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox6.Location = new System.Drawing.Point(757, 103);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(99, 26);
-            this.textBox6.TabIndex = 36;
             // 
             // radioButton2
             // 
@@ -445,14 +405,6 @@ namespace dashboard
             this.label13.TabIndex = 41;
             this.label13.Text = "Expiry Date";
             // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox4.Location = new System.Drawing.Point(445, 107);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(197, 26);
-            this.textBox4.TabIndex = 36;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -464,11 +416,120 @@ namespace dashboard
             this.label7.Text = "Company";
             this.label7.Click += new System.EventHandler(this.label4_Click);
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(742, 247);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(251, 202);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox4.TabIndex = 54;
+            this.pictureBox4.TabStop = false;
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.Gray;
+            this.button8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button8.BackgroundImage")));
+            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button8.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button8.Location = new System.Drawing.Point(691, 0);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(60, 45);
+            this.button8.TabIndex = 4;
+            this.button8.Text = "Add";
+            this.button8.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.button8.UseVisualStyleBackColor = false;
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.Gray;
+            this.button9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button9.BackgroundImage")));
+            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button9.FlatAppearance.BorderSize = 0;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button9.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button9.Location = new System.Drawing.Point(757, 0);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(55, 45);
+            this.button9.TabIndex = 4;
+            this.button9.Text = "View";
+            this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox3.Location = new System.Drawing.Point(445, 151);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(411, 26);
+            this.textBox3.TabIndex = 42;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox6.Location = new System.Drawing.Point(757, 103);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(99, 26);
+            this.textBox6.TabIndex = 36;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(287, 149);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(152, 24);
+            this.label5.TabIndex = 40;
+            this.label5.Text = "Chemical Name";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label10.Location = new System.Drawing.Point(648, 103);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(88, 24);
+            this.label10.TabIndex = 34;
+            this.label10.Text = "Quantity";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox4.Location = new System.Drawing.Point(445, 107);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(197, 26);
+            this.textBox4.TabIndex = 36;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(290, 105);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(118, 24);
+            this.label4.TabIndex = 34;
+            this.label4.Text = "Medicine ID";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Location = new System.Drawing.Point(258, 46);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(724, 487);
+            this.panel3.TabIndex = 55;
+            // 
             // Medicine
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(980, 530);
+            this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.button6);
@@ -491,6 +552,7 @@ namespace dashboard
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.panel3);
             this.Name = "Medicine";
             this.Text = "Medicine Status";
             this.panel1.ResumeLayout(false);
@@ -500,6 +562,7 @@ namespace dashboard
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -508,9 +571,7 @@ namespace dashboard
         #endregion
 
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -526,12 +587,9 @@ namespace dashboard
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label11;
@@ -539,7 +597,16 @@ namespace dashboard
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel3;
     }
 }

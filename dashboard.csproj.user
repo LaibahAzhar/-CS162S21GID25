@@ -16,5 +16,8 @@
     <Compile Update="Medicine.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="ViewMed.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

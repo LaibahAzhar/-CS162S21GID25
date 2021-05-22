@@ -19,5 +19,14 @@ namespace dashboard
         {
 
         }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            ViewMed view = new ViewMed();
+            panel3.Controls.Add(view);
+            panel3.Controls["ViewMed"].BringToFront();
+            
+
+        }
     }
 }
