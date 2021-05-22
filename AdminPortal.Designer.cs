@@ -98,7 +98,7 @@ namespace dashboard
             this.stockbtn.Size = new System.Drawing.Size(61, 24);
             this.stockbtn.TabIndex = 7;
             this.stockbtn.Text = "Stock";
-            this.stockbtn.Click += new System.EventHandler(this.label2_Click);
+            this.stockbtn.Click += new System.EventHandler(this.stockbtn_Click);
             // 
             // recordbtn
             // 
@@ -120,7 +120,7 @@ namespace dashboard
             this.label5.Size = new System.Drawing.Size(49, 24);
             this.label5.TabIndex = 7;
             this.label5.Text = "Staff";
-            this.label5.Click += new System.EventHandler(this.label2_Click);
+            this.label5.Click += new System.EventHandler(this.staff_Click);
             // 
             // Medbtn
             // 

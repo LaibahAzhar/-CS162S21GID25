@@ -10,9 +10,33 @@ namespace dashboard
 {
     public partial class Stock : Form
     {
+        ViewMed viewM = new ViewMed();
+        UpdtMed updt = new UpdtMed();
+        EditingMed edt = new EditingMed();
         public Stock()
         {
             InitializeComponent();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            panel3.Controls.Add(viewM);
+            panel3.Controls["ViewMed"].BringToFront();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            panel3.Controls.Remove(viewM);
+            panel3.Controls.Remove(updt);
+        }
+
+        private void updt_Click(object sender, EventArgs e)
+        {
+            panel3.Controls.Add(updt);
+            panel3.Controls["UpdtMed"].BringToFront();
+
+          
+            
         }
     }
 }

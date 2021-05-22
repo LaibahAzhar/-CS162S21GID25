@@ -43,5 +43,17 @@ namespace dashboard
             GenerateBill bill = new GenerateBill();
             bill.Show();
         }
+
+        private void stockbtn_Click(object sender, EventArgs e)
+        {
+            Stock stk = new Stock();
+            stk.Show();
+        }
+
+        private void staff_Click(object sender, EventArgs e)
+        {
+            Staff stf = new Staff();
+            stf.Show();
+        }
     }
 }

@@ -39,4 +39,10 @@ C:\Users\hp\OneDrive\Documents\2nd semester\OOP\Final OOP PROJECT\-CS162S21GID25
 C:\Users\hp\OneDrive\Documents\2nd semester\OOP\Final OOP PROJECT\-CS162S21GID25\-CS162S21GID25\obj\Debug\netcoreapp3.1\dashboard.Medicine.resources
 C:\Users\hp\OneDrive\Documents\-CS162S21GID25\obj\Debug\netcoreapp3.1\dashboard.Medicine.resources
 C:\Users\hp\OneDrive\Documents\-CS162S21GID25\obj\Debug\netcoreapp3.1\dashboard.ViewMed.resources
-C:\Users\hp\OneDrive\Documents\-CS162S21GID25\obj\Debug\netcoreapp3.1\dashboard.AddMed.resources
+C:\Users\hp\OneDrive\Documents\-CS162S21GID25\obj\Debug\netcoreapp3.1\dashboard.Stock.resources
+C:\Users\hp\OneDrive\Documents\-CS162S21GID25\obj\Debug\netcoreapp3.1\dashboard.EditingMed.resources
+C:\Users\hp\OneDrive\Documents\-CS162S21GID25\obj\Debug\netcoreapp3.1\dashboard.UpdtMed.resources
+C:\Users\hp\OneDrive\Documents\-CS162S21GID25\obj\Debug\netcoreapp3.1\dashboard.EdtngEmp.resources
+C:\Users\hp\OneDrive\Documents\-CS162S21GID25\obj\Debug\netcoreapp3.1\dashboard.Staff.resources
+C:\Users\hp\OneDrive\Documents\-CS162S21GID25\obj\Debug\netcoreapp3.1\dashboard.UpdtEmp.resources
+C:\Users\hp\OneDrive\Documents\-CS162S21GID25\obj\Debug\netcoreapp3.1\dashboard.ViewStaff.resources
