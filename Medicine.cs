@@ -10,6 +10,7 @@ namespace dashboard
 {
     public partial class Medicine : Form
     {
+        ViewMed view = new ViewMed();
         public Medicine()
         {
             InitializeComponent();
@@ -22,11 +23,16 @@ namespace dashboard
 
         private void button9_Click(object sender, EventArgs e)
         {
-            ViewMed view = new ViewMed();
+            
             panel3.Controls.Add(view);
             panel3.Controls["ViewMed"].BringToFront();
             
 
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {   
+            panel3.Controls.Remove(view);
         }
     }
 }
