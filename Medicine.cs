@@ -8,11 +8,16 @@ using System.Windows.Forms;
 
 namespace dashboard
 {
-    public partial class UserControl1 : UserControl
+    public partial class Medicine : Form
     {
-        public UserControl1()
+        public Medicine()
         {
             InitializeComponent();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

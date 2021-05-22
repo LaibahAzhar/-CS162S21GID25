@@ -34,7 +34,8 @@ namespace dashboard
             this.billingbtn = new System.Windows.Forms.Label();
             this.stockbtn = new System.Windows.Forms.Label();
             this.recordbtn = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.Medbtn = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -46,7 +47,6 @@ namespace dashboard
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -66,7 +66,7 @@ namespace dashboard
             this.panel1.Controls.Add(this.stockbtn);
             this.panel1.Controls.Add(this.recordbtn);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.Medbtn);
             this.panel1.Controls.Add(this.pictureBox7);
             this.panel1.Controls.Add(this.pictureBox5);
             this.panel1.Controls.Add(this.pictureBox4);
@@ -87,7 +87,7 @@ namespace dashboard
             this.billingbtn.Size = new System.Drawing.Size(105, 24);
             this.billingbtn.TabIndex = 7;
             this.billingbtn.Text = "Create Bill";
-            this.billingbtn.Click += new System.EventHandler(this.label2_Click);
+            this.billingbtn.Click += new System.EventHandler(this.billingBtn_Click);
             // 
             // stockbtn
             // 
@@ -111,16 +111,27 @@ namespace dashboard
             this.recordbtn.Text = "Billing Record";
             this.recordbtn.Click += new System.EventHandler(this.label2_Click);
             // 
-            // label1
+            // label5
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(85, 117);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 24);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Medicine";
-            this.label1.Click += new System.EventHandler(this.label2_Click);
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(400, 117);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(49, 24);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Staff";
+            this.label5.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // Medbtn
+            // 
+            this.Medbtn.AutoSize = true;
+            this.Medbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Medbtn.Location = new System.Drawing.Point(85, 117);
+            this.Medbtn.Name = "Medbtn";
+            this.Medbtn.Size = new System.Drawing.Size(96, 24);
+            this.Medbtn.TabIndex = 7;
+            this.Medbtn.Text = "Medicine";
+            this.Medbtn.Click += new System.EventHandler(this.label2_Click);
             // 
             // pictureBox7
             // 
@@ -235,17 +246,6 @@ namespace dashboard
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(400, 117);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 24);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Staff";
-            this.label5.Click += new System.EventHandler(this.label2_Click);
-            // 
             // AdminPortal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -285,7 +285,7 @@ namespace dashboard
         private System.Windows.Forms.Label billingbtn;
         private System.Windows.Forms.Label stockbtn;
         private System.Windows.Forms.Label recordbtn;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label Medbtn;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;

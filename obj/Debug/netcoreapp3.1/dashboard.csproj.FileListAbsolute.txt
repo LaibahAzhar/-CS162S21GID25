@@ -4,7 +4,6 @@ C:\Users\hp\OneDrive\Documents\2nd semester\OOP\Final OOP PROJECT\-CS162S21GID25
 C:\Users\hp\OneDrive\Documents\2nd semester\OOP\Final OOP PROJECT\-CS162S21GID25\-CS162S21GID25\bin\Debug\netcoreapp3.1\dashboard.runtimeconfig.dev.json
 C:\Users\hp\OneDrive\Documents\2nd semester\OOP\Final OOP PROJECT\-CS162S21GID25\-CS162S21GID25\bin\Debug\netcoreapp3.1\dashboard.dll
 C:\Users\hp\OneDrive\Documents\2nd semester\OOP\Final OOP PROJECT\-CS162S21GID25\-CS162S21GID25\bin\Debug\netcoreapp3.1\dashboard.pdb
-C:\Users\hp\OneDrive\Documents\2nd semester\OOP\Final OOP PROJECT\-CS162S21GID25\-CS162S21GID25\obj\Debug\netcoreapp3.1\dashboard.csprojAssemblyReference.cache
 C:\Users\hp\OneDrive\Documents\2nd semester\OOP\Final OOP PROJECT\-CS162S21GID25\-CS162S21GID25\obj\Debug\netcoreapp3.1\dashboard.AdminRegistory.resources
 C:\Users\hp\OneDrive\Documents\2nd semester\OOP\Final OOP PROJECT\-CS162S21GID25\-CS162S21GID25\obj\Debug\netcoreapp3.1\dashboard.Login.resources
 C:\Users\hp\OneDrive\Documents\2nd semester\OOP\Final OOP PROJECT\-CS162S21GID25\-CS162S21GID25\obj\Debug\netcoreapp3.1\dashboard.Properties.Resources.resources
@@ -36,3 +35,6 @@ C:\Users\hp\OneDrive\Documents\2nd semester\OOP\Final OOP PROJECT\-CS162S21GID25
 C:\Users\hp\OneDrive\Documents\-CS162S21GID25\obj\Debug\netcoreapp3.1\dashboard.Login.resources
 C:\Users\hp\OneDrive\Documents\-CS162S21GID25\obj\Debug\netcoreapp3.1\dashboard.GenerateBill.resources
 C:\Users\hp\OneDrive\Documents\-CS162S21GID25\obj\Debug\netcoreapp3.1\dashboard.UserControl1.resources
+C:\Users\hp\OneDrive\Documents\2nd semester\OOP\Final OOP PROJECT\-CS162S21GID25\-CS162S21GID25\obj\Debug\netcoreapp3.1\dashboard.GenerateBill.resources
+C:\Users\hp\OneDrive\Documents\2nd semester\OOP\Final OOP PROJECT\-CS162S21GID25\-CS162S21GID25\obj\Debug\netcoreapp3.1\dashboard.csprojAssemblyReference.cache
+C:\Users\hp\OneDrive\Documents\2nd semester\OOP\Final OOP PROJECT\-CS162S21GID25\-CS162S21GID25\obj\Debug\netcoreapp3.1\dashboard.Medicine.resources
