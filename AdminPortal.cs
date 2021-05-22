@@ -24,7 +24,8 @@ namespace dashboard
 
         private void label2_Click(object sender, EventArgs e)
         {
-
+            GenerateBill bill = new GenerateBill();
+            bill.Show();
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
