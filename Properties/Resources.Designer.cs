@@ -73,6 +73,16 @@ namespace dashboard.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap back_1_ {
+            get {
+                object obj = ResourceManager.GetObject("back(1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap boxes {
             get {
                 object obj = ResourceManager.GetObject("boxes", resourceCulture);
@@ -193,6 +203,16 @@ namespace dashboard.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap round_account_button_with_user_inside {
+            get {
+                object obj = ResourceManager.GetObject("round-account-button-with-user-inside", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap service {
             get {
                 object obj = ResourceManager.GetObject("service", resourceCulture);
@@ -246,6 +266,16 @@ namespace dashboard.Properties {
         internal static System.Drawing.Bitmap Webp_net_resizeimage_1_ {
             get {
                 object obj = ResourceManager.GetObject("Webp.net-resizeimage(1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Webp_net_resizeimage_2_ {
+            get {
+                object obj = ResourceManager.GetObject("Webp.net-resizeimage(2)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
