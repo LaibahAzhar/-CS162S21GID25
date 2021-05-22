@@ -63,6 +63,16 @@ namespace dashboard.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _2cd43b_a00114a6c68448c7a627432df9d634fc_mv2 {
+            get {
+                object obj = ResourceManager.GetObject("2cd43b_a00114a6c68448c7a627432df9d634fc~mv2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap boxes {
             get {
                 object obj = ResourceManager.GetObject("boxes", resourceCulture);
@@ -186,6 +196,26 @@ namespace dashboard.Properties {
         internal static System.Drawing.Bitmap update__2_ {
             get {
                 object obj = ResourceManager.GetObject("update (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap visibility {
+            get {
+                object obj = ResourceManager.GetObject("visibility", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap visibility_1_ {
+            get {
+                object obj = ResourceManager.GetObject("visibility(1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

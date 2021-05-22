@@ -10,22 +10,9 @@ namespace dashboard
 {
     public partial class Login : Form
     {
-
-       
         public Login()
         {
             InitializeComponent();
-
-        }
-
-        private void Login_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -33,21 +20,32 @@ namespace dashboard
 
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
+       
 
-        }
-
-        private void logbtn_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             AdminPortal admn = new AdminPortal();
             admn.Show();
         }
 
-        private void logbtn_Click_1(object sender, EventArgs e)
+        private void button2_MouseUp(object sender, MouseEventArgs e)
         {
-            AdminPortal admn = new AdminPortal();
-            admn.Show();
+            textBox1.Show();
+        }
+
+        private void button2_MouseDown(object sender, MouseEventArgs e)
+        {
+            textBox1.Hide();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            textBox4.Text = textBox1.Text;
         }
     }
 }
