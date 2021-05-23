@@ -61,5 +61,12 @@ namespace dashboard
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Login log = new Login();
+            this.Dispose();
+            log.Show();
+        }
     }
 }
