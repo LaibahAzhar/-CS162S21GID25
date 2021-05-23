@@ -29,6 +29,7 @@ namespace dashboard
         {
             Login log = new Login();
             log.Show();
+            this.Hide();
         }
 
         private void lbl_Click(object sender, EventArgs e)

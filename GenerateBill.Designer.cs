@@ -31,10 +31,11 @@ namespace dashboard
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GenerateBill));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.button7 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -68,10 +69,9 @@ namespace dashboard
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -91,15 +91,17 @@ namespace dashboard
             this.panel1.Size = new System.Drawing.Size(1005, 47);
             this.panel1.TabIndex = 1;
             // 
-            // pictureBox3
+            // button7
             // 
-            this.pictureBox3.Image = global::dashboard.Properties.Resources.Webp_net_resizeimage_2_;
-            this.pictureBox3.Location = new System.Drawing.Point(52, 5);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(64, 38);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 5;
-            this.pictureBox3.TabStop = false;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Image = global::dashboard.Properties.Resources.back_1_;
+            this.button7.Location = new System.Drawing.Point(0, -2);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(45, 49);
+            this.button7.TabIndex = 32;
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // pictureBox2
             // 
@@ -133,6 +135,16 @@ namespace dashboard
             this.label9.Size = new System.Drawing.Size(97, 32);
             this.label9.TabIndex = 4;
             this.label9.Text = "Billing";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::dashboard.Properties.Resources.Webp_net_resizeimage_2_;
+            this.pictureBox3.Location = new System.Drawing.Point(52, 5);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(64, 38);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 5;
+            this.pictureBox3.TabStop = false;
             // 
             // pictureBox1
             // 
@@ -227,6 +239,7 @@ namespace dashboard
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -265,6 +278,7 @@ namespace dashboard
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // label3
             // 
@@ -498,17 +512,6 @@ namespace dashboard
             this.button6.Text = "Generate Bill";
             this.button6.UseVisualStyleBackColor = false;
             // 
-            // button7
-            // 
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Image = global::dashboard.Properties.Resources.back_1_;
-            this.button7.Location = new System.Drawing.Point(0, -2);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(45, 49);
-            this.button7.TabIndex = 32;
-            this.button7.UseVisualStyleBackColor = true;
-            // 
             // GenerateBill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -540,8 +543,8 @@ namespace dashboard
             this.Load += new System.EventHandler(this.GenerateBill_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

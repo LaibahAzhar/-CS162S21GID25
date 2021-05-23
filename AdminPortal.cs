@@ -25,6 +25,7 @@ namespace dashboard
         private void label2_Click(object sender, EventArgs e)
         {
             Medicine med = new Medicine();
+            this.Dispose();
             med.Show();
 
         }
@@ -42,19 +43,27 @@ namespace dashboard
         private void billingBtn_Click(object sender, EventArgs e)
         {
             GenerateBill bill = new GenerateBill();
+            this.Dispose();
             bill.Show();
         }
 
         private void stockbtn_Click(object sender, EventArgs e)
         {
             Stock stk = new Stock();
+            this.Dispose();
             stk.Show();
         }
 
         private void staff_Click(object sender, EventArgs e)
         {
             Staff stf = new Staff();
+            this.Dispose();
             stf.Show();
+        }
+
+        private void recordbtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -109,7 +109,7 @@ namespace dashboard
             this.recordbtn.Size = new System.Drawing.Size(141, 24);
             this.recordbtn.TabIndex = 7;
             this.recordbtn.Text = "Billing Record";
-            this.recordbtn.Click += new System.EventHandler(this.label2_Click);
+            this.recordbtn.Click += new System.EventHandler(this.recordbtn_Click);
             // 
             // label5
             // 

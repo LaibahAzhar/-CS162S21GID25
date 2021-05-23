@@ -25,6 +25,7 @@ namespace dashboard
         private void button1_Click(object sender, EventArgs e)
         {
             AdminPortal admn = new AdminPortal();
+            this.Dispose();
             admn.Show();
         }
 
