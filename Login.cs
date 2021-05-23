@@ -54,5 +54,12 @@ namespace dashboard
             port.Show();
 
         }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            AdminRegistory a = new AdminRegistory();
+            a.Show();
+            this.Hide();
+        }
     }
 }
