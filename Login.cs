@@ -25,7 +25,7 @@ namespace dashboard
         private void button1_Click(object sender, EventArgs e)
         {
             AdminPortal admn = new AdminPortal();
-            this.Dispose();
+            this.Hide();
             admn.Show();
         }
 
@@ -47,6 +47,13 @@ namespace dashboard
         private void timer1_Tick(object sender, EventArgs e)
         {
             textBox4.Text = textBox1.Text;
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            AdminRegistory a = new AdminRegistory();
+            a.Show();
+            this.Hide();
         }
     }
 }

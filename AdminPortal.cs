@@ -57,7 +57,7 @@ namespace dashboard
         private void staff_Click(object sender, EventArgs e)
         {
             Staff stf = new Staff();
-            this.Dispose();
+            this.Hide();
             stf.Show();
         }
 
