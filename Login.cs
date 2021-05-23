@@ -48,12 +48,11 @@ namespace dashboard
         {
             textBox4.Text = textBox1.Text;
         }
-
-        private void label3_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
-            AdminRegistory a = new AdminRegistory();
-            a.Show();
-            this.Hide();
+            StaffPortal port = new StaffPortal();
+            port.Show();
+
         }
     }
 }
