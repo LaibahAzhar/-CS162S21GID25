@@ -48,5 +48,11 @@ namespace dashboard
         {
             textBox4.Text = textBox1.Text;
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            StaffPortal port = new StaffPortal();
+            port.Show();
+        }
     }
 }

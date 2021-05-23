@@ -25,6 +25,9 @@
     <Compile Update="Staff.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="StaffPortal.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Stock.cs">
       <SubType>Form</SubType>
     </Compile>

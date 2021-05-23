@@ -52,22 +52,18 @@ namespace dashboard
 
         private void button7_Click(object sender, EventArgs e)
         {
-            AdminPortal a = new AdminPortal();
             this.Dispose();
-            a.Show();
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
             Medicine m = new Medicine();
-            this.Dispose();
             m.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
            Stock s = new Stock();
-            this.Dispose();
             s.Show();
         }
     }
