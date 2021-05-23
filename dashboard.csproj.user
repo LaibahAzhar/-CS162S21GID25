@@ -7,6 +7,12 @@
     <Compile Update="AdminRegistory.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="EditingMed.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="EdtngEmp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="GenerateBill.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -16,7 +22,22 @@
     <Compile Update="Medicine.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Staff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Stock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UpdtEmp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UpdtMed.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="ViewMed.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="ViewStaff.cs">
       <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>
