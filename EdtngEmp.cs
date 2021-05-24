@@ -18,6 +18,7 @@ namespace dashboard
 
         private void button6_Click(object sender, EventArgs e)
         {
+            //for adding panel in the form
             panel1.Controls.Add(new UpdtEmp());
             panel1.Controls["UpdtEmp"].BringToFront();
         }
