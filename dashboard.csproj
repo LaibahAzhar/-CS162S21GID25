@@ -7,6 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Reference Include="BasselTech CamCapture">
+      <HintPath>..\..\..\Downloads\BasselTech CamCapture\BasselTech CamCapture.dll</HintPath>
+    </Reference>
+    <Reference Include="MessagingToolkit.Barcode">
+      <HintPath>..\..\..\Downloads\Barcode-DLL\MessagingToolkit.Barcode.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>

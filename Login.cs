@@ -24,9 +24,22 @@ namespace dashboard
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AdminPortal admn = new AdminPortal();
-            this.Hide();
-            admn.Show();
+            if (textBox3.Text == "Admin" && textBox1.Text == "1234")
+            {
+                AdminPortal admn = new AdminPortal();
+                this.Hide();
+                admn.Show();
+            }
+            if (textBox3.Text == "Staff" && textBox1.Text == "0000")
+            {
+                StaffPortal stff = new StaffPortal();
+                this.Hide();
+                stff.Show();
+            }
+            if((textBox3.Text != "Admin" && textBox1.Text != "1234") &&  (textBox3.Text != "Staff" && textBox1.Text != "0000"))
+            {
+                MessageBox.Show("Invalid Login Details");
+            }
         }
 
         private void button2_MouseUp(object sender, MouseEventArgs e)
@@ -60,6 +73,11 @@ namespace dashboard
             AdminRegistory a = new AdminRegistory();
             a.Show();
             this.Hide();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
