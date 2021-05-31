@@ -7,8 +7,28 @@
   "targets": {
     ".NETCoreApp,Version=v3.1": {
       "dashboard/1.0.0": {
+        "dependencies": {
+          "BasselTech CamCapture": "1.0.0.0",
+          "MessagingToolkit.Barcode": "1.8.3.0"
+        },
         "runtime": {
           "dashboard.dll": {}
+        }
+      },
+      "BasselTech CamCapture/1.0.0.0": {
+        "runtime": {
+          "BasselTech CamCapture.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "MessagingToolkit.Barcode/1.8.3.0": {
+        "runtime": {
+          "MessagingToolkit.Barcode.dll": {
+            "assemblyVersion": "1.8.3.0",
+            "fileVersion": "1.8.3.0"
+          }
         }
       }
     }
@@ -16,6 +36,16 @@
   "libraries": {
     "dashboard/1.0.0": {
       "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BasselTech CamCapture/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MessagingToolkit.Barcode/1.8.3.0": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     }

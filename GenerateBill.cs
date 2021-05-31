@@ -66,6 +66,13 @@ namespace dashboard
            Stock s = new Stock();
             s.Show();
         }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            Barcode bar = new Barcode();
+            bar.Show();
+            
+        }
     }
     
 }

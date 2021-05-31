@@ -7,6 +7,9 @@
     <Compile Update="AdminRegistory.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Barcode.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="EditingMed.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -20,6 +23,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Medicine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SplashScreen.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Staff.cs">
