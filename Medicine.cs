@@ -17,7 +17,8 @@ namespace dashboard
         private DateTime manufacturingDate;
         private DateTime expiryDate;
         private string compnany;
-        private int price;
+        private int marketPrice;
+        private int sellingPrice;
         private string category;
         private string status;
         public string MedicineName
@@ -36,7 +37,11 @@ namespace dashboard
         {
             get; set;
         }
-        public int Price
+        public int MarketPrice
+        {
+            get; set;
+        }
+        public int SellingPrice
         {
             get; set;
         }
