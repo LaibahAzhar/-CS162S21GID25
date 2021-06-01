@@ -31,7 +31,7 @@ namespace dashboard
         private int sellingPrice;
         private string category;
         private string status;
-        static List<Medicine> medList;
+        static private List<Medicine> medList;
         public static Medicine getObject()
         {
             if (med == null)
@@ -39,6 +39,10 @@ namespace dashboard
                 med = new Medicine();
             }
             return med;
+        }
+        public List<Medicine> GetList()
+        {
+            return medList;
         }
         public string MedicineName
         {
@@ -136,42 +140,9 @@ namespace dashboard
             DateTime eDate;
             int stk;
             string sats;
+
             //*******************************************************************************************
-            con.Open();
-            using (SqlCommand cmd = new SqlCommand(con.ToString()))
-            {
-                string selectCommand = "SELECT * FROM MedTable where MedicineName=@MedicineName";
-                SqlCommand oCmd = new SqlCommand(selectCommand, con);
-               // oCmd.Parameters.AddWithValue("@MedicineName", name);
-
-                using (SqlDataReader oReader = oCmd.ExecuteReader())
-
-                {
-                    while (oReader.Read())
-                    {
-                        med = new Medicine();
-                        med.medicineName = oReader["MedicineName"].ToString();
-                        med.medicineID = oReader["MedicineID"].ToString();
-                        med.chemicalName = oReader["ChemicalName"].ToString();
-                        med.stock = Int32.Parse( oReader["Stock"].ToString());
-                        med.manufacturingDate = DateTime.Parse(oReader["ManufacturingDate"].ToString());
-                        med.expiryDate = DateTime.Parse(oReader["ExpiryDate"].ToString());
-                        med.marketPrice = Int32.Parse(oReader["MarketPrice"].ToString());
-                        med.compnany = oReader["Company"].ToString();
-                        med.status = oReader["Status"].ToString();
-                        medList.Add(med);
-                    }
-
-                }
-                con.Close();
-                MessageBox.Show("DATA ADDED SQL");
-                for(int i = 0; i < medList.Count; i++)
-                {
-                    Console.WriteLine("One"+medList[i].medicineID);
-                    Console.WriteLine("2" + medList[i].marketPrice);
-                }
-            }
-            //**************************************************************************************
+          
             AddDataInList();
 
             
@@ -190,72 +161,37 @@ namespace dashboard
             else
                 sats = radioButton2.Text;
 
-            //Set the values to he original attributes
-            //med = new Medicine();
-            //if (ValidateName(name))
-            //    med.MedicineName = name;
-            //if (ValidateMedicineID(id))
-            //    med.MedicineID = id;
-            //if (ValidateChemicalName(cName))
-            //    med.ChemicalName = cName;
-            //if (ValidateCompanyName(comp))
-            //    med.Company = comp;
-            //med.MarketPrice = mPrice;
-            //med.Stock = stk;
-            //med.ManufacturingDate = mDate;
-            //med.ExpiryDate = eDate;
-            ////add to List
-            //medList.Add(med);
-            //MessageBox.Show("DATA ADDED List");
-
             //       ********************DataBASE******************************
             //add to DataBase
             try
             {
-                con.Open();
-                string insertCommand = "INSERT INTO MedTable (MedicineName,MedicineID,ChemicalName,Stock,ManufacturingDate,ExpiryData,MarketPrice,Company,Status) VALUES (@MedicineName,@MedicineID,@ChemicalName ,@Stock ,@ManufacturingDate,@ExpiryDate ,@MarketPrice,@Company ,@Status )";
-                using (SqlCommand cmd = new SqlCommand(insertCommand, con))
-                {
-                    cmd.Parameters.Clear();
-                    cmd.Parameters.AddWithValue("@MedicineName", name);
-                    cmd.Parameters.AddWithValue("@MedicineID", id);
-                    cmd.Parameters.AddWithValue("@ChemicalName", cName);
-                    cmd.Parameters.AddWithValue("@Stock", stk);
-                    cmd.Parameters.AddWithValue("@ManufacturingDate", mDate);
-                    cmd.Parameters.AddWithValue("@ExpiryDate", eDate);
-                    cmd.Parameters.AddWithValue("@MarketPrice", mPrice);
-                    cmd.Parameters.AddWithValue("@Company", comp);
-                    cmd.Parameters.AddWithValue("@Status", sats);
+                 con.Open();
 
-                    cmd.ExecuteNonQuery();
-                    con.Close();
-                }
-                con.Open();
-                string mn="NHI a";
-                using (SqlCommand cmd = new SqlCommand(con.ToString()))
-                {
-                    string selectCommand = "SELECT * FROM MedTable where MedicineName=@MedicineName";
-                    SqlCommand oCmd = new SqlCommand(selectCommand, con);
-                    oCmd.Parameters.AddWithValue("@MedicineName", name);
+                 string insertCommand = "INSERT INTO MedTable (MedicineName,MedicineID,ChemicalName,Stock,ManufacturingDate,ExpiryDate,MarketPrice,Company,Status) VALUES (@MedicineName,@MedicineID,@ChemicalName ,@Stock ,@ManufacturingDate,@ExpiryDate ,@MarketPrice,@Company ,@Status )";
+                 using (SqlCommand cmd = new SqlCommand(insertCommand, con))
+                 {
+                     cmd.Parameters.Clear();
+                     cmd.Parameters.AddWithValue("@MedicineName", name);
+                     cmd.Parameters.AddWithValue("@MedicineID", id);
+                     cmd.Parameters.AddWithValue("@ChemicalName", cName);
+                     cmd.Parameters.AddWithValue("@Stock", stk);
+                     cmd.Parameters.AddWithValue("@ManufacturingDate", mDate);
+                     cmd.Parameters.AddWithValue("@ExpiryDate", eDate);
+                     cmd.Parameters.AddWithValue("@MarketPrice", mPrice);
+                     cmd.Parameters.AddWithValue("@Company", comp);
+                     cmd.Parameters.AddWithValue("@Status", sats);
+
+                     cmd.ExecuteNonQuery();
                    
-                    using (SqlDataReader oReader = oCmd.ExecuteReader())
-                       
-                    {
-                        while (oReader.Read())
-                        {
-                            mn = oReader["MedicineName"].ToString();
-                        }
 
-                        MessageBox.Show("Medicine Name1 ", mn);
-                    }
-                    con.Close();
-                    MessageBox.Show("DATA ADDED SQL");
-                }
+                 }
+                con.Close();
             }
             catch (Exception ex)
             {
                 string message = ex.Message;
             }
+           
         }
 
 

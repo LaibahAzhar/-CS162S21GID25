@@ -60,7 +60,7 @@ namespace dashboard
             this.scanbtn.TabIndex = 32;
             this.scanbtn.Text = "Scan";
             this.scanbtn.UseVisualStyleBackColor = false;
-          //  this.scanbtn.Click += new System.EventHandler(this.scanbtn_Click_1);
+            this.scanbtn.Click += new System.EventHandler(this.scanbtn_Click_1);
             // 
             // stopbtn
             // 
@@ -78,7 +78,7 @@ namespace dashboard
             this.stopbtn.TabIndex = 32;
             this.stopbtn.Text = "Stop";
             this.stopbtn.UseVisualStyleBackColor = false;
-          //  this.stopbtn.Click += new System.EventHandler(this.stopbtn_Click_1);
+            this.stopbtn.Click += new System.EventHandler(this.stopbtn_Click_1);
             // 
             // Barcode
             // 

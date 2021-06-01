@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace dashboard
 {
@@ -23,7 +24,31 @@ namespace dashboard
        
 
         private void button1_Click(object sender, EventArgs e)
+
         {
+            SqlConnection con = new SqlConnection(Configuration.conection);
+            con.Open();
+            Medicine med = new Medicine();
+            
+            string query = "SELECT * FROM MedTable";
+            SqlDataAdapter sda = new SqlDataAdapter(query, con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                med = new Medicine();
+                med.MedicineName = dt.Rows[i]["MedicineName"].ToString();
+                med.MedicineID = dt.Rows[i]["MedicineID"].ToString();
+                med.ChemicalName = dt.Rows[i]["ChemicalName"].ToString();
+                med.Stock = Int32.Parse(dt.Rows[i]["Stock"].ToString());
+                med.ManufacturingDate = DateTime.Parse(dt.Rows[i]["ManufacturingDate"].ToString());
+                med.ExpiryDate = DateTime.Parse(dt.Rows[i]["ExpiryDate"].ToString());
+                med.MarketPrice = Int32.Parse(dt.Rows[i]["MarketPrice"].ToString());
+                med.Company = dt.Rows[i]["Company"].ToString();
+                med.Status = dt.Rows[i]["Status"].ToString();
+                med.GetList().Add(med);
+            }
+            con.Close();
             if (textBox3.Text == "Admin" && textBox1.Text == "1234")
             {
                 AdminPortal admn = new AdminPortal();

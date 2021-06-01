@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace dashboard
 {
@@ -17,7 +18,7 @@ namespace dashboard
 
         private void SplashScreen_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void timer1_Tick(object sender, EventArgs e)
