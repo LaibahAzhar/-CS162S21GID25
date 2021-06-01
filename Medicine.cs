@@ -9,7 +9,7 @@ using System.Data.SqlClient;
 
 namespace dashboard
 {
-     public partial class Medicine : Form
+    public partial class Medicine : Form
     {
         public Medicine()
         {
@@ -126,9 +126,10 @@ namespace dashboard
 
         private void button6_Click(object sender, EventArgs e)
         {
-            // SqlConnection con = new SqlConnection(Configuration.conection);
+            SqlConnection con = new SqlConnection(Configuration.conection);
             AddDataInList();
-            { string name;
+
+            string name;
             string id;
             string cName;
             string comp;
@@ -151,52 +152,79 @@ namespace dashboard
                 sats = radioButton1.Text;
             else
                 sats = radioButton2.Text;
-        
+
             //Set the values to he original attributes
             //med = new Medicine();
-             //if (ValidateName(name))
-             //    med.MedicineName = name;
-             //if (ValidateMedicineID(id))
-             //    med.MedicineID = id;
-             //if (ValidateChemicalName(cName))
-             //    med.ChemicalName = cName;
-             //if (ValidateCompanyName(comp))
-             //    med.Company = comp;
-             //med.MarketPrice = mPrice;
-             //med.Stock = stk;
-             //med.ManufacturingDate = mDate;
-             //med.ExpiryDate = eDate;
-             ////add to List
-             //medList.Add(med);
-             //MessageBox.Show("DATA ADDED List");
-            }
+            //if (ValidateName(name))
+            //    med.MedicineName = name;
+            //if (ValidateMedicineID(id))
+            //    med.MedicineID = id;
+            //if (ValidateChemicalName(cName))
+            //    med.ChemicalName = cName;
+            //if (ValidateCompanyName(comp))
+            //    med.Company = comp;
+            //med.MarketPrice = mPrice;
+            //med.Stock = stk;
+            //med.ManufacturingDate = mDate;
+            //med.ExpiryDate = eDate;
+            ////add to List
+            //medList.Add(med);
+            //MessageBox.Show("DATA ADDED List");
+
             //       ********************DataBASE******************************
-            {//add to DataBase
-                /*con.Open();
-                //string query = "INSERT INTO MedTable (Medicine Name,Medicine ID,Chemical Name,Stock/Quantity,Manufacturing Date,Expiry Data,Market Price,Company,Status) VALUES ('" + name + "','" + id + "','" + cName + "','" + stk + "','" + mDate + "''" + eDate + "','" + mPrice + "','" + comp + "','" + sats + "')";
+            //add to DataBase
+            try
+            {
+                con.Open();
+                //string query = "INSERT INTO MedTable (MedicineName,MedicineID,ChemicalName,Stock,ManufacturingDate,ExpiryData,MarketPrice,Company,Status) VALUES ('" + name + "','" + id + "','" + cName + "','" + stk + "','" + mDate + "''" + eDate + "','" + mPrice + "','" + comp + "','" + sats + "')";
                 //SqlDataAdapter sda = new SqlDataAdapter(query, con);
                 //sda.SelectCommand.ExecuteNonQuery();
-                string insertCommand = "INSERT INTO Events (Medicine Name,Medicine ID,Chemical Name,Stock/Quantity,Manufacturing Date,Expiry Data,Market Price,Company,Status) values (@name,@id,@cName ,@stk ,@mDate,@eDate ,@ mPrice,@ comp ,@ sats )";
+                string insertCommand = "INSERT INTO MedTable (MedicineName,MedicineID,ChemicalName,Stock,ManufacturingDate,ExpiryData,MarketPrice,Company,Status) VALUES (@MedicineName,@MedicineID,@ChemicalName ,@Stock ,@ManufacturingDate,@ExpiryDate ,@MarketPrice,@Company ,@Status )";
                 using (SqlCommand cmd = new SqlCommand(insertCommand, con))
                 {
                     cmd.Parameters.Clear();
-                    cmd.Parameters.AddWithValue("@Medince Name", name);
-                    cmd.Parameters.AddWithValue("@Medicine ID", id);
-                    cmd.Parameters.AddWithValue("@Chemical Name", cName);
+                    cmd.Parameters.AddWithValue("@MedicineName", name);
+                    cmd.Parameters.AddWithValue("@MedicineID", id);
+                    cmd.Parameters.AddWithValue("@ChemicalName", cName);
+                    cmd.Parameters.AddWithValue("@Stock", stk);
+                    cmd.Parameters.AddWithValue("@ManufacturingDate", mDate);
+                    cmd.Parameters.AddWithValue("@ExpiryDate", eDate);
+                    cmd.Parameters.AddWithValue("@MarketPrice", mPrice);
                     cmd.Parameters.AddWithValue("@Company", comp);
                     cmd.Parameters.AddWithValue("@Status", sats);
-                    cmd.Parameters.AddWithValue("@Stock", stk);
-                    cmd.Parameters.AddWithValue("@Stock/Quantity", stk);
-                    //cmd.Parameters.AddWithValue("@Manufacturing Date", "'" + mDate + "'");
-                    //cmd.Parameters.AddWithValue("@Expiry Date", "'" + eDate + "'");
-                    cmd.Parameters.AddWithValue("@Manufacturing Date", "'" + mDate + "'");
-                    cmd.Parameters.AddWithValue("@Expiry Date", "'" + eDate + "'");
-                    cmd.ExecuteNonQuery();*/
-                //  }
-                // MessageBox.Show("DATA ADDED SQL");
-            }
 
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                }
+                con.Open();
+                string selectCommand = "SELECT * FROM MedTable";
+                using (SqlCommand cmd = new SqlCommand(selectCommand,con))
+                {
+                    //cmd.CommandText = "SELECT * FROM MedTable";
+                    //cmd.CommandType = CommandType.StoredProcedure;
+                    //cmd.Connection = con;
+                    cmd.ExecuteNonQuery();
+                   
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        // Data is accessible through the DataReader object here.
+                        reader.Read();
+                        this.medicineName = reader.GetString(0);
+                        MessageBox.Show("Medicine Name1 ", this.medicineName);
+                    }
+                }
+                con.Close();
+                MessageBox.Show("Medicine Name2 ", this.medicineName);
+                MessageBox.Show("DATA ADDED SQL");
+            }
+            catch (Exception ex)
+            {
+                string message = ex.Message;
+            }
         }
+
+
         private bool ValidateName(string name)
         {
             bool flag = false;
@@ -291,6 +319,8 @@ namespace dashboard
             //add to List
             medList.Add(med);
             MessageBox.Show("DATA ADDED List");
+
         }
+
     }
 }
