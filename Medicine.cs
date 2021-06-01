@@ -127,9 +127,7 @@ namespace dashboard
         private void button6_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(Configuration.conection);
-            AddDataInList();
-
-            string name;
+            string name="";
             string id;
             string cName;
             string comp;
@@ -138,6 +136,45 @@ namespace dashboard
             DateTime eDate;
             int stk;
             string sats;
+            //*******************************************************************************************
+            con.Open();
+            using (SqlCommand cmd = new SqlCommand(con.ToString()))
+            {
+                string selectCommand = "SELECT * FROM MedTable where MedicineName=@MedicineName";
+                SqlCommand oCmd = new SqlCommand(selectCommand, con);
+               // oCmd.Parameters.AddWithValue("@MedicineName", name);
+
+                using (SqlDataReader oReader = oCmd.ExecuteReader())
+
+                {
+                    while (oReader.Read())
+                    {
+                        med = new Medicine();
+                        med.medicineName = oReader["MedicineName"].ToString();
+                        med.medicineID = oReader["MedicineID"].ToString();
+                        med.chemicalName = oReader["ChemicalName"].ToString();
+                        med.stock = Int32.Parse( oReader["Stock"].ToString());
+                        med.manufacturingDate = DateTime.Parse(oReader["ManufacturingDate"].ToString());
+                        med.expiryDate = DateTime.Parse(oReader["ExpiryDate"].ToString());
+                        med.marketPrice = Int32.Parse(oReader["MarketPrice"].ToString());
+                        med.compnany = oReader["Company"].ToString();
+                        med.status = oReader["Status"].ToString();
+                        medList.Add(med);
+                    }
+
+                }
+                con.Close();
+                MessageBox.Show("DATA ADDED SQL");
+                for(int i = 0; i < medList.Count; i++)
+                {
+                    Console.WriteLine("One"+medList[i].medicineID);
+                    Console.WriteLine("2" + medList[i].marketPrice);
+                }
+            }
+            //**************************************************************************************
+            AddDataInList();
+
+            
             //get data into local variables from the textBoxes, DateTimePicker etc
             name = textBox1.Text;
             id = textBox4.Text;
@@ -176,9 +213,6 @@ namespace dashboard
             try
             {
                 con.Open();
-                //string query = "INSERT INTO MedTable (MedicineName,MedicineID,ChemicalName,Stock,ManufacturingDate,ExpiryData,MarketPrice,Company,Status) VALUES ('" + name + "','" + id + "','" + cName + "','" + stk + "','" + mDate + "''" + eDate + "','" + mPrice + "','" + comp + "','" + sats + "')";
-                //SqlDataAdapter sda = new SqlDataAdapter(query, con);
-                //sda.SelectCommand.ExecuteNonQuery();
                 string insertCommand = "INSERT INTO MedTable (MedicineName,MedicineID,ChemicalName,Stock,ManufacturingDate,ExpiryData,MarketPrice,Company,Status) VALUES (@MedicineName,@MedicineID,@ChemicalName ,@Stock ,@ManufacturingDate,@ExpiryDate ,@MarketPrice,@Company ,@Status )";
                 using (SqlCommand cmd = new SqlCommand(insertCommand, con))
                 {
@@ -197,26 +231,26 @@ namespace dashboard
                     con.Close();
                 }
                 con.Open();
-                string selectCommand = "SELECT * FROM MedTable";
-                using (SqlCommand cmd = new SqlCommand(selectCommand,con))
+                string mn="NHI a";
+                using (SqlCommand cmd = new SqlCommand(con.ToString()))
                 {
-                    //cmd.CommandText = "SELECT * FROM MedTable";
-                    //cmd.CommandType = CommandType.StoredProcedure;
-                    //cmd.Connection = con;
-                    cmd.ExecuteNonQuery();
+                    string selectCommand = "SELECT * FROM MedTable where MedicineName=@MedicineName";
+                    SqlCommand oCmd = new SqlCommand(selectCommand, con);
+                    oCmd.Parameters.AddWithValue("@MedicineName", name);
                    
-
-                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    using (SqlDataReader oReader = oCmd.ExecuteReader())
+                       
                     {
-                        // Data is accessible through the DataReader object here.
-                        reader.Read();
-                        this.medicineName = reader.GetString(0);
-                        MessageBox.Show("Medicine Name1 ", this.medicineName);
+                        while (oReader.Read())
+                        {
+                            mn = oReader["MedicineName"].ToString();
+                        }
+
+                        MessageBox.Show("Medicine Name1 ", mn);
                     }
+                    con.Close();
+                    MessageBox.Show("DATA ADDED SQL");
                 }
-                con.Close();
-                MessageBox.Show("Medicine Name2 ", this.medicineName);
-                MessageBox.Show("DATA ADDED SQL");
             }
             catch (Exception ex)
             {
