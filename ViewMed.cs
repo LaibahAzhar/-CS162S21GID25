@@ -37,7 +37,7 @@ namespace dashboard
         }
         private void textBox1_KeyUp(object sender, KeyEventArgs e)
         {
-            string outputInfo = "";
+           /* string outputInfo = "";
             string[] keyWords = textBox1.Text.Split(' ');
             SqlConnection con = new SqlConnection(Configuration.conection);
             con.Open();
@@ -62,7 +62,29 @@ namespace dashboard
 
             //Applies the filter to the DataView
             //dt.RowFilter = outputInfo;
-            con.Close();
+            con.Close();*/
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            try
+          {
+                SqlConnection con = new SqlConnection(Configuration.conection);
+                con.Open();
+                Medicine med = new Medicine();
+
+                string query = "SELECT * FROM MedTable";
+                SqlDataAdapter sda = new SqlDataAdapter(query, con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                dataGridView1.DataSource = dt;
+                (dataGridView1.DataSource as DataTable).DefaultView.RowFilter = string.Format("MedicineName LIKE '%{0}%'", textBox1.Text);
+                con.Close();
+            }
+            catch(Exception ex)
+            {
+                string message = ex.Message;
+            }
         }
     }
 }

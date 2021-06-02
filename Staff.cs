@@ -136,7 +136,7 @@ namespace dashboard
         {
             SqlConnection con = new SqlConnection(Configuration.conection);
             string name;
-            string CnicNmber = "";
+            string CnicNmber;
             string Mail;
             int slry;
             int bns;
@@ -151,7 +151,7 @@ namespace dashboard
 
             // storing data into local variable from the form
             name = textBox1.Text;
-            cnicNmbr = maskedTextBox1.Text;
+            CnicNmber = maskedTextBox1.Text;
             Mail = textBox4.Text;
             slry = Int32.Parse(textBox7.Text);
             bns = Int32.Parse(textBox6.Text);
@@ -180,7 +180,7 @@ namespace dashboard
             {
                 con.Open();
 
-                string insertCommand = "INSERT INTO StaffTable (Name,CNICnmbr,Email,Salary,Bonus,WorkingHrs,ContactNmbr,DOB,Job) VALUES(@Name,@CNICnmbr,@Email,@Salary,@Bonus,@WorkingHrs,@ContactNmbr,@DOB,@Job)";
+                string insertCommand = "INSERT INTO StaffTable (Name,CNICnmbr,Email,Salary,Bonus,WorkingHrs,ContactNmbr,DOB,Job) VALUES (@Name,@CNICnmbr,@Email,@Salary,@Bonus,@WorkingHrs,@ContactNmbr,@DOB,@Job)";
                 using (SqlCommand cmd = new SqlCommand(insertCommand,con))
                 {
                     cmd.Parameters.Clear();
@@ -190,13 +190,14 @@ namespace dashboard
                     cmd.Parameters.AddWithValue("@Salary",slry);
                     cmd.Parameters.AddWithValue("@Bonus",bns);
                     cmd.Parameters.AddWithValue("@WorkingHrs",wHrs);
-                    cmd.Parameters.AddWithValue("@ContactNmber",conNmbr);
+                    cmd.Parameters.AddWithValue("@ContactNmbr",conNmbr);
                     cmd.Parameters.AddWithValue("@DOB",date);
                     cmd.Parameters.AddWithValue("@Job",job);
 
                     cmd.ExecuteNonQuery();
                 }
                 con.Close();
+                MessageBox.Show("Done hogyaa");
             }
             catch(Exception ex)
             {
@@ -265,7 +266,7 @@ namespace dashboard
 
 
             name = textBox1.Text;
-            cnicNmbr = maskedTextBox1.Text;
+            CnicNmber = maskedTextBox1.Text;
             Mail = textBox4.Text;
             slry = Int32.Parse(textBox7.Text);
             bns = Int32.Parse(textBox6.Text);
