@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uQjC+h+C/UydyVnrMCSytZzyDiI7S4JOteE8cx36nvFF3vXwtOFyj5BXOYO9KFXDD9JP7YdBG6kaCkGOzizCuQ==",
+  "dgSpecHash": "xOFrMbcOwgMqBFpwdzvLN8XSqBWqeVnnKfzjZwo7bvo3v48FTAAS1lB8R+6lm8Y0W5ZGZrj+9fuuvQu9U2xA5g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\hp\\OneDrive\\Documents\\2nd semester\\OOP\\Final OOP PROJECT\\-CS162S21GID25\\-CS162S21GID25\\dashboard.csproj",
+  "projectFilePath": "C:\\Users\\hp\\OneDrive\\Documents\\-CS162S21GID25\\dashboard.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hp\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

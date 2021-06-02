@@ -51,6 +51,8 @@ namespace dashboard
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
@@ -98,7 +100,7 @@ namespace dashboard
             // textBox7
             // 
             this.textBox7.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox7.Location = new System.Drawing.Point(485, 164);
+            this.textBox7.Location = new System.Drawing.Point(433, 164);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(99, 26);
             this.textBox7.TabIndex = 113;
@@ -135,11 +137,11 @@ namespace dashboard
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label11.Location = new System.Drawing.Point(407, 166);
+            this.label11.Location = new System.Drawing.Point(376, 166);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(57, 24);
+            this.label11.Size = new System.Drawing.Size(51, 24);
             this.label11.TabIndex = 108;
-            this.label11.Text = "Price";
+            this.label11.Text = "Cost";
             // 
             // label12
             // 
@@ -258,6 +260,25 @@ namespace dashboard
             this.textBox2.Size = new System.Drawing.Size(197, 26);
             this.textBox2.TabIndex = 101;
             // 
+            // textBox5
+            // 
+            this.textBox5.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox5.Location = new System.Drawing.Point(612, 164);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(99, 26);
+            this.textBox5.TabIndex = 113;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(543, 154);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(63, 48);
+            this.label1.TabIndex = 108;
+            this.label1.Text = "Price/\r\nbox";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // EditingMed
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -267,10 +288,12 @@ namespace dashboard
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.button6);
+            this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label6);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label5);
@@ -315,5 +338,7 @@ namespace dashboard
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label label1;
     }
 }

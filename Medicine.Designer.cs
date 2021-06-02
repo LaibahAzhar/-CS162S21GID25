@@ -68,6 +68,8 @@ namespace dashboard
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -236,6 +238,7 @@ namespace dashboard
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -294,6 +297,7 @@ namespace dashboard
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -318,6 +322,8 @@ namespace dashboard
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.label8);
+            this.panel3.Controls.Add(this.textBox5);
             this.panel3.Controls.Add(this.pictureBox4);
             this.panel3.Controls.Add(this.dateTimePicker2);
             this.panel3.Controls.Add(this.dateTimePicker1);
@@ -389,7 +395,7 @@ namespace dashboard
             // textBox7
             // 
             this.textBox7.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox7.Location = new System.Drawing.Point(479, 165);
+            this.textBox7.Location = new System.Drawing.Point(433, 169);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(99, 26);
             this.textBox7.TabIndex = 92;
@@ -426,11 +432,11 @@ namespace dashboard
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label11.Location = new System.Drawing.Point(401, 167);
+            this.label11.Location = new System.Drawing.Point(375, 167);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(57, 24);
+            this.label11.Size = new System.Drawing.Size(51, 24);
             this.label11.TabIndex = 87;
-            this.label11.Text = "Price";
+            this.label11.Text = "Cost";
             // 
             // label12
             // 
@@ -549,6 +555,26 @@ namespace dashboard
             this.textBox2.Size = new System.Drawing.Size(197, 26);
             this.textBox2.TabIndex = 80;
             // 
+            // textBox5
+            // 
+            this.textBox5.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox5.Location = new System.Drawing.Point(607, 165);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(99, 26);
+            this.textBox5.TabIndex = 97;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label8.Location = new System.Drawing.Point(538, 155);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(63, 48);
+            this.label8.TabIndex = 98;
+            this.label8.Text = "Price/\r\nbox";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label8.Click += new System.EventHandler(this.label8_Click);
+            // 
             // Medicine
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -557,6 +583,7 @@ namespace dashboard
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Medicine";
             this.Text = "Medicine Status";
             this.panel1.ResumeLayout(false);
@@ -612,5 +639,7 @@ namespace dashboard
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textBox5;
     }
 }
