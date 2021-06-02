@@ -18,6 +18,12 @@ namespace dashboard
         {
             InitializeComponent();
             staffList = new List<Staff>();
+           
+        }
+
+        private void Warning()
+        {
+          
         }
 
         private static Staff stff;
@@ -32,6 +38,7 @@ namespace dashboard
         private string contact;
         private string job;
 
+       
         public static Staff getObject()
         {
             if (stff== null)
@@ -131,190 +138,239 @@ namespace dashboard
         {
             this.Dispose();
         }
-
-        private void button6_Click(object sender, EventArgs e)
+        WarnMsg warns = new WarnMsg();
+        private bool CheckEmpty()
         {
-            SqlConnection con = new SqlConnection(Configuration.conection);
-            string name;
-            string CnicNmber;
-            string Mail;
-            int slry;
-            int bns;
-            int wHrs;
-            string conNmbr;
-            DateTime date;
-            string job = "";
-
-            //***********************************************************************************
-
-            AddDataInList();
-
-            // storing data into local variable from the form
-            name = textBox1.Text;
-            CnicNmber = maskedTextBox1.Text;
-            Mail = textBox4.Text;
-            slry = Int32.Parse(textBox7.Text);
-            bns = Int32.Parse(textBox6.Text);
-            wHrs = Int32.Parse(textBox8.Text);
-            conNmbr = maskedTextBox2.Text;
-            date = dateTimePicker1.Value;
-            if (radioButton2.Checked)
+            bool flag = true ;
+            if (textBox1.Text == "")
             {
-                job = radioButton2.Text;
+                warn.Enabled = true;
+                flag = false;
             }
+            if (textBox4.Text == "")
+            {
+                button11.Enabled = true;
+                flag = false;
+            }
+            if (textBox6.Text == "")
+            {
+                button14.Enabled = true;
+                flag = false;
+            }
+            if (textBox7.Text == "")
+            {
+                button16.Enabled = true;
+                flag = false;
+            }
+            if (textBox8.Text == "")
+            {
+                button15.Enabled = true;
+                flag = false;
+            }
+            if (maskedTextBox1.MaskCompleted==false)
+            {
+                button12.Enabled = true;
+                flag = false;
+            }
+            if (maskedTextBox2.MaskCompleted==false)
+            {
+                button13.Enabled = true;
+                flag = false;
+            }
+      
+            return flag;
+        }
+        private void button6_Click(object sender, EventArgs e)
+        {   if(CheckEmpty()==false)
+            {
+                warns.Show();
+            }
+            
+
             else
             {
-                if(radioButton1.Checked)
+                SqlConnection con = new SqlConnection(Configuration.conection);
+                string name;
+                string CnicNmber;
+                string Mail;
+                int slry;
+                int bns;
+                int wHrs;
+                string conNmbr;
+                DateTime date;
+                string job = "";
+
+                //***********************************************************************************
+
+                AddDataInList();
+
+                // storing data into local variable from the form
+                name = textBox1.Text;
+                CnicNmber = maskedTextBox1.Text;
+                Mail = textBox4.Text;
+                slry = Int32.Parse(textBox7.Text);
+                bns = Int32.Parse(textBox6.Text);
+                wHrs = Int32.Parse(textBox8.Text);
+                conNmbr = maskedTextBox2.Text;
+                date = dateTimePicker1.Value;
+                if (radioButton2.Checked)
                 {
-                    job = radioButton1.Text;
+                    job = radioButton2.Text;
                 }
                 else
                 {
-                    if (radioButton3.Checked)
-                     job = radioButton3.Text;
+                    if (radioButton1.Checked)
+                    {
+                        job = radioButton1.Text;
+                    }
+                    else
+                    {
+                        if (radioButton3.Checked)
+                            job = radioButton3.Text;
+                    }
+
                 }
 
-            }
-
-            try 
-            {
-                con.Open();
-
-                string insertCommand = "INSERT INTO StaffTable (Name,CNICnmbr,Email,Salary,Bonus,WorkingHrs,ContactNmbr,DOB,Job) VALUES (@Name,@CNICnmbr,@Email,@Salary,@Bonus,@WorkingHrs,@ContactNmbr,@DOB,@Job)";
-                using (SqlCommand cmd = new SqlCommand(insertCommand,con))
+                try
                 {
-                    cmd.Parameters.Clear();
-                    cmd.Parameters.AddWithValue("@Name",name);
-                    cmd.Parameters.AddWithValue("@CNICnmbr",CnicNmber);
-                    cmd.Parameters.AddWithValue("@Email", Mail);
-                    cmd.Parameters.AddWithValue("@Salary",slry);
-                    cmd.Parameters.AddWithValue("@Bonus",bns);
-                    cmd.Parameters.AddWithValue("@WorkingHrs",wHrs);
-                    cmd.Parameters.AddWithValue("@ContactNmbr",conNmbr);
-                    cmd.Parameters.AddWithValue("@DOB",date);
-                    cmd.Parameters.AddWithValue("@Job",job);
+                    con.Open();
 
-                    cmd.ExecuteNonQuery();
+                    string insertCommand = "INSERT INTO StaffTable (Name,CNICnmbr,Email,Salary,Bonus,WorkingHrs,ContactNmbr,DOB,Job) VALUES (@Name,@CNICnmbr,@Email,@Salary,@Bonus,@WorkingHrs,@ContactNmbr,@DOB,@Job)";
+                    using (SqlCommand cmd = new SqlCommand(insertCommand, con))
+                    {
+                        cmd.Parameters.Clear();
+                        cmd.Parameters.AddWithValue("@Name", name);
+                        cmd.Parameters.AddWithValue("@CNICnmbr", CnicNmber);
+                        cmd.Parameters.AddWithValue("@Email", Mail);
+                        cmd.Parameters.AddWithValue("@Salary", slry);
+                        cmd.Parameters.AddWithValue("@Bonus", bns);
+                        cmd.Parameters.AddWithValue("@WorkingHrs", wHrs);
+                        cmd.Parameters.AddWithValue("@ContactNmbr", conNmbr);
+                        cmd.Parameters.AddWithValue("@DOB", date);
+                        cmd.Parameters.AddWithValue("@Job", job);
+
+                        cmd.ExecuteNonQuery();
+                    }
+                    con.Close();
                 }
-                con.Close();
-                MessageBox.Show("Done hogyaa");
-            }
-            catch(Exception ex)
-            {
-                string message = ex.Message;
+                catch (Exception ex)
+                {
+                    string message = ex.Message;
+                }
             }
         }
 
-        private bool ValidateName(string name)
-        {
-            bool flag = false;
-            for (int i = 0; i < name.Length; i++)
+            private bool ValidateName(string name)
             {
-                if (name[i] >= 'a' && name[i] <= 'z' || name[i] >= 'A' && name[i] <= 'Z' || name[i] == ' ')
-                    flag = true;
+                bool flag = false;
+                for (int i = 0; i < name.Length; i++)
+                {
+                    if (name[i] >= 'a' && name[i] <= 'z' || name[i] >= 'A' && name[i] <= 'Z' || name[i] == ' ')
+                        flag = true;
+                    else
+                        return false;
+                }
+
+                return flag;
+            }
+
+            private bool ValidateMail(string mail)
+            {
+                var email = new MailAddress(mail);
+                bool isValidEmail = email.Host.Contains(".");
+                if (!isValidEmail)
+                    return false;
+                else
+                    return true;
+            }
+
+            private bool ValidateSalary(int sal)
+            {
+                if (sal >= 20000 && sal <= 200000)
+                    return true;
                 else
                     return false;
             }
 
-            return flag;
-        }
-
-        private bool ValidateMail(string mail)
-        {
-            var email = new MailAddress( mail);
-            bool isValidEmail = email.Host.Contains(".");
-            if (!isValidEmail)
-                return false;
-            else
-                return true;
-        }
-
-        private bool ValidateSalary(int sal)
-        {
-            if (sal >= 20000 && sal <= 200000)
-                return true;
-            else
-                return false;
-        }
-
-        private bool ValidateBonus(int bon)
-        {
-            if (bon >= 1000 && bon <= 30000)
-                return true;
-            else
-                return false;
-        }
-        private bool ValidateWorkHrs(int work)
-        {
-            if (work >= 1 && work <= 15)
-                return true;
-            else
-                return false;
-        }
-
-        private void AddDataInList()
-        {
-            string name;
-            string CnicNmber ="";
-            string Mail;
-            int slry;
-            int bns;
-            int wHrs;
-            string conNmbr="";
-            DateTime date;
-            string job;
-
-
-            name = textBox1.Text;
-            CnicNmber = maskedTextBox1.Text;
-            Mail = textBox4.Text;
-            slry = Int32.Parse(textBox7.Text);
-            bns = Int32.Parse(textBox6.Text);
-            wHrs = Int32.Parse(textBox8.Text);
-            conNmbr = maskedTextBox2.Text;
-            date = dateTimePicker1.Value;
-            if (radioButton2.Checked)
+            private bool ValidateBonus(int bon)
             {
-                job = radioButton2.Text;
+                if (bon >= 1000 && bon <= 30000)
+                    return true;
+                else
+                    return false;
             }
-            else
+            private bool ValidateWorkHrs(int work)
             {
-                if (radioButton1.Checked)
+                if (work >= 1 && work <= 15)
+                    return true;
+                else
+                    return false;
+            }
+
+            private void AddDataInList()
+            {
+                string name;
+                string CnicNmber = "";
+                string Mail;
+                int slry;
+                int bns;
+                int wHrs;
+                string conNmbr = "";
+                DateTime date;
+                string job;
+
+
+                name = textBox1.Text;
+                CnicNmber = maskedTextBox1.Text;
+                Mail = textBox4.Text;
+                slry = Int32.Parse(textBox7.Text);
+                bns = Int32.Parse(textBox6.Text);
+                wHrs = Int32.Parse(textBox8.Text);
+                conNmbr = maskedTextBox2.Text;
+                date = dateTimePicker1.Value;
+                if (radioButton2.Checked)
                 {
-                    job = radioButton1.Text;
+                    job = radioButton2.Text;
                 }
                 else
                 {
-                    if (radioButton3.Checked)
-                        job = radioButton3.Text;
+                    if (radioButton1.Checked)
+                    {
+                        job = radioButton1.Text;
+                    }
+                    else
+                    {
+                        if (radioButton3.Checked)
+                            job = radioButton3.Text;
+                    }
+
                 }
+
+                //setting the values to original attributes after validation
+
+                stff = new Staff();
+                if (ValidateName(name))
+                    stff.StaffName = name;
+                if (ValidateMail(Mail))
+                    stff.mail = Mail;
+                if (ValidateBonus(bns))
+                    stff.bonus = bns;
+                if (ValidateSalary(slry))
+                    stff.Salary = slry;
+                if (ValidateWorkHrs(wHrs))
+                    stff.workHrs = wHrs;
+                stff.cnicNmbr = CnicNmber;
+                stff.Nmber = conNmbr;
+                //added to list
+                staffList.Add(stff);
+            Done task = new Done();
+            task.Show();
+
+
 
             }
 
-            //setting the values to original attributes after validation
-
-            stff = new Staff();
-            if (ValidateName(name))
-                stff.StaffName = name;
-            if (ValidateMail(Mail))
-                stff.mail = Mail;
-            if (ValidateBonus(bns))
-                stff.bonus = bns;
-            if (ValidateSalary(slry))
-                stff.Salary = slry;
-            if (ValidateWorkHrs(wHrs))
-                stff.workHrs = wHrs;
-            stff.cnicNmbr = CnicNmber;
-            stff.Nmber = conNmbr;
-            //added to list
-            staffList.Add(stff);
-            MessageBox.Show("DATA ADDED to the List");
-
-    
-
         }
 
-
-
-    }
+    
 }

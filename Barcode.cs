@@ -48,13 +48,15 @@ namespace dashboard
 
                 if (decoded_text == "FALAH Pharmacy")
                 {
-                    MessageBox.Show("Valid");
                     this.Hide();
+                    Done don = new Done();
+                    don.Show();
                 }
                 else
                 {
-                    MessageBox.Show("Invalid, Try Again");
-                    GenerateBill bil = new GenerateBill();
+
+                    WarnMsg warn = new WarnMsg();
+                    warn.Show();
                 }
             }
             catch (Exception)

@@ -36,7 +36,8 @@ namespace dashboard
             }
             if((textBox3.Text != "Admin" && textBox1.Text != "1234") &&  (textBox3.Text != "Staff" && textBox1.Text != "0000"))
             {
-                MessageBox.Show("Invalid Login Details");
+                WarnMsg warn = new WarnMsg();
+                warn.Show();
             }
         }
         public void DataRetrieveFromMedicineDataBase()

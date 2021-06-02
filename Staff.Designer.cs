@@ -62,14 +62,21 @@ namespace dashboard
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button16 = new System.Windows.Forms.Button();
+            this.button15 = new System.Windows.Forms.Button();
+            this.button14 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.warn = new System.Windows.Forms.Button();
+            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -100,11 +107,11 @@ namespace dashboard
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = global::dashboard.Properties.Resources.addepl;
-            this.pictureBox4.Location = new System.Drawing.Point(336, 194);
+            this.pictureBox4.Image = global::dashboard.Properties.Resources.team;
+            this.pictureBox4.Location = new System.Drawing.Point(442, 257);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(422, 293);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 96;
             this.pictureBox4.TabStop = false;
             // 
@@ -486,6 +493,13 @@ namespace dashboard
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.button16);
+            this.panel3.Controls.Add(this.button15);
+            this.panel3.Controls.Add(this.button14);
+            this.panel3.Controls.Add(this.button13);
+            this.panel3.Controls.Add(this.button12);
+            this.panel3.Controls.Add(this.button11);
+            this.panel3.Controls.Add(this.warn);
             this.panel3.Controls.Add(this.maskedTextBox2);
             this.panel3.Controls.Add(this.maskedTextBox1);
             this.panel3.Controls.Add(this.textBox8);
@@ -512,6 +526,139 @@ namespace dashboard
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(747, 512);
             this.panel3.TabIndex = 61;
+            // 
+            // button16
+            // 
+            this.button16.BackColor = System.Drawing.Color.Transparent;
+            this.button16.Enabled = false;
+            this.button16.FlatAppearance.BorderSize = 0;
+            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button16.Image = global::dashboard.Properties.Resources.alarm_1_;
+            this.button16.Location = new System.Drawing.Point(279, 217);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(51, 37);
+            this.button16.TabIndex = 101;
+            this.button16.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button16.UseVisualStyleBackColor = false;
+            // 
+            // button15
+            // 
+            this.button15.BackColor = System.Drawing.Color.Transparent;
+            this.button15.Enabled = false;
+            this.button15.FlatAppearance.BorderSize = 0;
+            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button15.Image = global::dashboard.Properties.Resources.alarm_1_;
+            this.button15.Location = new System.Drawing.Point(279, 264);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(51, 37);
+            this.button15.TabIndex = 101;
+            this.button15.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button15.UseVisualStyleBackColor = false;
+            // 
+            // button14
+            // 
+            this.button14.BackColor = System.Drawing.Color.Transparent;
+            this.button14.Enabled = false;
+            this.button14.FlatAppearance.BorderSize = 0;
+            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button14.Image = global::dashboard.Properties.Resources.alarm_1_;
+            this.button14.Location = new System.Drawing.Point(584, 214);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(51, 37);
+            this.button14.TabIndex = 101;
+            this.button14.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button14.UseVisualStyleBackColor = false;
+            // 
+            // button13
+            // 
+            this.button13.BackColor = System.Drawing.Color.Transparent;
+            this.button13.Enabled = false;
+            this.button13.FlatAppearance.BorderSize = 0;
+            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button13.Image = global::dashboard.Properties.Resources.alarm_1_;
+            this.button13.Location = new System.Drawing.Point(584, 161);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(51, 37);
+            this.button13.TabIndex = 101;
+            this.button13.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button13.UseVisualStyleBackColor = false;
+            // 
+            // button12
+            // 
+            this.button12.BackColor = System.Drawing.Color.Transparent;
+            this.button12.Enabled = false;
+            this.button12.FlatAppearance.BorderSize = 0;
+            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button12.Image = global::dashboard.Properties.Resources.alarm_1_;
+            this.button12.Location = new System.Drawing.Point(584, 109);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(51, 37);
+            this.button12.TabIndex = 101;
+            this.button12.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button12.UseVisualStyleBackColor = false;
+            // 
+            // button11
+            // 
+            this.button11.BackColor = System.Drawing.Color.Transparent;
+            this.button11.Enabled = false;
+            this.button11.FlatAppearance.BorderSize = 0;
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.Image = global::dashboard.Properties.Resources.alarm_1_;
+            this.button11.Location = new System.Drawing.Point(584, 65);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(51, 37);
+            this.button11.TabIndex = 101;
+            this.button11.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button11.UseVisualStyleBackColor = false;
+            // 
+            // warn
+            // 
+            this.warn.BackColor = System.Drawing.Color.Transparent;
+            this.warn.Enabled = false;
+            this.warn.FlatAppearance.BorderSize = 0;
+            this.warn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.warn.Image = global::dashboard.Properties.Resources.alarm_1_;
+            this.warn.Location = new System.Drawing.Point(581, 23);
+            this.warn.Name = "warn";
+            this.warn.Size = new System.Drawing.Size(51, 37);
+            this.warn.TabIndex = 101;
+            this.warn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.warn.UseVisualStyleBackColor = false;
+            // 
+            // maskedTextBox2
+            // 
+            this.maskedTextBox2.Location = new System.Drawing.Point(168, 169);
+            this.maskedTextBox2.Mask = "0000-0000-000";
+            this.maskedTextBox2.Name = "maskedTextBox2";
+            this.maskedTextBox2.Size = new System.Drawing.Size(410, 23);
+            this.maskedTextBox2.TabIndex = 100;
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Location = new System.Drawing.Point(168, 117);
+            this.maskedTextBox1.Mask = "00000-0000000-0";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(410, 23);
+            this.maskedTextBox1.TabIndex = 99;
+            // 
+            // textBox8
+            // 
+            this.textBox8.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox8.Location = new System.Drawing.Point(167, 267);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(99, 26);
+            this.textBox8.TabIndex = 98;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label10.Location = new System.Drawing.Point(61, 253);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(91, 48);
+            this.label10.TabIndex = 97;
+            this.label10.Text = "Working \r\nHours";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // textBox6
             // 
@@ -544,33 +691,6 @@ namespace dashboard
             this.radioButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.radioButton3.UseVisualStyleBackColor = true;
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label10.Location = new System.Drawing.Point(61, 253);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(91, 48);
-            this.label10.TabIndex = 97;
-            this.label10.Text = "Working \r\nHours";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox8.Location = new System.Drawing.Point(167, 267);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(99, 26);
-            this.textBox8.TabIndex = 98;
-            // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(168, 117);
-            this.maskedTextBox1.Mask = "00000-0000000-0";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(410, 23);
-            this.maskedTextBox1.TabIndex = 99;
-            // 
             // textBox4
             // 
             this.textBox4.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -579,14 +699,6 @@ namespace dashboard
             this.textBox4.Size = new System.Drawing.Size(411, 26);
             this.textBox4.TabIndex = 82;
             this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
-            // 
-            // maskedTextBox2
-            // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(168, 169);
-            this.maskedTextBox2.Mask = "0000-0000-000";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(410, 23);
-            this.maskedTextBox2.TabIndex = 100;
             // 
             // Staff
             // 
@@ -655,5 +767,12 @@ namespace dashboard
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.Button warn;
+        private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button11;
     }
 }

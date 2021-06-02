@@ -89,8 +89,46 @@ namespace dashboard
             get; set;
         }
 
-
-
+        WarnMsg warns = new WarnMsg();
+        private bool CheckEmpty()
+        { bool flag = true;
+            if(textBox1.Text=="")
+            {
+                warn.Enabled = true;
+                flag = false;
+            }
+            if(textBox6.Text=="")
+            {
+                button10.Enabled = true;
+                flag = false;
+            }
+            if(textBox4.Text=="")
+            {
+                button11.Enabled = true;
+                flag = false;
+            }
+            if (textBox3.Text == "")
+            {
+                button12.Enabled = true;
+                flag = false;
+            }
+            if (textBox2.Text == "")
+            {
+                button13.Enabled = true;
+                flag = false;
+            }
+            if (textBox7.Text == "")
+            {
+                button14.Enabled = true;
+                flag = false;
+            }
+            if (textBox5.Text == "")
+            {
+                button15.Enabled = true;
+                flag = false;
+            }
+            return flag;
+        }
 
         private void label4_Click(object sender, EventArgs e)
         {
@@ -130,68 +168,75 @@ namespace dashboard
 
         private void button6_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(Configuration.conection);
-            string name="";
-            string id;
-            string cName;
-            string comp;
-            int mPrice;
-            DateTime mDate;
-            DateTime eDate;
-            int stk;
-            string sats;
-
-            //*******************************************************************************************
-          
-            AddDataInList();
-
-            
-            //get data into local variables from the textBoxes, DateTimePicker etc
-            name = textBox1.Text;
-            id = textBox4.Text;
-            cName = textBox3.Text;
-            comp = textBox2.Text;
-            mPrice = Int32.Parse(textBox6.Text);
-            stk = Int32.Parse(textBox7.Text);
-            mDate = dateTimePicker2.Value;
-            eDate = dateTimePicker1.Value;
-            bool isChecked = radioButton1.Checked;
-            if (isChecked)
-                sats = radioButton1.Text;
+            if (CheckEmpty() == false)
+            {
+                warns.Show();
+            }
             else
-                sats = radioButton2.Text;
-
-            //       ********************DataBASE******************************
-            //add to DataBase
-            try
             {
-                 con.Open();
+                SqlConnection con = new SqlConnection(Configuration.conection);
+                string name = "";
+                string id;
+                string cName;
+                string comp;
+                int mPrice;
+                DateTime mDate;
+                DateTime eDate;
+                int stk;
+                string sats;
 
-                 string insertCommand = "INSERT INTO MedTable (MedicineName,MedicineID,ChemicalName,Stock,ManufacturingDate,ExpiryDate,MarketPrice,Company,Status) VALUES (@MedicineName,@MedicineID,@ChemicalName ,@Stock ,@ManufacturingDate,@ExpiryDate ,@MarketPrice,@Company ,@Status )";
-                 using (SqlCommand cmd = new SqlCommand(insertCommand, con))
-                 {
-                     cmd.Parameters.Clear();
-                     cmd.Parameters.AddWithValue("@MedicineName", name);
-                     cmd.Parameters.AddWithValue("@MedicineID", id);
-                     cmd.Parameters.AddWithValue("@ChemicalName", cName);
-                     cmd.Parameters.AddWithValue("@Stock", stk);
-                     cmd.Parameters.AddWithValue("@ManufacturingDate", mDate);
-                     cmd.Parameters.AddWithValue("@ExpiryDate", eDate);
-                     cmd.Parameters.AddWithValue("@MarketPrice", mPrice);
-                     cmd.Parameters.AddWithValue("@Company", comp);
-                     cmd.Parameters.AddWithValue("@Status", sats);
+                //*******************************************************************************************
 
-                     cmd.ExecuteNonQuery();
-                   
+                AddDataInList();
 
-                 }
-                con.Close();
+
+                //get data into local variables from the textBoxes, DateTimePicker etc
+                name = textBox1.Text;
+                id = textBox4.Text;
+                cName = textBox3.Text;
+                comp = textBox2.Text;
+                mPrice = Int32.Parse(textBox6.Text);
+                stk = Int32.Parse(textBox7.Text);
+                mDate = dateTimePicker2.Value;
+                eDate = dateTimePicker1.Value;
+                bool isChecked = radioButton1.Checked;
+                if (isChecked)
+                    sats = radioButton1.Text;
+                else
+                    sats = radioButton2.Text;
+
+                //       ********************DataBASE******************************
+                //add to DataBase
+                try
+                {
+                    con.Open();
+
+                    string insertCommand = "INSERT INTO MedTable (MedicineName,MedicineID,ChemicalName,Stock,ManufacturingDate,ExpiryDate,MarketPrice,Company,Status) VALUES (@MedicineName,@MedicineID,@ChemicalName ,@Stock ,@ManufacturingDate,@ExpiryDate ,@MarketPrice,@Company ,@Status )";
+                    using (SqlCommand cmd = new SqlCommand(insertCommand, con))
+                    {
+                        cmd.Parameters.Clear();
+                        cmd.Parameters.AddWithValue("@MedicineName", name);
+                        cmd.Parameters.AddWithValue("@MedicineID", id);
+                        cmd.Parameters.AddWithValue("@ChemicalName", cName);
+                        cmd.Parameters.AddWithValue("@Stock", stk);
+                        cmd.Parameters.AddWithValue("@ManufacturingDate", mDate);
+                        cmd.Parameters.AddWithValue("@ExpiryDate", eDate);
+                        cmd.Parameters.AddWithValue("@MarketPrice", mPrice);
+                        cmd.Parameters.AddWithValue("@Company", comp);
+                        cmd.Parameters.AddWithValue("@Status", sats);
+
+                        cmd.ExecuteNonQuery();
+
+
+                    }
+                    con.Close();
+                }
+                catch (Exception ex)
+                {
+                    string message = ex.Message;
+                }
+
             }
-            catch (Exception ex)
-            {
-                string message = ex.Message;
-            }
-           
         }
 
 
@@ -288,7 +333,8 @@ namespace dashboard
             med.ExpiryDate = eDate;
             //add to List
             medList.Add(med);
-            MessageBox.Show("DATA ADDED List");
+            Done task = new Done();
+            task.Show();
 
         }
 
