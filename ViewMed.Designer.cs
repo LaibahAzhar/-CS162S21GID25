@@ -32,12 +32,6 @@ namespace dashboard
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.MedName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ChemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Comp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -49,6 +43,7 @@ namespace dashboard
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(411, 26);
             this.textBox1.TabIndex = 56;
+            this.textBox1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyUp);
             // 
             // label3
             // 
@@ -63,54 +58,11 @@ namespace dashboard
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MedName,
-            this.ChemName,
-            this.Quantity,
-            this.Comp,
-            this.Price,
-            this.Delete});
             this.dataGridView1.Location = new System.Drawing.Point(17, 113);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.Size = new System.Drawing.Size(704, 341);
             this.dataGridView1.TabIndex = 59;
-            // 
-            // MedName
-            // 
-            this.MedName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.MedName.HeaderText = "Medicine Name";
-            this.MedName.Name = "MedName";
-            this.MedName.ReadOnly = true;
-            // 
-            // ChemName
-            // 
-            this.ChemName.HeaderText = "Chemical Name";
-            this.ChemName.Name = "ChemName";
-            this.ChemName.ReadOnly = true;
-            // 
-            // Quantity
-            // 
-            this.Quantity.HeaderText = "Quantity";
-            this.Quantity.Name = "Quantity";
-            this.Quantity.ReadOnly = true;
-            // 
-            // Comp
-            // 
-            this.Comp.HeaderText = "Company Name";
-            this.Comp.Name = "Comp";
-            this.Comp.ReadOnly = true;
-            // 
-            // Price
-            // 
-            this.Price.HeaderText = "Price";
-            this.Price.Name = "Price";
-            this.Price.ReadOnly = true;
-            // 
-            // Delete
-            // 
-            this.Delete.HeaderText = "Delete";
-            this.Delete.Name = "Delete";
             // 
             // comboBox1
             // 
@@ -142,12 +94,6 @@ namespace dashboard
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MedName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ChemName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Comp;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
-        private System.Windows.Forms.DataGridViewButtonColumn Delete;
         private System.Windows.Forms.ComboBox comboBox1;
     }
 }
