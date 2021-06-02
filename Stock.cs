@@ -55,5 +55,31 @@ namespace dashboard
             GenerateBill b = new GenerateBill();
             b.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Staff stf = new Staff();
+            stf.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

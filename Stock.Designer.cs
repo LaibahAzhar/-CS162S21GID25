@@ -69,6 +69,8 @@ namespace dashboard
             this.button5 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -122,10 +124,11 @@ namespace dashboard
             // textBox7
             // 
             this.textBox7.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox7.Location = new System.Drawing.Point(479, 165);
+            this.textBox7.Location = new System.Drawing.Point(635, 165);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(99, 26);
             this.textBox7.TabIndex = 92;
+            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // textBox3
             // 
@@ -159,11 +162,12 @@ namespace dashboard
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label11.Location = new System.Drawing.Point(401, 167);
+            this.label11.Location = new System.Drawing.Point(388, 172);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(57, 24);
+            this.label11.Size = new System.Drawing.Size(51, 24);
             this.label11.TabIndex = 87;
-            this.label11.Text = "Price";
+            this.label11.Text = "Cost";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label12
             // 
@@ -414,10 +418,12 @@ namespace dashboard
             this.panel3.Controls.Add(this.dateTimePicker2);
             this.panel3.Controls.Add(this.dateTimePicker1);
             this.panel3.Controls.Add(this.button6);
+            this.panel3.Controls.Add(this.textBox5);
             this.panel3.Controls.Add(this.textBox7);
             this.panel3.Controls.Add(this.textBox3);
             this.panel3.Controls.Add(this.label13);
             this.panel3.Controls.Add(this.label6);
+            this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.label11);
             this.panel3.Controls.Add(this.label12);
             this.panel3.Controls.Add(this.label5);
@@ -435,6 +441,7 @@ namespace dashboard
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(747, 498);
             this.panel3.TabIndex = 58;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // button1
             // 
@@ -509,6 +516,7 @@ namespace dashboard
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -528,6 +536,7 @@ namespace dashboard
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button3
             // 
@@ -567,6 +576,27 @@ namespace dashboard
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label8.Location = new System.Drawing.Point(566, 157);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(63, 48);
+            this.label8.TabIndex = 87;
+            this.label8.Text = "Price/\r\nbox";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox5.Location = new System.Drawing.Point(454, 165);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(99, 26);
+            this.textBox5.TabIndex = 92;
+            this.textBox5.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // Stock
             // 
@@ -576,6 +606,7 @@ namespace dashboard
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Stock";
             this.Text = "Stock";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -633,5 +664,7 @@ namespace dashboard
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textBox5;
     }
 }

@@ -291,9 +291,9 @@ namespace dashboard
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button8.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button8.Location = new System.Drawing.Point(617, 2);
+            this.button8.Location = new System.Drawing.Point(676, 8);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(60, 45);
+            this.button8.Size = new System.Drawing.Size(60, 51);
             this.button8.TabIndex = 4;
             this.button8.Text = "Add";
             this.button8.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -352,9 +352,9 @@ namespace dashboard
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button9.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button9.Location = new System.Drawing.Point(760, 0);
+            this.button9.Location = new System.Drawing.Point(615, 7);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(55, 45);
+            this.button9.Size = new System.Drawing.Size(55, 52);
             this.button9.TabIndex = 4;
             this.button9.Text = "View";
             this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -420,9 +420,9 @@ namespace dashboard
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button10.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button10.Location = new System.Drawing.Point(683, 2);
+            this.button10.Location = new System.Drawing.Point(742, 6);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(71, 45);
+            this.button10.Size = new System.Drawing.Size(71, 53);
             this.button10.TabIndex = 4;
             this.button10.Text = "Update";
             this.button10.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -434,7 +434,7 @@ namespace dashboard
             this.button7.FlatAppearance.BorderSize = 0;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Image = global::dashboard.Properties.Resources.back_1_;
-            this.button7.Location = new System.Drawing.Point(0, -2);
+            this.button7.Location = new System.Drawing.Point(-1, 4);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(45, 49);
             this.button7.TabIndex = 32;
@@ -444,7 +444,7 @@ namespace dashboard
             // pictureBox2
             // 
             this.pictureBox2.Image = global::dashboard.Properties.Resources.round_account_button_with_user_inside;
-            this.pictureBox2.Location = new System.Drawing.Point(827, 2);
+            this.pictureBox2.Location = new System.Drawing.Point(819, 8);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(55, 47);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -468,7 +468,7 @@ namespace dashboard
             this.label9.BackColor = System.Drawing.SystemColors.GrayText;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(98, 9);
+            this.label9.Location = new System.Drawing.Point(120, 18);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(74, 32);
             this.label9.TabIndex = 4;
@@ -487,13 +487,13 @@ namespace dashboard
             this.panel1.Controls.Add(this.button8);
             this.panel1.Location = new System.Drawing.Point(0, -7);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1005, 47);
+            this.panel1.Size = new System.Drawing.Size(1005, 59);
             this.panel1.TabIndex = 59;
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::dashboard.Properties.Resources.Webp_net_resizeimage_3_;
-            this.pictureBox3.Location = new System.Drawing.Point(44, 3);
+            this.pictureBox3.Location = new System.Drawing.Point(50, 13);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(64, 38);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -594,6 +594,7 @@ namespace dashboard
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Staff";
             this.Text = "Staff";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();

@@ -292,5 +292,20 @@ namespace dashboard
 
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Staff stf = new Staff();
+            stf.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

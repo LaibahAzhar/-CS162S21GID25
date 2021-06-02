@@ -73,6 +73,18 @@ namespace dashboard
             bar.Show();
             
         }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            Staff stf = new Staff();
+            stf.Show();
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
     
 }

@@ -62,5 +62,10 @@ namespace dashboard
             Stock s = new Stock();
             s.Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }

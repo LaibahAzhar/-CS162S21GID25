@@ -241,6 +241,7 @@ namespace dashboard
             this.ClientSize = new System.Drawing.Size(951, 577);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AdminRegistory";
             this.Text = "Form2";
             this.panel1.ResumeLayout(false);
