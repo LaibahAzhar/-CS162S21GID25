@@ -33,23 +33,12 @@ namespace dashboard
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EmpName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Bonus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Slry = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.EmpName,
-            this.Bonus,
-            this.Slry,
-            this.Delete});
             this.dataGridView1.Location = new System.Drawing.Point(16, 113);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
@@ -63,6 +52,7 @@ namespace dashboard
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(411, 26);
             this.textBox1.TabIndex = 62;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label3
             // 
@@ -82,36 +72,6 @@ namespace dashboard
             this.comboBox1.Size = new System.Drawing.Size(74, 23);
             this.comboBox1.TabIndex = 64;
             this.comboBox1.Text = "Filter";
-            // 
-            // ID
-            // 
-            this.ID.HeaderText = "Employee ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            // 
-            // EmpName
-            // 
-            this.EmpName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.EmpName.HeaderText = "Employee Name";
-            this.EmpName.Name = "EmpName";
-            this.EmpName.ReadOnly = true;
-            // 
-            // Bonus
-            // 
-            this.Bonus.HeaderText = "Bonus";
-            this.Bonus.Name = "Bonus";
-            this.Bonus.ReadOnly = true;
-            // 
-            // Slry
-            // 
-            this.Slry.HeaderText = "Salary";
-            this.Slry.Name = "Slry";
-            this.Slry.ReadOnly = true;
-            // 
-            // Delete
-            // 
-            this.Delete.HeaderText = "Delete";
-            this.Delete.Name = "Delete";
             // 
             // ViewStaff
             // 
@@ -133,11 +93,6 @@ namespace dashboard
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EmpName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Bonus;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Slry;
-        private System.Windows.Forms.DataGridViewButtonColumn Delete;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBox1;

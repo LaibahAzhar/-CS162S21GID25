@@ -85,6 +85,6 @@ namespace dashboard
             {
                 string message = ex.Message;
             }
-        }
     }
+        }
 }
