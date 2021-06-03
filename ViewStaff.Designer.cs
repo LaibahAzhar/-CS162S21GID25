@@ -84,6 +84,7 @@ namespace dashboard
             this.Controls.Add(this.comboBox1);
             this.Name = "ViewStaff";
             this.Size = new System.Drawing.Size(737, 484);
+            this.Load += new System.EventHandler(this.ViewStaff_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

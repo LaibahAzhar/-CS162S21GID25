@@ -54,6 +54,7 @@ namespace dashboard
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(175)))), ((int)(((byte)(5)))));
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Default;
             this.pictureBox1.Image = global::dashboard.Properties.Resources.logo;
             this.pictureBox1.Location = new System.Drawing.Point(-46, 35);
             this.pictureBox1.Name = "pictureBox1";
@@ -61,7 +62,6 @@ namespace dashboard
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.UseWaitCursor = true;
             // 
             // panel1
             // 
@@ -94,6 +94,7 @@ namespace dashboard
             // 
             // button2
             // 
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Image = global::dashboard.Properties.Resources.visibility_1_;
             this.button2.Location = new System.Drawing.Point(892, 315);
@@ -118,6 +119,7 @@ namespace dashboard
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label6.Font = new System.Drawing.Font("Constantia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.Blue;
             this.label6.Location = new System.Drawing.Point(781, 357);
@@ -201,7 +203,6 @@ namespace dashboard
             this.label1.TabIndex = 24;
             this.label1.Text = "Login";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-           // this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel2
             // 

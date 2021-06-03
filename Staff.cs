@@ -88,6 +88,10 @@ namespace dashboard
         {
             get; set;
         }
+        public string Contact
+        {
+            get; set;
+        }
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
 

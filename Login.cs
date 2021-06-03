@@ -14,6 +14,7 @@ namespace dashboard
         public Login()
         {
             InitializeComponent();
+            
         }
        
 
@@ -25,14 +26,14 @@ namespace dashboard
                 AdminPortal admn = new AdminPortal();
                 this.Hide();
                 admn.Show();
-                DataRetrieveFromMedicineDataBase();
+                
             }
             if (textBox3.Text == "Staff" && textBox1.Text == "0000")
             {
                 StaffPortal stff = new StaffPortal();
                 this.Hide();
                 stff.Show();
-                DataRetrieveFromMedicineDataBase();
+                
             }
             if((textBox3.Text != "Admin" && textBox1.Text != "1234") &&  (textBox3.Text != "Staff" && textBox1.Text != "0000"))
             {
@@ -40,39 +41,7 @@ namespace dashboard
                 warn.Show();
             }
         }
-        public void DataRetrieveFromMedicineDataBase()
-        {
-            try
-            {
-                SqlConnection con = new SqlConnection(Configuration.conection);
-                con.Open();
-                Medicine med = new Medicine();
 
-                string query = "SELECT * FROM MedTable";
-                SqlDataAdapter sda = new SqlDataAdapter(query, con);
-                DataTable dt = new DataTable();
-                sda.Fill(dt);
-                for (int i = 0; i < dt.Rows.Count; i++)
-                {
-                    med = new Medicine();
-                    med.MedicineName = dt.Rows[i]["MedicineName"].ToString();
-                    med.MedicineID = dt.Rows[i]["MedicineID"].ToString();
-                    med.ChemicalName = dt.Rows[i]["ChemicalName"].ToString();
-                    med.Stock = Int32.Parse(dt.Rows[i]["Stock"].ToString());
-                    med.ManufacturingDate = DateTime.Parse(dt.Rows[i]["ManufacturingDate"].ToString());
-                    med.ExpiryDate = DateTime.Parse(dt.Rows[i]["ExpiryDate"].ToString());
-                    med.MarketPrice = Int32.Parse(dt.Rows[i]["MarketPrice"].ToString());
-                    med.Company = dt.Rows[i]["Company"].ToString();
-                    med.Status = dt.Rows[i]["Status"].ToString();
-                    med.GetList().Add(med);
-                }
-                con.Close();
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.ToString(),"Ocurred");
-            }
-        }
         private void button2_MouseUp(object sender, MouseEventArgs e)
         {
             textBox1.Show();

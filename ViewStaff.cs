@@ -16,7 +16,7 @@ namespace dashboard
             InitializeComponent();
         }
 
-        private void Main_Load(object sender, EventArgs e)
+        private void Table_Load()
         {
             try
             {
@@ -56,6 +56,11 @@ namespace dashboard
             {
                 string message = ex.Message;
             }
+        }
+
+        private void ViewStaff_Load(object sender, EventArgs e)
+        {
+            Table_Load();
         }
     }
 }
