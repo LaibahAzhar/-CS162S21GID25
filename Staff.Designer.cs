@@ -54,7 +54,6 @@ namespace dashboard
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button10 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -77,6 +76,9 @@ namespace dashboard
             this.label8 = new System.Windows.Forms.Label();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -291,7 +293,7 @@ namespace dashboard
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button8.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button8.Location = new System.Drawing.Point(676, 8);
+            this.button8.Location = new System.Drawing.Point(742, 8);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(60, 51);
             this.button8.TabIndex = 4;
@@ -335,7 +337,7 @@ namespace dashboard
             // 
             this.radioButton2.AutoSize = true;
             this.radioButton2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.radioButton2.Location = new System.Drawing.Point(166, 378);
+            this.radioButton2.Location = new System.Drawing.Point(169, 378);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(100, 21);
             this.radioButton2.TabIndex = 85;
@@ -352,7 +354,7 @@ namespace dashboard
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button9.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button9.Location = new System.Drawing.Point(615, 7);
+            this.button9.Location = new System.Drawing.Point(681, 7);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(55, 52);
             this.button9.TabIndex = 4;
@@ -400,24 +402,6 @@ namespace dashboard
             this.label3.Size = new System.Drawing.Size(156, 24);
             this.label3.TabIndex = 79;
             this.label3.Text = "Employee Name";
-            // 
-            // button10
-            // 
-            this.button10.BackColor = System.Drawing.Color.Gray;
-            this.button10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button10.BackgroundImage")));
-            this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button10.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button10.Location = new System.Drawing.Point(742, 6);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(71, 53);
-            this.button10.TabIndex = 4;
-            this.button10.Text = "Update";
-            this.button10.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.button10.UseVisualStyleBackColor = false;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button7
             // 
@@ -467,13 +451,14 @@ namespace dashboard
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.GrayText;
+            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.button7);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.button9);
-            this.panel1.Controls.Add(this.button10);
             this.panel1.Controls.Add(this.button8);
             this.panel1.Location = new System.Drawing.Point(0, -7);
             this.panel1.Name = "panel1";
@@ -493,6 +478,7 @@ namespace dashboard
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.textBox3);
             this.panel3.Controls.Add(this.button16);
             this.panel3.Controls.Add(this.button15);
             this.panel3.Controls.Add(this.button14);
@@ -707,6 +693,32 @@ namespace dashboard
             this.textBox4.TabIndex = 82;
             this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox2.Location = new System.Drawing.Point(367, 18);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(308, 26);
+            this.textBox2.TabIndex = 68;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label7.Location = new System.Drawing.Point(278, 20);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(72, 24);
+            this.label7.TabIndex = 67;
+            this.label7.Text = "Search";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(167, 376);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(213, 23);
+            this.textBox3.TabIndex = 102;
+            this.textBox3.Visible = false;
+            // 
             // Staff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -758,7 +770,6 @@ namespace dashboard
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label2;
@@ -781,5 +792,8 @@ namespace dashboard
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBox3;
     }
 }
