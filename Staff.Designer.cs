@@ -540,6 +540,7 @@ namespace dashboard
             this.button16.TabIndex = 101;
             this.button16.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button16.UseVisualStyleBackColor = false;
+            this.button16.Visible = false;
             // 
             // button15
             // 
@@ -554,6 +555,7 @@ namespace dashboard
             this.button15.TabIndex = 101;
             this.button15.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button15.UseVisualStyleBackColor = false;
+            this.button15.Visible = false;
             // 
             // button14
             // 
@@ -568,6 +570,7 @@ namespace dashboard
             this.button14.TabIndex = 101;
             this.button14.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button14.UseVisualStyleBackColor = false;
+            this.button14.Visible = false;
             // 
             // button13
             // 
@@ -582,6 +585,7 @@ namespace dashboard
             this.button13.TabIndex = 101;
             this.button13.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button13.UseVisualStyleBackColor = false;
+            this.button13.Visible = false;
             // 
             // button12
             // 
@@ -596,6 +600,7 @@ namespace dashboard
             this.button12.TabIndex = 101;
             this.button12.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button12.UseVisualStyleBackColor = false;
+            this.button12.Visible = false;
             // 
             // button11
             // 
@@ -610,6 +615,7 @@ namespace dashboard
             this.button11.TabIndex = 101;
             this.button11.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button11.UseVisualStyleBackColor = false;
+            this.button11.Visible = false;
             // 
             // warn
             // 
@@ -624,6 +630,7 @@ namespace dashboard
             this.warn.TabIndex = 101;
             this.warn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.warn.UseVisualStyleBackColor = false;
+            this.warn.Visible = false;
             // 
             // maskedTextBox2
             // 

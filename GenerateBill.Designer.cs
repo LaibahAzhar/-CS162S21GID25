@@ -38,6 +38,7 @@ namespace dashboard
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -160,6 +161,7 @@ namespace dashboard
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(175)))), ((int)(((byte)(5)))));
+            this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.button4);
@@ -172,6 +174,18 @@ namespace dashboard
             this.panel2.Size = new System.Drawing.Size(259, 531);
             this.panel2.TabIndex = 3;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Constantia", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label10.Location = new System.Drawing.Point(99, 148);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(96, 52);
+            this.label10.TabIndex = 3;
+            this.label10.Text = "Staff\r\nMember";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label10.Visible = false;
             // 
             // label1
             // 
@@ -193,7 +207,7 @@ namespace dashboard
             this.button4.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button4.Image = global::dashboard.Properties.Resources.home;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.Location = new System.Drawing.Point(0, 488);
+            this.button4.Location = new System.Drawing.Point(0, 485);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(259, 45);
             this.button4.TabIndex = 4;
@@ -213,7 +227,7 @@ namespace dashboard
             this.button5.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button5.Image = global::dashboard.Properties.Resources.Webp_net_resizeimage;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button5.Location = new System.Drawing.Point(0, 329);
+            this.button5.Location = new System.Drawing.Point(1, 287);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(259, 45);
             this.button5.TabIndex = 4;
@@ -232,7 +246,7 @@ namespace dashboard
             this.button3.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button3.Image = global::dashboard.Properties.Resources.Webp_net_resizeimage_1_;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.Location = new System.Drawing.Point(0, 287);
+            this.button3.Location = new System.Drawing.Point(0, 247);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(259, 45);
             this.button3.TabIndex = 4;
@@ -252,7 +266,7 @@ namespace dashboard
             this.button2.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button2.Image = global::dashboard.Properties.Resources.Webp_net_resizeimage_3_;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.Location = new System.Drawing.Point(0, 247);
+            this.button2.Location = new System.Drawing.Point(1, 328);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(259, 45);
             this.button2.TabIndex = 4;
@@ -600,5 +614,6 @@ namespace dashboard
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Label label10;
     }
 }

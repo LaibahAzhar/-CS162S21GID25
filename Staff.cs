@@ -149,45 +149,90 @@ namespace dashboard
             if (textBox1.Text == "")
             {
                 warn.Enabled = true;
+                warn.Visible = true;
                 flag = false;
             }
+            else
+            {
+                warn.Enabled = false;
+                warn.Visible = false;
+
+            }
+
             if (textBox4.Text == "")
             {
                 button11.Enabled = true;
+                button11.Visible = true;
                 flag = false;
+            }
+            else
+            {
+                button11.Enabled = false;
+                button11.Visible = false;
             }
             if (textBox6.Text == "")
             {
                 button14.Enabled = true;
+                button14.Visible = true;
                 flag = false;
+            }
+            else
+            {
+                button14.Enabled = false;
+                button14.Visible = false;
             }
             if (textBox7.Text == "")
             {
                 button16.Enabled = true;
+                button16.Visible = true;
                 flag = false;
+            }
+            else
+            {
+                button16.Enabled = false;
+                button16.Visible = false;
             }
             if (textBox8.Text == "")
             {
                 button15.Enabled = true;
+                button15.Visible = true;
                 flag = false;
+            }
+            else
+            {
+                button15.Enabled = false;
+                button15.Visible = false;
             }
             if (maskedTextBox1.MaskCompleted==false)
             {
                 button12.Enabled = true;
+                button12.Visible = true;
                 flag = false;
+            }
+            else
+            {
+                button12.Enabled = false;
+                button12.Visible = false;
             }
             if (maskedTextBox2.MaskCompleted==false)
             {
                 button13.Enabled = true;
+                button13.Visible = true;
                 flag = false;
             }
-      
+            else
+            {
+                button13.Enabled = false;
+                button13.Visible = false;
+            }
+
             return flag;
         }
         private void button6_Click(object sender, EventArgs e)
         {   if(CheckEmpty()==false)
             {
                 warns.Show();
+
             }
             
 

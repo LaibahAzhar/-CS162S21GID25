@@ -95,37 +95,85 @@ namespace dashboard
             if(textBox1.Text=="")
             {
                 warn.Enabled = true;
+                warn.Visible = true;
                 flag = false;
             }
-            if(textBox6.Text=="")
+            else
+            {
+                warn.Enabled = false;
+                warn.Visible = false;
+            }
+            if (textBox6.Text=="")
             {
                 button10.Enabled = true;
+                button10.Visible = true;
                 flag = false;
             }
-            if(textBox4.Text=="")
+            else
+            {
+                button10.Enabled = false;
+                button10.Visible = false;
+
+            }
+            if (textBox4.Text=="")
             {
                 button11.Enabled = true;
+                button11.Visible = true;
                 flag = false;
+            }
+            else
+            {
+                button11.Enabled = false;
+                button11.Visible = false;
+
             }
             if (textBox3.Text == "")
             {
                 button12.Enabled = true;
+                button12.Visible = true;
                 flag = false;
+            }
+            else
+            {
+                button12.Enabled = false;
+                button12.Visible = false;
+
             }
             if (textBox2.Text == "")
             {
                 button13.Enabled = true;
+                button13.Visible = true;
                 flag = false;
+            }
+            else
+            {
+                button13.Enabled = false;
+                button13.Visible = false;
+
             }
             if (textBox7.Text == "")
             {
                 button14.Enabled = true;
+                button14.Visible = true;
                 flag = false;
+            }
+            else
+            {
+                button14.Enabled = false;
+                button14.Visible = false;
+
             }
             if (textBox5.Text == "")
             {
                 button15.Enabled = true;
+                button15.Visible = true;
                 flag = false;
+            }
+            else
+            {
+                button15.Enabled = false;
+                button15.Visible = false;
+
             }
             return flag;
         }

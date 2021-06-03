@@ -48,6 +48,13 @@ namespace dashboard
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
+            this.button15 = new System.Windows.Forms.Button();
+            this.button14 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.warn = new System.Windows.Forms.Button();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
@@ -70,13 +77,6 @@ namespace dashboard
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.warn = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -376,6 +376,111 @@ namespace dashboard
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
+            // button11
+            // 
+            this.button11.BackColor = System.Drawing.Color.Transparent;
+            this.button11.Enabled = false;
+            this.button11.FlatAppearance.BorderSize = 0;
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.Image = global::dashboard.Properties.Resources.alarm_1_;
+            this.button11.Location = new System.Drawing.Point(370, 67);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(51, 37);
+            this.button11.TabIndex = 102;
+            this.button11.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button11.UseVisualStyleBackColor = false;
+            this.button11.Visible = false;
+            // 
+            // button13
+            // 
+            this.button13.BackColor = System.Drawing.Color.Transparent;
+            this.button13.Enabled = false;
+            this.button13.FlatAppearance.BorderSize = 0;
+            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button13.Image = global::dashboard.Properties.Resources.alarm_1_;
+            this.button13.Location = new System.Drawing.Point(365, 157);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(51, 37);
+            this.button13.TabIndex = 102;
+            this.button13.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button13.UseVisualStyleBackColor = false;
+            this.button13.Visible = false;
+            // 
+            // button15
+            // 
+            this.button15.BackColor = System.Drawing.Color.Transparent;
+            this.button15.Enabled = false;
+            this.button15.FlatAppearance.BorderSize = 0;
+            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button15.Image = global::dashboard.Properties.Resources.alarm_1_;
+            this.button15.Location = new System.Drawing.Point(622, 221);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(51, 37);
+            this.button15.TabIndex = 102;
+            this.button15.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button15.UseVisualStyleBackColor = false;
+            this.button15.Visible = false;
+            // 
+            // button14
+            // 
+            this.button14.BackColor = System.Drawing.Color.Transparent;
+            this.button14.Enabled = false;
+            this.button14.FlatAppearance.BorderSize = 0;
+            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button14.Image = global::dashboard.Properties.Resources.alarm_1_;
+            this.button14.Location = new System.Drawing.Point(622, 157);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(51, 37);
+            this.button14.TabIndex = 102;
+            this.button14.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button14.UseVisualStyleBackColor = false;
+            this.button14.Visible = false;
+            // 
+            // button12
+            // 
+            this.button12.BackColor = System.Drawing.Color.Transparent;
+            this.button12.Enabled = false;
+            this.button12.FlatAppearance.BorderSize = 0;
+            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button12.Image = global::dashboard.Properties.Resources.alarm_1_;
+            this.button12.Location = new System.Drawing.Point(622, 109);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(51, 37);
+            this.button12.TabIndex = 102;
+            this.button12.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button12.UseVisualStyleBackColor = false;
+            this.button12.Visible = false;
+            // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.Transparent;
+            this.button10.Enabled = false;
+            this.button10.FlatAppearance.BorderSize = 0;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Image = global::dashboard.Properties.Resources.alarm_1_;
+            this.button10.Location = new System.Drawing.Point(622, 67);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(51, 37);
+            this.button10.TabIndex = 102;
+            this.button10.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button10.UseVisualStyleBackColor = false;
+            this.button10.Visible = false;
+            // 
+            // warn
+            // 
+            this.warn.BackColor = System.Drawing.Color.Transparent;
+            this.warn.Enabled = false;
+            this.warn.FlatAppearance.BorderSize = 0;
+            this.warn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.warn.Image = global::dashboard.Properties.Resources.alarm_1_;
+            this.warn.Location = new System.Drawing.Point(622, 25);
+            this.warn.Name = "warn";
+            this.warn.Size = new System.Drawing.Size(51, 37);
+            this.warn.TabIndex = 102;
+            this.warn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.warn.UseVisualStyleBackColor = false;
+            this.warn.Visible = false;
+            // 
             // textBox5
             // 
             this.textBox5.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -588,104 +693,6 @@ namespace dashboard
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(192, 26);
             this.textBox2.TabIndex = 80;
-            // 
-            // warn
-            // 
-            this.warn.BackColor = System.Drawing.Color.Transparent;
-            this.warn.Enabled = false;
-            this.warn.FlatAppearance.BorderSize = 0;
-            this.warn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.warn.Image = global::dashboard.Properties.Resources.alarm_1_;
-            this.warn.Location = new System.Drawing.Point(622, 25);
-            this.warn.Name = "warn";
-            this.warn.Size = new System.Drawing.Size(51, 37);
-            this.warn.TabIndex = 102;
-            this.warn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.warn.UseVisualStyleBackColor = false;
-            // 
-            // button10
-            // 
-            this.button10.BackColor = System.Drawing.Color.Transparent;
-            this.button10.Enabled = false;
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Image = global::dashboard.Properties.Resources.alarm_1_;
-            this.button10.Location = new System.Drawing.Point(622, 67);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(51, 37);
-            this.button10.TabIndex = 102;
-            this.button10.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button10.UseVisualStyleBackColor = false;
-            // 
-            // button11
-            // 
-            this.button11.BackColor = System.Drawing.Color.Transparent;
-            this.button11.Enabled = false;
-            this.button11.FlatAppearance.BorderSize = 0;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Image = global::dashboard.Properties.Resources.alarm_1_;
-            this.button11.Location = new System.Drawing.Point(370, 67);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(51, 37);
-            this.button11.TabIndex = 102;
-            this.button11.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button11.UseVisualStyleBackColor = false;
-            // 
-            // button12
-            // 
-            this.button12.BackColor = System.Drawing.Color.Transparent;
-            this.button12.Enabled = false;
-            this.button12.FlatAppearance.BorderSize = 0;
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Image = global::dashboard.Properties.Resources.alarm_1_;
-            this.button12.Location = new System.Drawing.Point(622, 109);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(51, 37);
-            this.button12.TabIndex = 102;
-            this.button12.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button12.UseVisualStyleBackColor = false;
-            // 
-            // button13
-            // 
-            this.button13.BackColor = System.Drawing.Color.Transparent;
-            this.button13.Enabled = false;
-            this.button13.FlatAppearance.BorderSize = 0;
-            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.Image = global::dashboard.Properties.Resources.alarm_1_;
-            this.button13.Location = new System.Drawing.Point(365, 157);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(51, 37);
-            this.button13.TabIndex = 102;
-            this.button13.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button13.UseVisualStyleBackColor = false;
-            // 
-            // button14
-            // 
-            this.button14.BackColor = System.Drawing.Color.Transparent;
-            this.button14.Enabled = false;
-            this.button14.FlatAppearance.BorderSize = 0;
-            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button14.Image = global::dashboard.Properties.Resources.alarm_1_;
-            this.button14.Location = new System.Drawing.Point(622, 157);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(51, 37);
-            this.button14.TabIndex = 102;
-            this.button14.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button14.UseVisualStyleBackColor = false;
-            // 
-            // button15
-            // 
-            this.button15.BackColor = System.Drawing.Color.Transparent;
-            this.button15.Enabled = false;
-            this.button15.FlatAppearance.BorderSize = 0;
-            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button15.Image = global::dashboard.Properties.Resources.alarm_1_;
-            this.button15.Location = new System.Drawing.Point(622, 221);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(51, 37);
-            this.button15.TabIndex = 102;
-            this.button15.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button15.UseVisualStyleBackColor = false;
             // 
             // Medicine
             // 

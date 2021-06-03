@@ -16,7 +16,7 @@ namespace dashboard
             InitializeComponent();
             
         }
-       
+        public string user = "";
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -24,18 +24,21 @@ namespace dashboard
             if (textBox3.Text == "Admin" && textBox1.Text == "1234")
             {
                 AdminPortal admn = new AdminPortal();
-                this.Hide();
+                this.Dispose();
                 admn.Show();
+                user = "Admin";
                 
             }
             if (textBox3.Text == "Staff" && textBox1.Text == "0000")
             {
                 StaffPortal stff = new StaffPortal();
-                this.Hide();
+                this.Dispose();
                 stff.Show();
+                user ="Staff";
                 
             }
-            if((textBox3.Text != "Admin" && textBox1.Text != "1234") &&  (textBox3.Text != "Staff" && textBox1.Text != "0000"))
+            
+            if(user !=" Admin" && user != "Staff")
             {
                 WarnMsg warn = new WarnMsg();
                 warn.Show();
