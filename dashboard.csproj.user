@@ -10,6 +10,9 @@
     <Compile Update="Barcode.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Done.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="EditingMed.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -48,6 +51,9 @@
     </Compile>
     <Compile Update="ViewStaff.cs">
       <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="WarnMsg.cs">
+      <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>

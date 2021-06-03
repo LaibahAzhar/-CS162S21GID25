@@ -85,6 +85,7 @@ namespace dashboard
             this.Controls.Add(this.label3);
             this.Name = "ViewMed";
             this.Size = new System.Drawing.Size(737, 484);
+            this.Load += new System.EventHandler(this.ViewMed_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

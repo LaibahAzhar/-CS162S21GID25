@@ -14,8 +14,13 @@ namespace dashboard
         public ViewMed()
         {
             InitializeComponent();
+            //Table_Load();
         }
         private void Main_Load(object sender, EventArgs e)
+        {
+            
+        }
+        public void Table_Load()
         {
             try
             {
@@ -86,5 +91,10 @@ namespace dashboard
                 string message = ex.Message;
             }
     }
+
+        private void ViewMed_Load(object sender, EventArgs e)
+        {
+            Table_Load();
         }
+    }
 }
