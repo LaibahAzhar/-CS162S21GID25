@@ -9,6 +9,7 @@ using System.Data.SqlClient;
 
 namespace dashboard
 {
+
     public partial class ViewMed : UserControl
     {
         public ViewMed()
@@ -28,7 +29,7 @@ namespace dashboard
                 con.Open();
                 Medicine med = new Medicine();
 
-                string query = "SELECT * FROM MedTable";
+                string query = "SELECT * FROM MedicineTable";
                 SqlDataAdapter sda = new SqlDataAdapter(query, con);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
@@ -78,7 +79,7 @@ namespace dashboard
                 con.Open();
                 Medicine med = new Medicine();
 
-                string query = "SELECT * FROM MedTable";
+                string query = "SELECT * FROM MedicineTable";
                 SqlDataAdapter sda = new SqlDataAdapter(query, con);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);

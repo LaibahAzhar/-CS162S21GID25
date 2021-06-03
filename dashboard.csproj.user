@@ -10,6 +10,9 @@
     <Compile Update="Barcode.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="BillRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Done.cs">
       <SubType>Form</SubType>
     </Compile>

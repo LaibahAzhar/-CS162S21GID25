@@ -17,6 +17,7 @@ namespace dashboard
             medList = new List<Medicine>();
 
         }
+        
 
         private static Medicine med;
         ViewMed view = new ViewMed();
@@ -232,6 +233,7 @@ namespace dashboard
                 DateTime eDate;
                 int stk;
                 string sats;
+                int sPrice;
 
                 //*******************************************************************************************
 
@@ -247,6 +249,7 @@ namespace dashboard
                 stk = Int32.Parse(textBox7.Text);
                 mDate = dateTimePicker2.Value;
                 eDate = dateTimePicker1.Value;
+                sPrice = Int32.Parse(textBox5.Text);
                 bool isChecked = radioButton1.Checked;
                 if (isChecked)
                     sats = radioButton1.Text;
@@ -259,7 +262,7 @@ namespace dashboard
                 {
                     con.Open();
 
-                    string insertCommand = "INSERT INTO MedTable (MedicineName,MedicineID,ChemicalName,Stock,ManufacturingDate,ExpiryDate,MarketPrice,Company,Status) VALUES (@MedicineName,@MedicineID,@ChemicalName ,@Stock ,@ManufacturingDate,@ExpiryDate ,@MarketPrice,@Company ,@Status )";
+                    string insertCommand = "INSERT INTO MedicineTable (MedicineName,MedicineID,ChemicalName,Stock,ManufacturingDate,ExpiryDate,MarketPrice,SellingPrice,Company,Status) VALUES (@MedicineName,@MedicineID,@ChemicalName ,@Stock ,@ManufacturingDate,@ExpiryDate ,@MarketPrice,@SellingPrice,@Company ,@Status )";
                     using (SqlCommand cmd = new SqlCommand(insertCommand, con))
                     {
                         cmd.Parameters.Clear();
@@ -270,6 +273,7 @@ namespace dashboard
                         cmd.Parameters.AddWithValue("@ManufacturingDate", mDate);
                         cmd.Parameters.AddWithValue("@ExpiryDate", eDate);
                         cmd.Parameters.AddWithValue("@MarketPrice", mPrice);
+                        cmd.Parameters.AddWithValue("@SellingPrice", sPrice);
                         cmd.Parameters.AddWithValue("@Company", comp);
                         cmd.Parameters.AddWithValue("@Status", sats);
 
@@ -285,6 +289,7 @@ namespace dashboard
                 }
 
             }
+            setNullValuesToTextBoxes();
         }
 
 
@@ -347,6 +352,7 @@ namespace dashboard
             string cName;
             string comp;
             int mPrice;
+            int sPrice;
             DateTime mDate;
             DateTime eDate;
             int stk;
@@ -360,6 +366,7 @@ namespace dashboard
             stk = Int32.Parse(textBox7.Text);
             mDate = dateTimePicker2.Value;
             eDate = dateTimePicker1.Value;
+            sPrice = Int32.Parse(textBox5.Text);
             bool isChecked = radioButton1.Checked;
             if (isChecked)
                 sats = radioButton1.Text;
@@ -379,13 +386,24 @@ namespace dashboard
             med.Stock = stk;
             med.ManufacturingDate = mDate;
             med.ExpiryDate = eDate;
+            med.SellingPrice = sPrice;
             //add to List
             medList.Add(med);
             Done task = new Done();
             task.Show();
 
         }
-
+        private void setNullValuesToTextBoxes()
+        {
+            textBox1.Text = null;
+            textBox4.Text = null;
+            textBox3.Text = null;
+            textBox6.Text = null;
+            textBox5.Text = null;
+            textBox7.Text = null;
+            radioButton1.Text = null;
+            radioButton2.Text = null;
+        }
         private void button2_Click(object sender, EventArgs e)
         {
             Staff stf = new Staff();

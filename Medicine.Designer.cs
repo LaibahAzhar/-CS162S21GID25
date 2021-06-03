@@ -368,11 +368,11 @@ namespace dashboard
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(410, 221);
+            this.label8.Location = new System.Drawing.Point(399, 221);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(63, 48);
+            this.label8.Size = new System.Drawing.Size(74, 48);
             this.label8.TabIndex = 98;
-            this.label8.Text = "Price/\r\nbox";
+            this.label8.Text = "Selling \r\nPrice";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 

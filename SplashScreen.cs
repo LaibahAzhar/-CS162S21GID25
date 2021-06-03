@@ -45,7 +45,7 @@ namespace dashboard
                 con.Open();
                 Medicine med = new Medicine();
 
-                string query = "SELECT * FROM MedTable";
+                string query = "SELECT * FROM MedicineTable";
                 SqlDataAdapter sda = new SqlDataAdapter(query, con);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
