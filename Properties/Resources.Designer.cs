@@ -263,6 +263,16 @@ namespace dashboard.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap qr_code {
+            get {
+                object obj = ResourceManager.GetObject("qr-code", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap round_account_button_with_user_inside {
             get {
                 object obj = ResourceManager.GetObject("round-account-button-with-user-inside", resourceCulture);

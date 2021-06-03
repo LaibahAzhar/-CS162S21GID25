@@ -38,9 +38,11 @@ namespace dashboard
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(45, 12);
+            this.pictureBox1.Image = global::dashboard.Properties.Resources.qr_code;
+            this.pictureBox1.Location = new System.Drawing.Point(106, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(583, 360);
+            this.pictureBox1.Size = new System.Drawing.Size(350, 350);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -72,7 +74,7 @@ namespace dashboard
             this.stopbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.stopbtn.ForeColor = System.Drawing.Color.Black;
             this.stopbtn.Image = ((System.Drawing.Image)(resources.GetObject("stopbtn.Image")));
-            this.stopbtn.Location = new System.Drawing.Point(409, 388);
+            this.stopbtn.Location = new System.Drawing.Point(362, 388);
             this.stopbtn.Name = "stopbtn";
             this.stopbtn.Size = new System.Drawing.Size(120, 41);
             this.stopbtn.TabIndex = 32;
@@ -85,12 +87,13 @@ namespace dashboard
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(175)))), ((int)(((byte)(5)))));
-            this.ClientSize = new System.Drawing.Size(681, 450);
+            this.ClientSize = new System.Drawing.Size(550, 450);
             this.Controls.Add(this.stopbtn);
             this.Controls.Add(this.scanbtn);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Barcode";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Barcode";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
