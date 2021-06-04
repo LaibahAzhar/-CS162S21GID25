@@ -38,14 +38,14 @@ namespace dashboard
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -83,7 +83,6 @@ namespace dashboard
             this.lbl.Size = new System.Drawing.Size(97, 26);
             this.lbl.TabIndex = 35;
             this.lbl.Text = "Password";
-            this.lbl.Click += new System.EventHandler(this.lbl_Click);
             // 
             // label6
             // 
@@ -94,7 +93,6 @@ namespace dashboard
             this.label6.Size = new System.Drawing.Size(92, 26);
             this.label6.TabIndex = 35;
             this.label6.Text = "Confirm ";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label5
             // 
@@ -105,7 +103,6 @@ namespace dashboard
             this.label5.Size = new System.Drawing.Size(97, 26);
             this.label5.TabIndex = 34;
             this.label5.Text = "Password";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label4
             // 
@@ -116,7 +113,6 @@ namespace dashboard
             this.label4.Size = new System.Drawing.Size(105, 26);
             this.label4.TabIndex = 33;
             this.label4.Text = "Username";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
@@ -127,7 +123,6 @@ namespace dashboard
             this.label3.Size = new System.Drawing.Size(72, 26);
             this.label3.TabIndex = 32;
             this.label3.Text = "E-mail";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -138,7 +133,6 @@ namespace dashboard
             this.label2.Size = new System.Drawing.Size(66, 26);
             this.label2.TabIndex = 31;
             this.label2.Text = "Name";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // button1
             // 
@@ -158,29 +152,12 @@ namespace dashboard
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(641, 375);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(231, 23);
-            this.textBox5.TabIndex = 29;
-            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(641, 317);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(231, 23);
-            this.textBox4.TabIndex = 28;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
-            // 
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(641, 275);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(231, 23);
             this.textBox3.TabIndex = 27;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // textBox2
             // 
@@ -188,7 +165,6 @@ namespace dashboard
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(231, 23);
             this.textBox2.TabIndex = 26;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // textBox1
             // 
@@ -196,7 +172,6 @@ namespace dashboard
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(231, 23);
             this.textBox1.TabIndex = 25;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
@@ -208,7 +183,6 @@ namespace dashboard
             this.label1.TabIndex = 24;
             this.label1.Text = "Register Admin";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // panel2
             // 
@@ -219,7 +193,6 @@ namespace dashboard
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(454, 590);
             this.panel2.TabIndex = 0;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // pictureBox1
             // 
@@ -232,7 +205,22 @@ namespace dashboard
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.UseWaitCursor = true;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(641, 375);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(231, 23);
+            this.textBox5.TabIndex = 29;
+            this.textBox5.UseSystemPasswordChar = true;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(641, 317);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(231, 23);
+            this.textBox4.TabIndex = 28;
+            this.textBox4.UseSystemPasswordChar = true;
             // 
             // AdminRegistory
             // 
@@ -264,12 +252,12 @@ namespace dashboard
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbl;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox4;
     }
 }

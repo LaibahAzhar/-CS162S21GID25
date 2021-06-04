@@ -401,8 +401,8 @@ namespace dashboard
             textBox6.Text = null;
             textBox5.Text = null;
             textBox7.Text = null;
-            radioButton1.Text = null;
-            radioButton2.Text = null;
+            //radioButton1.Text = null;
+            //radioButton2.Text = null;
         }
         private void button2_Click(object sender, EventArgs e)
         {

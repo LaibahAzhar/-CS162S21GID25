@@ -81,3 +81,11 @@ C:\Users\hp\OneDrive\Documents\-CS162S21GID25\bin\Debug\netcoreapp3.1\runtimes\w
 C:\Users\hp\OneDrive\Documents\2nd semester\OOP\Final OOP PROJECT\-CS162S21GID25\-CS162S21GID25\obj\Debug\netcoreapp3.1\dashboard.Done.resources
 C:\Users\hp\OneDrive\Documents\2nd semester\OOP\Final OOP PROJECT\-CS162S21GID25\-CS162S21GID25\obj\Debug\netcoreapp3.1\dashboard.WarnMsg.resources
 C:\Users\hp\OneDrive\Documents\2nd semester\OOP\Final OOP PROJECT\-CS162S21GID25\-CS162S21GID25\obj\Debug\netcoreapp3.1\dashboard.BillRecord.resources
+C:\Users\hp\OneDrive\Documents\2nd semester\OOP\Final OOP PROJECT\-CS162S21GID25\-CS162S21GID25\bin\Debug\netcoreapp3.1\EntityFramework.SqlServer.dll
+C:\Users\hp\OneDrive\Documents\2nd semester\OOP\Final OOP PROJECT\-CS162S21GID25\-CS162S21GID25\bin\Debug\netcoreapp3.1\EntityFramework.dll
+C:\Users\hp\OneDrive\Documents\2nd semester\OOP\Final OOP PROJECT\-CS162S21GID25\-CS162S21GID25\bin\Debug\netcoreapp3.1\System.Data.SQLite.dll
+C:\Users\hp\OneDrive\Documents\2nd semester\OOP\Final OOP PROJECT\-CS162S21GID25\-CS162S21GID25\bin\Debug\netcoreapp3.1\System.Data.SQLite.EF6.dll
+C:\Users\hp\OneDrive\Documents\2nd semester\OOP\Final OOP PROJECT\-CS162S21GID25\-CS162S21GID25\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\SQLite.Interop.dll
+C:\Users\hp\OneDrive\Documents\2nd semester\OOP\Final OOP PROJECT\-CS162S21GID25\-CS162S21GID25\bin\Debug\netcoreapp3.1\runtimes\osx-x64\native\SQLite.Interop.dll
+C:\Users\hp\OneDrive\Documents\2nd semester\OOP\Final OOP PROJECT\-CS162S21GID25\-CS162S21GID25\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\SQLite.Interop.dll
+C:\Users\hp\OneDrive\Documents\2nd semester\OOP\Final OOP PROJECT\-CS162S21GID25\-CS162S21GID25\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\SQLite.Interop.dll
