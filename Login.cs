@@ -28,10 +28,11 @@ namespace dashboard
             sda.Fill(dt);
                 if (textBox3.Text == dt.Rows[0]["UserName"].ToString() && textBox1.Text == dt.Rows[0]["Password"].ToString())
                 {
-                AdminPortal admn = new AdminPortal();
-                this.Dispose();
-                    admn.Show();
                 User = "Admin";
+                this.Dispose();
+                AdminPortal admn = new AdminPortal();
+                admn.Show();
+               
             }
             else
             {
@@ -42,16 +43,24 @@ namespace dashboard
             //    AdminPortal admn = new AdminPortal();
             //    this.Dispose();
             //    admn.Show();
-           
+
 
             //}
-            if (textBox3.Text == "Staff" && textBox1.Text == "0000")
+            string query1 = "SELECT * FROM StaffLoginTable";
+            SqlDataAdapter sda1 = new SqlDataAdapter(query1, con);
+            DataTable dt1 = new DataTable();
+            sda.Fill(dt1);
+            for (int i = 0; i < dt1.Rows.Count; i++)
             {
-                StaffPortal stff = new StaffPortal();
-                this.Dispose();
-                stff.Show();
-               User = "Staff";
-
+                if (textBox3.Text == dt.Rows[i]["UserName"].ToString() && textBox1.Text == dt.Rows[i]["Password"].ToString())
+                {
+                    StaffPortal stff = new StaffPortal();
+                    User = "Staff";
+                    this.Dispose();
+                    stff.Show();
+                   
+                    break;
+                }
             }
 
             //if(user !=" Admin" && user != "Staff")

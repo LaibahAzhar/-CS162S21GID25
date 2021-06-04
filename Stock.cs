@@ -71,13 +71,14 @@ namespace dashboard
             {
                 
                 SqlConnection con = new SqlConnection(Configuration.conection);
-                con.Open();
+                
                 Medicine med = new Medicine();
 
                 string query = "SELECT * FROM MedicineTable";
                 SqlDataAdapter sda = new SqlDataAdapter(query, con);
                 SqlDataReader myReader;
                 SqlCommand cmd = new SqlCommand(query, con);
+                con.Open();
                 myReader = cmd.ExecuteReader();
                 while (myReader.Read())
                 {
@@ -85,6 +86,7 @@ namespace dashboard
                     comString.Add(mName);
 
                 }
+                myReader.Close();
                 con.Close();
             }catch(Exception ex)
             {
@@ -97,13 +99,13 @@ namespace dashboard
             try { 
             string mName=textBox8.Text;
             SqlConnection con = new SqlConnection(Configuration.conection);
-            con.Open();
+            
             string query = "SELECT * FROM MedicineTable where MedicineName = '"+mName+"'";
 
             SqlCommand sda = new SqlCommand(query, con);
             SqlDataReader dr;
-
-            dr = sda.ExecuteReader();
+                con.Open();
+                dr = sda.ExecuteReader();
             if (dr.HasRows)
             {
                 dr.Read();
@@ -119,6 +121,7 @@ namespace dashboard
                     textBox7.Text = (dr["SellingPrice"].ToString());
 
                 }
+                dr.Close();
             con.Close();
         }
             catch(Exception ex)

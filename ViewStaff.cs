@@ -24,7 +24,7 @@ namespace dashboard
                 con.Open();
                 Staff stf= new Staff();
 
-                string query = "SELECT * FROM MedTable";
+                string query = "SELECT * FROM StaffTable";
                 SqlDataAdapter sda = new SqlDataAdapter(query, con);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);

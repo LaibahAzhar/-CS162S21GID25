@@ -38,8 +38,10 @@ namespace dashboard
         private int workHrs;
         private string contact;
         private string job;
+        private string userName;
+        private string password;
 
-       
+
         public static Staff getObject()
         {
             if (stff== null)
@@ -93,6 +95,15 @@ namespace dashboard
         {
             get; set;
         }
+        public string UserName
+        {
+            get; set;
+        }
+        public string Password
+        {
+            get; set;
+        }
+
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
 
@@ -248,7 +259,8 @@ namespace dashboard
                 string conNmbr;
                 DateTime date;
                 string job = "";
-
+                string uName;
+                string psswrd;
                 //***********************************************************************************
 
                 AddDataInList();
@@ -262,6 +274,8 @@ namespace dashboard
                 wHrs = Int32.Parse(textBox8.Text);
                 conNmbr = maskedTextBox2.Text;
                 date = dateTimePicker1.Value;
+                uName = textBox7.Text;
+                psswrd = textBox8.Text;
                 if (radioButton2.Checked)
                 {
                     job = radioButton2.Text;
@@ -297,6 +311,8 @@ namespace dashboard
                         cmd.Parameters.AddWithValue("@ContactNmbr", conNmbr);
                         cmd.Parameters.AddWithValue("@DOB", date);
                         cmd.Parameters.AddWithValue("@Job", job);
+                        cmd.Parameters.AddWithValue("@UserName", uName);
+                        cmd.Parameters.AddWithValue("@Password", psswrd);
 
                         cmd.ExecuteNonQuery();
                     }
@@ -306,6 +322,26 @@ namespace dashboard
                 {
                     string message = ex.Message;
                 }
+                try
+                {
+                    con.Open();
+
+                    string insertCommand = "INSERT INTO StaffLoginTable (UserName,Password) VALUES (@UserName,@password)";
+                    using (SqlCommand cmd = new SqlCommand(insertCommand, con))
+                    {
+                        cmd.Parameters.Clear();
+                        cmd.Parameters.AddWithValue("@UserName", uName);
+                        cmd.Parameters.AddWithValue("@Password", psswrd);
+
+                        cmd.ExecuteNonQuery();
+                    }
+                    con.Close();
+                }
+                catch (Exception ex)
+                {
+                    string message = ex.Message;
+                }
+                //AdminRegistory.getObject().Show();
             }
         }
 
@@ -367,16 +403,19 @@ namespace dashboard
                 string conNmbr = "";
                 DateTime date;
                 string job;
+            string uName;
+            string psswrd;
 
-
-                name = textBox1.Text;
+            name = textBox1.Text;
                 CnicNmber = maskedTextBox1.Text;
                 Mail = textBox4.Text;
-                slry = Int32.Parse(textBox7.Text);
+                slry = Int32.Parse(textBox9.Text);
                 bns = Int32.Parse(textBox6.Text);
-                wHrs = Int32.Parse(textBox8.Text);
+                wHrs = Int32.Parse(textBox5.Text);
                 conNmbr = maskedTextBox2.Text;
                 date = dateTimePicker1.Value;
+            uName = textBox7.Text;
+            psswrd = textBox8.Text;
                 if (radioButton2.Checked)
                 {
                     job = radioButton2.Text;
@@ -447,7 +486,7 @@ namespace dashboard
             }
             textBox2.AutoCompleteCustomSource = conString;
         }
-        public void setValues()
+      /*  public void setValues()
         {
             try
             {
@@ -472,7 +511,6 @@ namespace dashboard
                     maskedTextBox2.Text = (read["ContactNmbr"].ToString());
                     dateTimePicker1.Text = (read["DOB"].ToString());
                     radioButton3.Visible = false;
-                    textBox3.Visible = true;
                     textBox3.Text = (read["Job"].ToString());
 
                 }
@@ -482,7 +520,7 @@ namespace dashboard
             {
                 string message = ex.Message;
             }
-        }
+        }*/
         private void setNullValuesToTextBoxes()
         {
             textBox1.Text = null;
@@ -494,8 +532,8 @@ namespace dashboard
             maskedTextBox2.Text = null;
             dateTimePicker1.Text = null;
             radioButton3.Visible = false; 
-            textBox3.Visible = true;
-            textBox3.Text = null;
+            //textBox3.Visible = true;
+            //textBox3.Text = null;
 
         }
         
@@ -511,10 +549,6 @@ namespace dashboard
             if(!(textBox2.Text== sName))
             {
                 setNullValuesToTextBoxes();
-            }
-            else
-            {
-                setValues();
             }
             con.Close();
         }

@@ -19,8 +19,8 @@ namespace dashboard
 
         private void SplashScreen_Load(object sender, EventArgs e)
         {
-            DataRetrieveFromMedicineDataBase();
-            DataRetrieveFromStaffDataBase();
+           // DataRetrieveFromMedicineDataBase();
+           // DataRetrieveFromStaffDataBase();
         }
 
         private void timer1_Tick(object sender, EventArgs e)

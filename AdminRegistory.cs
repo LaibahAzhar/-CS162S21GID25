@@ -19,6 +19,15 @@ namespace dashboard
         private string mail;
         private string userName;
         private string password;
+        public static AdminRegistory admin;
+        public static AdminRegistory getObject()
+        {
+            if (admin == null)
+            {
+                admin = new AdminRegistory();
+            }
+            return admin;
+        }
         public string Name
         {
             get; set;

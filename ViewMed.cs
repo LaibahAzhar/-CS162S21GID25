@@ -76,11 +76,13 @@ namespace dashboard
             try
           {
                 SqlConnection con = new SqlConnection(Configuration.conection);
-                con.Open();
+               
                 Medicine med = new Medicine();
 
                 string query = "SELECT * FROM MedicineTable";
+                con.Open();
                 SqlDataAdapter sda = new SqlDataAdapter(query, con);
+                
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
                 dataGridView1.DataSource = dt;
