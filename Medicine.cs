@@ -1,11 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace dashboard
 {
@@ -17,7 +13,7 @@ namespace dashboard
             medList = new List<Medicine>();
 
         }
-        
+
 
         private static Medicine med;
         ViewMed view = new ViewMed();
@@ -92,8 +88,9 @@ namespace dashboard
 
         WarnMsg warns = new WarnMsg();
         private bool CheckEmpty()
-        { bool flag = true;
-            if(textBox1.Text=="")
+        {
+            bool flag = true;
+            if (textBox1.Text == "")
             {
                 warn.Enabled = true;
                 warn.Visible = true;
@@ -104,7 +101,7 @@ namespace dashboard
                 warn.Enabled = false;
                 warn.Visible = false;
             }
-            if (textBox6.Text=="")
+            if (textBox6.Text == "")
             {
                 button10.Enabled = true;
                 button10.Visible = true;
@@ -116,7 +113,7 @@ namespace dashboard
                 button10.Visible = false;
 
             }
-            if (textBox4.Text=="")
+            if (textBox4.Text == "")
             {
                 button11.Enabled = true;
                 button11.Visible = true;
@@ -418,6 +415,41 @@ namespace dashboard
         private void label8_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void labelStaff_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Medicine_Load(object sender, EventArgs e)
+        {
+            string user = Login.User;
+            // string user = Login.User;
+            MessageBox.Show(Login.User);
+            if (user == "Admin")
+            {
+                labelAdmin.Visible = true;
+                labelStaff.Visible = false;
+
+                //disable billing record button
+                billingBtn.Enabled = true;
+                billingBtn.Visible = true;
+                //disable staff button
+                staffBtn.Enabled = true;
+                staffBtn.Visible = true;
+            }
+            //Disabling some functionality if a staff member is Signed In
+            if (user == "Staff")
+            {
+                labelAdmin.Visible = false;
+                labelStaff.Visible = true;
+
+                //disable billing record button
+                billingBtn.Visible = false;
+                //disable staff button
+                staffBtn.Visible = false;
+            }
         }
     }
 }

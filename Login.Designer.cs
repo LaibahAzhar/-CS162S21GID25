@@ -95,7 +95,8 @@ namespace dashboard
             // button2
             // 
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Image = global::dashboard.Properties.Resources.visibility_1_;
             this.button2.Location = new System.Drawing.Point(892, 315);
             this.button2.Name = "button2";

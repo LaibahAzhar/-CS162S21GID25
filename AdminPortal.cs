@@ -61,9 +61,9 @@ namespace dashboard
 
         private void staff_Click(object sender, EventArgs e)
         {
-            Staff stf = new Staff();
-            this.SendToBack();
+            Employee stf = new Employee();
             stf.Show();
+            this.Hide();
             
         }
 
@@ -77,6 +77,11 @@ namespace dashboard
             Login log = new Login();
             this.Dispose();
             log.Show();
+        }
+
+        private void AdminPortal_Load(object sender, EventArgs e)
+        {
+            label4.Text = Login.UserName;
         }
     }
 }

@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace dashboard
 {
@@ -55,7 +51,7 @@ namespace dashboard
                 string sName = textBox2.Text;
                 SqlConnection con = new SqlConnection(Configuration.conection);
                 con.Open();
-                string query = "SELECT * FROM StaffTable where Name = '"+sName+"'";
+                string query = "SELECT * FROM StaffTable where Name = '" + sName + "'";
 
                 SqlCommand sda = new SqlCommand(query, con);
                 SqlDataReader read;
@@ -101,7 +97,7 @@ namespace dashboard
             string sName = textBox2.Text;
             SqlConnection con = new SqlConnection(Configuration.conection);
             con.Open();
-            string query = "SELECT * FROM StaffTable where Name = '"+sName+"'";
+            string query = "SELECT * FROM StaffTable where Name = '" + sName + "'";
 
             SqlCommand sda = new SqlCommand(query, con);
 
@@ -131,7 +127,7 @@ namespace dashboard
             try
             {
                 con.Open();
-                string insertCommand = "UPDATE StaffTable SET (Salary,Bonus,WorkingHrs,ContacNmbr) VALUES (@Salary,@Bonus,@WorkingHrs,@ContacNmbr) where '"+textBox1.Text+"'";
+                string insertCommand = "UPDATE StaffTable SET (Salary,Bonus,WorkingHrs,ContacNmbr) VALUES (@Salary,@Bonus,@WorkingHrs,@ContacNmbr) where '" + textBox1.Text + "'";
                 using (SqlCommand cmd = new SqlCommand(insertCommand, con))
                 {
                     cmd.Parameters.Clear();

@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 
 namespace dashboard
@@ -39,6 +34,11 @@ namespace dashboard
             this.Dispose();
             log.Show();
 
+        }
+
+        private void StaffPortal_Load(object sender, EventArgs e)
+        {
+            label4.Text = Login.UserName;
         }
     }
 }
