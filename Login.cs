@@ -68,15 +68,14 @@ namespace dashboard
                 {
                     if (textBox3.Text == dt1.Rows[j]["UserName"].ToString() && textBox1.Text == dt1.Rows[j]["Password"].ToString())
                     {
+                        UserName = dt1.Rows[j]["UserName"].ToString();
                         setUser("Staff");
                         StaffPortal stff = new StaffPortal();
                         this.Dispose();
                         stff.Show();
+                        success = true;
                     }
-                    else
-                    {
-                        MessageBox.Show("Invalid");
-                    }
+
                 }
                 con.Close();
 
@@ -85,6 +84,9 @@ namespace dashboard
             {
                 string message = ex.Message;
             }
+            if (success == false)
+            { WarnMsg warn = new WarnMsg();
+                warn.Show(); }
         }
 
         private void button2_MouseUp(object sender, MouseEventArgs e)

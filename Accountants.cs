@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Data.SqlClient;
+using System.Data;
 
 namespace dashboard
 {
@@ -26,32 +27,16 @@ namespace dashboard
 public void AddDataInDataBase( Accountants a)
         {
             SqlConnection con = new SqlConnection(Configuration.conection);
+
             try
             {
-                con.Open();
 
-                string insertCommand = "INSERT INTO StaffLoginTable (UserName,Password) VALUES (@UserName,@Password)";
-                using (SqlCommand cnn = new SqlCommand(insertCommand, con))
-                {
-                    cnn.Parameters.Clear();
-                    cnn.Parameters.AddWithValue("@UserName", a.UserName);
-                    cnn.Parameters.AddWithValue("@Password", a.Password);
-
-                    cnn.ExecuteNonQuery();
-                }
-                con.Close();
-            }
-            catch (Exception ex)
-            {
-                string message = ex.Message;
-            }
-            try
-            {
                 con.Open();
-                DateTime t=new DateTime();
                 string insertCommand = "INSERT INTO StaffTable (Name,CNICnmbr,Email,Salary,Bonus,WorkingHrs,ContactNmbr,DOB,Job) VALUES (@Name,@CNICnmbr,@Email,@Salary,@Bonus,@WorkingHrs,@ContactNmbr,@DOB,@Job)";
+                
                 using (SqlCommand cmd = new SqlCommand(insertCommand, con))
                 {
+                   
                     cmd.Parameters.Clear();
                     cmd.Parameters.AddWithValue("@Name", a.StaffName);
                     cmd.Parameters.AddWithValue("@CNICnmbr", a.CNIC);
@@ -62,11 +47,37 @@ public void AddDataInDataBase( Accountants a)
                     cmd.Parameters.AddWithValue("@ContactNmbr", a.Contact);
                     cmd.Parameters.AddWithValue("@DOB", a.Dob);
                     cmd.Parameters.AddWithValue("@Job", a.Job);
-                    //cmd.Parameters.AddWithValue("@UserName", userName);
-                    //cmd.Parameters.AddWithValue("@Password", password);
+
                     cmd.ExecuteNonQuery();
 
+                }
+            }
+            catch (Exception ex)
+            {
+                string message = ex.Message;
+            }
+            finally
+            {
+                con.Close();
+            }
+            SqlConnection com = new SqlConnection(Configuration.conection);
+            try
+            {
+                
+                com.Open();
+                DateTime t = new DateTime();
+                string insertComman = "INSERT INTO StaffLoginTable (UserName,Password) VALUES (@UserName,@Password)";
 
+                using (SqlCommand cnn = new SqlCommand(insertComman, com))
+                {
+
+                    cnn.Parameters.Clear();
+                    cnn.Parameters.AddWithValue("@UserName", a.UserName);
+                    cnn.Parameters.AddWithValue("@Password", a.Password);
+
+                    cnn.ExecuteNonQuery();
+
+       
                 }
 
 
@@ -74,6 +85,10 @@ public void AddDataInDataBase( Accountants a)
             catch (Exception ex)
             {
                 string message = ex.Message;
+            }
+            finally
+            {
+                com.Close();
             }
         }
         override

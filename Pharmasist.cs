@@ -45,12 +45,13 @@ namespace dashboard
              {
                  string message = ex.Message;
              }
+            SqlConnection com = new SqlConnection(Configuration.conection);
             try
             {
-                con.Open();
+                com.Open();
 
                 string insertCommand = "INSERT INTO StaffTable (Name,CNICnmbr,Email,Salary,Bonus,WorkingHrs,ContactNmbr,DOB,Job) VALUES (@Name,@CNICnmbr,@Email,@Salary,@Bonus,@WorkingHrs,@ContactNmbr,@DOB,@Job)";
-                using (SqlCommand cmd = new SqlCommand(insertCommand, con))
+                using (SqlCommand cmd = new SqlCommand(insertCommand, com))
                 {
                     cmd.Parameters.Clear();
                     cmd.Parameters.AddWithValue("@Name", p.StaffName);
@@ -62,19 +63,18 @@ namespace dashboard
                     cmd.Parameters.AddWithValue("@ContactNmbr", p.Contact);
                     cmd.Parameters.AddWithValue("@DOB", p.Dob);
                     cmd.Parameters.AddWithValue("@Job", p.Job);
-                    //cmd.Parameters.AddWithValue("@UserName", userName);
-                    //cmd.Parameters.AddWithValue("@Password", password);
+               //     cmd.Parameters.AddWithValue("@UserName", userName);
+               //     cmd.Parameters.AddWithValue("@Password", password);
                     cmd.ExecuteNonQuery();
 
-
+                   
                 }
-
-
             }
             catch (Exception ex)
             {
                 string message = ex.Message;
             }
+            com.Close();
         }
         override
           public void AddDataInDataBase( Accountants a)

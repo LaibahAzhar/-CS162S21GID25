@@ -6,6 +6,6 @@ namespace dashboard
 {
     class Configuration
     {
-        public static string conection = @"Data Source=FIZZA-AKRAM\SQLEXPRESS;Initial Catalog=PharmacyDataBases;Integrated Security=True";
+        public static string conection = @"Data Source=DESKTOP-7K5D4FC\SQLEXPRESS;Initial Catalog=PharmacyDataBases;Integrated Security=True";
     }
 }

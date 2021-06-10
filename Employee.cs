@@ -74,47 +74,47 @@ namespace dashboard
             bool x = false;
             if (textBoxName.Text == "")
             {
-                warnName.Enabled = true;
+                warnName.Visible = true;
                 x = true;
             }
             if (textBoxEmail.Text == "")
             {
-                warnEmail.Enabled = true;
+                warnEmail.Visible = true;
                 x = true;
             }
             if (textBoxBonus.Text == "")
             {
-                warnBonus.Enabled = true;
+                warnBonus.Visible = true;
                 x = true;
             }
             if (textBoxPassword.Text == "")
             {
-                warnPassword.Enabled = true;
+                warnPassword.Visible = true;
                 x = true;
             }
             if (textBoxSalary.Text == "")
             {
-                warnSalary.Enabled = true;
+                warnSalary.Visible = true;
                 x = true;
             }
             if (textBoxUserName.Text == "")
             {
-                warnUserName.Enabled = true;
+                warnUserName.Visible = true;
                 x = true;
             }
             if (textBoxworkHrs.Text == "")
             {
-                warnWorkHrs.Enabled = true;
+                warnWorkHrs.Visible = true;
                 x = true;
             }
             if (maskedTextBoxCNIC.Text == "")
             {
-                warnCnic.Enabled = true;
+                warnCnic.Visible = true;
                 x = true;
             }
             if (maskedTextBoxContact.Text == "")
             {
-                warnContact.Enabled = true;
+                warnContact.Visible = true;
                 x = true;
             }
             return x;

@@ -32,14 +32,35 @@ public void AddDataInDataBase(Staffs s)
                     cmd.Parameters.AddWithValue("@ContactNmbr", s.Contact);
                     cmd.Parameters.AddWithValue("@DOB", s.Dob);
                     cmd.Parameters.AddWithValue("@Job", s.Job);
-                    //cmd.Parameters.AddWithValue("@UserName", userName);
-                    //cmd.Parameters.AddWithValue("@Password", password);
+                  //  cmd.Parameters.AddWithValue("@UserName", userName);
+                   // cmd.Parameters.AddWithValue("@Password", password);
                     cmd.ExecuteNonQuery();
 
 
                 }
+                con.Close();
 
 
+            }
+            catch (Exception ex)
+            {
+                string message = ex.Message;
+            }
+           
+            try
+            {
+                con.Open();
+
+                string insertCommand = "INSERT INTO StaffLoginTable (UserName,Password) VALUES (@UserName,@Password)";
+                using (SqlCommand cnn = new SqlCommand(insertCommand, con))
+                {
+                    cnn.Parameters.Clear();
+                    cnn.Parameters.AddWithValue("@UserName", s.Username);
+                    cnn.Parameters.AddWithValue("@Password", s.Password);
+
+                    cnn.ExecuteNonQuery();
+                }
+                con.Close();
             }
             catch (Exception ex)
             {

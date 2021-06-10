@@ -36,6 +36,7 @@ namespace dashboard
             this.label2 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.warnContact = new System.Windows.Forms.Button();
@@ -82,7 +83,6 @@ namespace dashboard
             this.button3 = new System.Windows.Forms.Button();
             this.staffBtn = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -163,6 +163,24 @@ namespace dashboard
             this.pictureBox3.TabIndex = 5;
             this.pictureBox3.TabStop = false;
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Gray;
+            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button2.Location = new System.Drawing.Point(586, 7);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(80, 52);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "Update";
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.buttonUp_Click);
+            // 
             // button9
             // 
             this.button9.BackColor = System.Drawing.Color.Gray;
@@ -202,7 +220,6 @@ namespace dashboard
             // warnContact
             // 
             this.warnContact.BackColor = System.Drawing.Color.Transparent;
-            this.warnContact.Enabled = false;
             this.warnContact.FlatAppearance.BorderSize = 0;
             this.warnContact.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.warnContact.Image = global::dashboard.Properties.Resources.alarm_1_;
@@ -217,7 +234,6 @@ namespace dashboard
             // warnUserName
             // 
             this.warnUserName.BackColor = System.Drawing.Color.Transparent;
-            this.warnUserName.Enabled = false;
             this.warnUserName.FlatAppearance.BorderSize = 0;
             this.warnUserName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.warnUserName.Image = global::dashboard.Properties.Resources.alarm_1_;
@@ -232,7 +248,6 @@ namespace dashboard
             // warnPassword
             // 
             this.warnPassword.BackColor = System.Drawing.Color.Transparent;
-            this.warnPassword.Enabled = false;
             this.warnPassword.FlatAppearance.BorderSize = 0;
             this.warnPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.warnPassword.Image = global::dashboard.Properties.Resources.alarm_1_;
@@ -247,7 +262,6 @@ namespace dashboard
             // warnBonus
             // 
             this.warnBonus.BackColor = System.Drawing.Color.Transparent;
-            this.warnBonus.Enabled = false;
             this.warnBonus.FlatAppearance.BorderSize = 0;
             this.warnBonus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.warnBonus.Image = global::dashboard.Properties.Resources.alarm_1_;
@@ -262,7 +276,6 @@ namespace dashboard
             // warnCnic
             // 
             this.warnCnic.BackColor = System.Drawing.Color.Transparent;
-            this.warnCnic.Enabled = false;
             this.warnCnic.FlatAppearance.BorderSize = 0;
             this.warnCnic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.warnCnic.Image = global::dashboard.Properties.Resources.alarm_1_;
@@ -277,7 +290,6 @@ namespace dashboard
             // warnWorkHrs
             // 
             this.warnWorkHrs.BackColor = System.Drawing.Color.Transparent;
-            this.warnWorkHrs.Enabled = false;
             this.warnWorkHrs.FlatAppearance.BorderSize = 0;
             this.warnWorkHrs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.warnWorkHrs.Image = global::dashboard.Properties.Resources.alarm_1_;
@@ -292,7 +304,6 @@ namespace dashboard
             // warnSalary
             // 
             this.warnSalary.BackColor = System.Drawing.Color.Transparent;
-            this.warnSalary.Enabled = false;
             this.warnSalary.FlatAppearance.BorderSize = 0;
             this.warnSalary.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.warnSalary.Image = global::dashboard.Properties.Resources.alarm_1_;
@@ -307,7 +318,6 @@ namespace dashboard
             // warnEmail
             // 
             this.warnEmail.BackColor = System.Drawing.Color.Transparent;
-            this.warnEmail.Enabled = false;
             this.warnEmail.FlatAppearance.BorderSize = 0;
             this.warnEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.warnEmail.Image = global::dashboard.Properties.Resources.alarm_1_;
@@ -322,7 +332,6 @@ namespace dashboard
             // warnName
             // 
             this.warnName.BackColor = System.Drawing.Color.Transparent;
-            this.warnName.Enabled = false;
             this.warnName.FlatAppearance.BorderSize = 0;
             this.warnName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.warnName.Image = global::dashboard.Properties.Resources.alarm_1_;
@@ -766,24 +775,6 @@ namespace dashboard
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Gray;
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(586, 7);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(80, 52);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Update";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.buttonUp_Click);
             // 
             // Employee
             // 

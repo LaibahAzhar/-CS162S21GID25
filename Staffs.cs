@@ -20,7 +20,8 @@ namespace dashboard
         protected int workHrs;
         protected string contact;
         protected string job;
-       
+        protected string username;
+        protected string password;
 
       
         public string StaffName
@@ -60,6 +61,14 @@ namespace dashboard
             get; set;
         }
         public string Contact
+        {
+            get; set;
+        }
+        public string Username
+        {
+            get; set;
+        }
+        public string Password
         {
             get; set;
         }
