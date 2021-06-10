@@ -40,9 +40,9 @@ namespace dashboard
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button5 = new System.Windows.Forms.Button();
+            this.billingBtn = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.staffBtn = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
@@ -63,6 +63,7 @@ namespace dashboard
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button10 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
@@ -83,7 +84,6 @@ namespace dashboard
             this.label14 = new System.Windows.Forms.Label();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.button10 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -103,7 +103,7 @@ namespace dashboard
             this.button4.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button4.Image = global::dashboard.Properties.Resources.home;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.Location = new System.Drawing.Point(0, 488);
+            this.button4.Location = new System.Drawing.Point(0, 491);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(259, 45);
             this.button4.TabIndex = 4;
@@ -191,9 +191,9 @@ namespace dashboard
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.button5);
+            this.panel2.Controls.Add(this.billingBtn);
             this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.staffBtn);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Location = new System.Drawing.Point(-1, -7);
             this.panel2.Name = "panel2";
@@ -210,24 +210,24 @@ namespace dashboard
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // button5
+            // billingBtn
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(186)))), ((int)(((byte)(40)))));
-            this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button5.Image = global::dashboard.Properties.Resources.Webp_net_resizeimage;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button5.Location = new System.Drawing.Point(0, 329);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(259, 45);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Billing Record";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.button5.UseVisualStyleBackColor = false;
+            this.billingBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(186)))), ((int)(((byte)(40)))));
+            this.billingBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("billingBtn.BackgroundImage")));
+            this.billingBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.billingBtn.FlatAppearance.BorderSize = 0;
+            this.billingBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.billingBtn.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.billingBtn.Image = global::dashboard.Properties.Resources.Webp_net_resizeimage;
+            this.billingBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.billingBtn.Location = new System.Drawing.Point(0, 292);
+            this.billingBtn.Name = "billingBtn";
+            this.billingBtn.Size = new System.Drawing.Size(259, 45);
+            this.billingBtn.TabIndex = 4;
+            this.billingBtn.Text = "Billing Record";
+            this.billingBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.billingBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.billingBtn.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
@@ -239,7 +239,7 @@ namespace dashboard
             this.button3.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button3.Image = global::dashboard.Properties.Resources.medicine1;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.Location = new System.Drawing.Point(0, 287);
+            this.button3.Location = new System.Drawing.Point(1, 248);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(259, 45);
             this.button3.TabIndex = 4;
@@ -249,25 +249,25 @@ namespace dashboard
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button2
+            // staffBtn
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(186)))), ((int)(((byte)(40)))));
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.Image = global::dashboard.Properties.Resources.Webp_net_resizeimage_1_;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.Location = new System.Drawing.Point(0, 247);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(259, 45);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Stock";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.staffBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(186)))), ((int)(((byte)(40)))));
+            this.staffBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("staffBtn.BackgroundImage")));
+            this.staffBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.staffBtn.FlatAppearance.BorderSize = 0;
+            this.staffBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.staffBtn.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.staffBtn.Image = global::dashboard.Properties.Resources.Webp_net_resizeimage_1_;
+            this.staffBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.staffBtn.Location = new System.Drawing.Point(0, 330);
+            this.staffBtn.Name = "staffBtn";
+            this.staffBtn.Size = new System.Drawing.Size(259, 45);
+            this.staffBtn.TabIndex = 4;
+            this.staffBtn.Text = "Stock";
+            this.staffBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.staffBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.staffBtn.UseVisualStyleBackColor = false;
+            this.staffBtn.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -541,6 +541,21 @@ namespace dashboard
             this.panel3.Size = new System.Drawing.Size(747, 512);
             this.panel3.TabIndex = 61;
             // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.Transparent;
+            this.button10.Enabled = false;
+            this.button10.FlatAppearance.BorderSize = 0;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Image = global::dashboard.Properties.Resources.alarm_1_;
+            this.button10.Location = new System.Drawing.Point(294, 160);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(51, 37);
+            this.button10.TabIndex = 101;
+            this.button10.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button10.UseVisualStyleBackColor = false;
+            this.button10.Visible = false;
+            // 
             // button16
             // 
             this.button16.BackColor = System.Drawing.Color.Transparent;
@@ -772,21 +787,6 @@ namespace dashboard
             this.textBox4.TabIndex = 82;
             this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
-            // button10
-            // 
-            this.button10.BackColor = System.Drawing.Color.Transparent;
-            this.button10.Enabled = false;
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Image = global::dashboard.Properties.Resources.alarm_1_;
-            this.button10.Location = new System.Drawing.Point(294, 160);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(51, 37);
-            this.button10.TabIndex = 101;
-            this.button10.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button10.UseVisualStyleBackColor = false;
-            this.button10.Visible = false;
-            // 
             // Staff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -824,9 +824,9 @@ namespace dashboard
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button billingBtn;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button staffBtn;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Label label11;

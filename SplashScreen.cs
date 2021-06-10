@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
+
 namespace dashboard
 {
     public partial class SplashScreen : Form
@@ -19,6 +20,7 @@ namespace dashboard
 
         private void SplashScreen_Load(object sender, EventArgs e)
         {
+            progressBar1.ForeColor = Color.Black;
            // DataRetrieveFromMedicineDataBase();
            // DataRetrieveFromStaffDataBase();
         }
@@ -37,7 +39,7 @@ namespace dashboard
                 this.Hide();
             }
         }
-        public void DataRetrieveFromMedicineDataBase()
+      /**  public void DataRetrieveFromMedicineDataBase()
         {
             try
             {
@@ -101,6 +103,6 @@ namespace dashboard
             {
                 MessageBox.Show(ex.ToString(), "Ocurred");
             }
-        }
+        } **/
     }
 }

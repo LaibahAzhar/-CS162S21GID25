@@ -11,24 +11,40 @@ namespace dashboard
 {
     public partial class Login : Form
     {
+        public static string User;
+        public static string UserName;
         public Login()
         {
             InitializeComponent();
 
         }
-        private string user;
-        public string User { get; set; }
+         
+      // static public string User { get; }
+            public void setUser(string person)
+        {
+            if(person=="Admin")
+            {
+                Login.User = "Admin";
+            }
+            if(person=="Staff")
+            {
+                Login.User = "Staff";
+            }
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
+            bool success = false;
             SqlConnection con = new SqlConnection(Configuration.conection);
             con.Open();
             string query = "SELECT * FROM AdminLogin_Table";
             SqlDataAdapter sda = new SqlDataAdapter(query, con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
+
            
             
-                if (!(textBox3.Text != dt.Rows[0]["UserName"].ToString() && textBox1.Text != dt.Rows[0]["Password"].ToString()))
+               /* if (!(textBox3.Text != dt.Rows[0]["UserName"].ToString() && textBox1.Text != dt.Rows[0]["Password"].ToString()))
                 {
                 User = "Admin";
                     this.Dispose();
@@ -41,7 +57,46 @@ namespace dashboard
                     MessageBox.Show("Invalid Details");
                 }
             
-            con.Close();
+            con.Close();*/
+
+            if (textBox3.Text == dt.Rows[0]["UserName"].ToString() && textBox1.Text == dt.Rows[0]["Password"].ToString())
+            {
+                setUser("Admin");
+                this.Dispose();
+                UserName = dt.Rows[0]["UserName"].ToString();
+                AdminPortal admn = new AdminPortal();
+                admn.Show();
+                success = true;
+                MessageBox.Show(User);
+            }
+            if (textBox3.Text != dt.Rows[0]["UserName"].ToString() && textBox1.Text != dt.Rows[0]["Password"].ToString())
+            {
+                
+                string query1 = "SELECT * FROM StaffTable";
+                SqlDataAdapter sda1 = new SqlDataAdapter(query1, con);
+                DataTable dt1 = new DataTable();
+                sda.Fill(dt1);
+                for (int i = 0; i < dt1.Rows.Count; i++)
+                {
+                    MessageBox.Show(dt1.Rows[i]["UserName"].ToString());
+                    if (textBox3.Text == dt1.Rows[i]["UserName"].ToString() && textBox1.Text == dt1.Rows[i]["Password"].ToString())                    {
+
+                        StaffPortal staff = new StaffPortal();
+                        setUser("Staff");
+                        success = true;
+                        UserName = dt.Rows[i]["UserName"].ToString();
+                        this.Dispose();
+                        staff.Show();
+
+                        break;
+                    }
+                }
+                if (success == false)
+                {
+                    WarnMsg warn = new WarnMsg();
+                    warn.Show();
+                }
+            }
             //{
             //    AdminPortal admn = new AdminPortal();
             //    this.Dispose();
@@ -49,6 +104,7 @@ namespace dashboard
 
 
             //}
+
             string query1 = "SELECT * FROM StaffLoginTable";
             SqlDataAdapter sda1 = new SqlDataAdapter(query1, con);
             DataTable dt1 = new DataTable();
@@ -71,12 +127,32 @@ namespace dashboard
             
             con.Close();
 
+            /* string query1 = "SELECT * FROM StaffLoginTable";
+             SqlDataAdapter sda1 = new SqlDataAdapter(query1, con);
+             DataTable dt1 = new DataTable();
+             sda.Fill(dt1);
+             for (int i = 0; i < dt1.Rows.Count; i++)
+             {
+                 if (textBox3.Text == dt.Rows[i]["UserName"].ToString() && textBox1.Text == dt.Rows[i]["Password"].ToString())
+                 {
+                     StaffPortal stff = new StaffPortal();
+                     setUser("Staff");
+                     this.Dispose();
+                     stff.Show();
+                     break;
+                 }
+             }
+            */
             //if(user !=" Admin" && user != "Staff")
             //{
             //    WarnMsg warn = new WarnMsg();
             //    warn.Show();
             //}
-        }
+        /*    StaffPortal stff = new StaffPortal();
+            setUser("Staff");
+            this.Dispose();
+            stff.Show();
+*/        }
 
         private void button2_MouseUp(object sender, MouseEventArgs e)
         {

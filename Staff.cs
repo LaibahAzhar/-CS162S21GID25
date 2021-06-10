@@ -26,7 +26,7 @@ namespace dashboard
         {
           
         }
-
+    
         private static Staff stff;
         static private List<Staff> staffList;
         private string staffName;
@@ -40,7 +40,7 @@ namespace dashboard
         private string job;
         private string userName;
         private string password;
-
+      
 
         public static Staff getObject()
         {
@@ -103,7 +103,7 @@ namespace dashboard
         {
             get; set;
         }
-
+       
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
 
@@ -111,8 +111,8 @@ namespace dashboard
 
         private void button10_Click(object sender, EventArgs e)
         {
-            panel3.Controls.Add(upd);
-            panel3.Controls["UpdtEmp"].BringToFront();
+         //   panel3.Controls.Add(upd);
+         //   panel3.Controls["UpdtEmp"].BringToFront();
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -311,8 +311,8 @@ namespace dashboard
                         cmd.Parameters.AddWithValue("@ContactNmbr", conNmbr);
                         cmd.Parameters.AddWithValue("@DOB", date);
                         cmd.Parameters.AddWithValue("@Job", job);
-                        cmd.Parameters.AddWithValue("@UserName", uName);
-                        cmd.Parameters.AddWithValue("@Password", psswrd);
+                      //  cmd.Parameters.AddWithValue("@UserName", uName);
+                      //  cmd.Parameters.AddWithValue("@Password", psswrd);
 
                         cmd.ExecuteNonQuery();
                     }
@@ -327,13 +327,13 @@ namespace dashboard
                     con.Open();
 
                     string insertCommand = "INSERT INTO StaffLoginTable (UserName,Password) VALUES (@UserName,@password)";
-                    using (SqlCommand cmd = new SqlCommand(insertCommand, con))
+                    using (SqlCommand cnn = new SqlCommand(insertCommand, con))
                     {
-                        cmd.Parameters.Clear();
-                        cmd.Parameters.AddWithValue("@UserName", uName);
-                        cmd.Parameters.AddWithValue("@Password", psswrd);
+                        cnn.Parameters.Clear();
+                        cnn.Parameters.AddWithValue("@UserName", uName);
+                        cnn.Parameters.AddWithValue("@Password", psswrd);
 
-                        cmd.ExecuteNonQuery();
+                        cnn.ExecuteNonQuery();
                     }
                     con.Close();
                 }
@@ -341,6 +341,7 @@ namespace dashboard
                 {
                     string message = ex.Message;
                 }
+                setNullValuesToTextBoxes();
                 //AdminRegistory.getObject().Show();
             }
         }

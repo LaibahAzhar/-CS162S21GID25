@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
+
 namespace dashboard
 {
     public partial class GenerateBill : Form
@@ -53,28 +54,33 @@ namespace dashboard
             //***********************************************************************************
             string user = log.User;
             //MessageBox.Show(user);
+
+        { // string user = log.getUser();
+            string user = Login.User;
+           // string user = Login.User;
+            MessageBox.Show(Login.User);
             if (user == "Admin")
             {
-                label1.Visible = true;
-                label10.Visible = false;
+                labelAdmin.Visible = true;
+                labelStaff.Visible = false;
 
                 //disable billing record button
-                button5.Enabled = true;
-                button5.Visible = true; 
+                billingBtn.Enabled = true;
+                billingBtn.Visible = true; 
                 //disable staff button
-                button2.Enabled = true;
-                button2.Visible = true;
+                staffBtn.Enabled = true;
+                staffBtn.Visible = true;
             }
             //Disabling some functionality if a staff member is Signed In
             if (user == "Staff")
             {
-                label1.Visible = false;
-                label10.Visible = true;
+                labelAdmin.Visible = false;
+                labelStaff.Visible = true;
                
                 //disable billing record button
-                button5.Enabled = false;
+                billingBtn.Visible = false;
                 //disable staff button
-                button2.Visible = false;
+                staffBtn.Visible = false;
             }
         }
         public void AutoCompleteTextBox()
@@ -196,7 +202,8 @@ namespace dashboard
 
         private void button6_Click(object sender, EventArgs e)
         {
-
+            Receipt re = new Receipt();
+            re.Show();
         }
 
         private void button2_Click_1(object sender, EventArgs e)
@@ -210,7 +217,7 @@ namespace dashboard
         private void button4_Click(object sender, EventArgs e)
         {
             this.Dispose();
-            if(log.User == "Admin")
+         /**   if(log.User == "Admin")
             {   
                 AdminPortal adm = new AdminPortal();
                 adm.Show();
@@ -220,6 +227,11 @@ namespace dashboard
                 StaffPortal stff = new StaffPortal();
                 stff.Show();
             }
+       **/ }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
         }
         
         private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)

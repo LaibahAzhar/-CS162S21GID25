@@ -39,11 +39,13 @@ namespace dashboard
             // 
             // progressBar1
             // 
-            this.progressBar1.BackColor = System.Drawing.Color.BurlyWood;
-            this.progressBar1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(175)))), ((int)(((byte)(5)))));
-            this.progressBar1.Location = new System.Drawing.Point(-1, 393);
+            this.progressBar1.BackColor = System.Drawing.Color.White;
+            this.progressBar1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.progressBar1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.progressBar1.ForeColor = System.Drawing.Color.Black;
+            this.progressBar1.Location = new System.Drawing.Point(0, 390);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(606, 10);
+            this.progressBar1.Size = new System.Drawing.Size(600, 10);
             this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.progressBar1.TabIndex = 0;
             // 
@@ -75,6 +77,7 @@ namespace dashboard
             this.Name = "SplashScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SplashScreen";
+            this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.Load += new System.EventHandler(this.SplashScreen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

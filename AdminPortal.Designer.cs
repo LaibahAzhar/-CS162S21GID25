@@ -204,7 +204,7 @@ namespace dashboard
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Constantia", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label4.Location = new System.Drawing.Point(464, 125);
+            this.label4.Location = new System.Drawing.Point(459, 125);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(121, 29);
             this.label4.TabIndex = 2;
@@ -284,6 +284,7 @@ namespace dashboard
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminPortal";
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.AdminPortal_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
