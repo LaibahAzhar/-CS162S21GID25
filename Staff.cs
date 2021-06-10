@@ -14,12 +14,11 @@ namespace dashboard
     {
         ViewStaff vew = new ViewStaff();
         UpdtEmp upd = new UpdtEmp();
+        private static Staff stff;
         public Staff()
         {
             InitializeComponent();
-            staffList = new List<Staff>();
             AutoCompleteText();
-           
         }
 
         private void Warning()
@@ -27,21 +26,7 @@ namespace dashboard
           
         }
     
-        private static Staff stff;
-        static private List<Staff> staffList;
-        private string staffName;
-        private string cnicNmbr;
-        private string email;
-        private DateTime dob;
-        private int salary;
-        private int bonus;
-        private int workHrs;
-        private string contact;
-        private string job;
-        private string userName;
-        private string password;
-      
-
+        
         public static Staff getObject()
         {
             if (stff== null)
@@ -51,58 +36,7 @@ namespace dashboard
             return stff;
         }
 
-        public List<Staff> GetList()
-        {
-            return staffList;
-        }
-        public string StaffName
-        {
-            get; set;
-        }
-        public string Nmber
-        {
-            get; set;
-        }
-        public string CNIC
-        {
-            get; set;
-        }
-        public string mail
-        {
-            get; set;
-        }
-        public int Salary
-        {
-            get; set;
-        }
-        public int Bonus
-        {
-            get; set;
-        }
-        public int Workhr
-        {
-            get; set;
-        }
-        public string Job
-        {
-            get; set;
-        }
-        public DateTime Dob
-        {
-            get; set;
-        }
-        public string Contact
-        {
-            get; set;
-        }
-        public string UserName
-        {
-            get; set;
-        }
-        public string Password
-        {
-            get; set;
-        }
+       
        
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
@@ -326,7 +260,7 @@ namespace dashboard
                 {
                     con.Open();
 
-                    string insertCommand = "INSERT INTO StaffLoginTable (UserName,Password) VALUES (@UserName,@password)";
+                    string insertCommand = "INSERT INTO StaffLoginTable (UserName,Password) VALUES (@UserName,@Password)";
                     using (SqlCommand cnn = new SqlCommand(insertCommand, con))
                     {
                         cnn.Parameters.Clear();
@@ -435,29 +369,29 @@ namespace dashboard
 
                 }
 
-                //setting the values to original attributes after validation
+            //setting the values to original attributes after validation
 
-                stff = new Staff();
-                if (ValidateName(name))
-                    stff.StaffName = name;
-                if (ValidateMail(Mail))
-                    stff.mail = Mail;
-                if (ValidateBonus(bns))
-                    stff.bonus = bns;
-                if (ValidateSalary(slry))
-                    stff.Salary = slry;
-                if (ValidateWorkHrs(wHrs))
-                    stff.workHrs = wHrs;
-                stff.cnicNmbr = CnicNmber;
-                stff.Nmber = conNmbr;
-                //added to list
-                staffList.Add(stff);
-            Done task = new Done();
-            task.Show();
+            //stff = new Staff();
+            //if (ValidateName(name))
+            //    stff.StaffName = name;
+            //if (ValidateMail(Mail))
+            //    stff.mail = Mail;
+            //if (ValidateBonus(bns))
+            //    stff.bonus = bns;
+            //if (ValidateSalary(slry))
+            //    stff.Salary = slry;
+            //if (ValidateWorkHrs(wHrs))
+            //    stff.workHrs = wHrs;
+            //stff.cnicNmbr = CnicNmber;
+            //stff.Nmber = conNmbr;
+            ////added to list
+            //staffList.Add(stff);
+            //Done task = new Done();
+            //task.Show();
 
 
 
-            }
+        }
         //Method for editing Staff Information
         public void AutoCompleteText()
         {

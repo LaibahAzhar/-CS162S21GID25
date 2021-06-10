@@ -547,6 +547,7 @@ namespace dashboard
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
 
+        private System.Windows.Forms.Button button8;
 
         private System.Windows.Forms.Label labelStaff;
 

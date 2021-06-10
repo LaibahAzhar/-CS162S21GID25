@@ -1,6 +1,7 @@
 ﻿namespace dashboard
 {
-    class UnPrescribtedMedicine
+    abstract class UnPrescribtedMedicine : Medicines
     {
+
     }
 }

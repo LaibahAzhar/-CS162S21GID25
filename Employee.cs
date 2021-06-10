@@ -17,8 +17,8 @@ namespace dashboard
         {
             InitializeComponent();
         }
-        ViewStaff vew = new ViewStaff();
-       // EdtngEmp upd = new EdtngEmp();
+       // ViewStaff vew = new ViewStaff();
+       //EdtngEmp upd = new EdtngEmp();
         WarnMsg warning = new WarnMsg();
         private void button1_Click(object sender, EventArgs e)
         {
@@ -52,6 +52,7 @@ namespace dashboard
         private void button7_Click(object sender, EventArgs e)
         {
             this.Hide();
+           new  AdminPortal().Show();
         }
         private void setNullValuesToTextBoxes()
         {
@@ -127,8 +128,6 @@ namespace dashboard
             }
             else
             {
-
-                SqlConnection con = new SqlConnection(Configuration.conection);
                 string name;
                 string email;
                 string contact;
@@ -140,12 +139,6 @@ namespace dashboard
                 string job="";
                 string userName;
                 string password;
-
-                //*******************************************************************************************
-
-                AddDataInList();
-
-
                 //get data into local variables from the textBoxes, DateTimePicker etc
                 name = textBoxName.Text;
                 email = textBoxEmail.Text;
@@ -163,129 +156,88 @@ namespace dashboard
                     job = radioButton2.Text;
                 if (radioButton3.Checked)
                     job = radioButton3.Text;
-
-                //       ********************DataBASE******************************
-                //add to DataBase
-                try
+                Validators validate = new Validators();
+                if (job == "Pharmacist")
                 {
-                    con.Open();
-
-                    string insertCommand = "INSERT INTO StaffTable (Name,CNICnmbr,Email,Salary,Bonus,WorkingHrs,ContactNmbr,DOB,Job,UserName,Password) VALUES (@Name,@CNICnmbr,@Email,@Salary,@Bonus,@WorkingHrs,@ContactNmbr,@DOB,@Job,@UserName,@Password)";
-                    using (SqlCommand cmd = new SqlCommand(insertCommand, con))
-                    {
-                        cmd.Parameters.Clear();
-                        cmd.Parameters.AddWithValue("@Name", name);
-                        cmd.Parameters.AddWithValue("@CNICnmbr", cnic);
-                        cmd.Parameters.AddWithValue("@Email", email);
-                        cmd.Parameters.AddWithValue("@Salary", salary);
-                        cmd.Parameters.AddWithValue("@Bonus", bonus);
-                        cmd.Parameters.AddWithValue("@WorkingHrs", workHrs);
-                        cmd.Parameters.AddWithValue("@ContactNmbr", contact);
-                        cmd.Parameters.AddWithValue("@DOB",birthDate);
-                        cmd.Parameters.AddWithValue("@Job", job);
-                        cmd.Parameters.AddWithValue("@UserName", userName);
-                        cmd.Parameters.AddWithValue("@Password", password);
-                        cmd.ExecuteNonQuery();
-
-
-                    }
-
-                    
+                    Pharmasist p = new Pharmasist();
+                    if (validate.ValidateName(name))
+                        p.StaffName = name;
+                    if (validate.ValidateMail(email))
+                        p.mail = email;
+                    if (validate.ValidateBonus(bonus))
+                        p.Bonus = bonus;
+                    if (validate.ValidateSalary(salary))
+                        p.Salary = salary;
+                    if (validate.ValidateWorkHrs(workHrs))
+                        p.Workhr = workHrs;
+                    p.CNIC = cnic;
+                    p.Nmber = contact;
+                    p.UserName = userName;
+                    p.Password = password;
+                    //added to list
+                    p.AddDataInList(p);
+                    //added to DataBase
+                    p.AddDataInDataBase(p);
+                    Done task = new Done();
+                    task.Show();
                 }
-                catch (Exception ex)
+                if (job == "Accountant")
                 {
-                    string message = ex.Message;
+                    Accountants a = new Accountants();
+                    if (validate.ValidateName(name))
+                        a.StaffName = name;
+                    if (validate.ValidateMail(email))
+                        a.mail = email;
+                    if (validate.ValidateBonus(bonus))
+                        a.Bonus = bonus;
+                    if (validate.ValidateSalary(salary))
+                        a.Salary = salary;
+                    if (validate.ValidateWorkHrs(workHrs))
+                        a.Workhr = workHrs;
+                    a.CNIC = cnic;
+                    a.Nmber = contact;
+                    a.UserName = userName;
+                    a.Password = password;
+                    //added to list
+                    a.AddDataInList(a);
+                    //added to DataBase
+                    a.AddDataInDataBase(a);
+                    Done task = new Done();
+                    task.Show();
                 }
+                if (job == "Security")
+                {
+                    Security s = new Security();
+                    if (validate.ValidateName(name))
+                        s.StaffName = name;
+                    if (validate.ValidateMail(email))
+                        s.mail = email;
+                    if (validate.ValidateBonus(bonus))
+                        s.Bonus = bonus;
+                    if (validate.ValidateSalary(salary))
+                        s.Salary = salary;
+                    if (validate.ValidateWorkHrs(workHrs))
+                        s.Workhr = workHrs;
+                    s.CNIC = cnic;
+                    s.Nmber = contact;
+                   
+                    //added to list
+                    s.AddDataInList(s);
+                    //added to DataBase
+                    s.AddDataInDataBase(s);
+                    Done task = new Done();
+                    task.Show();
+                }
+
+
+
 
             }
             setNullValuesToTextBoxes();
         }
-        private bool ValidateName(string name)
-        {
-            bool flag = false;
-            for (int i = 0; i < name.Length; i++)
-            {
-                if (name[i] >= 'a' && name[i] <= 'z' || name[i] >= 'A' && name[i] <= 'Z' || name[i] == ' ')
-                    flag = true;
-                else
-                    return false;
-            }
+       
 
-            return flag;
-        }
-
-        private bool ValidateMail(string mail)
-        {
-            var email = new MailAddress(mail);
-            bool isValidEmail = email.Host.Contains(".");
-            if (!isValidEmail)
-                return false;
-            else
-                return true;
-        }
-
-        private bool ValidateSalary(int sal)
-        {
-            if (sal >= 20000 && sal <= 200000)
-                return true;
-            else
-                return false;
-        }
-
-        private bool ValidateBonus(int bon)
-        {
-            if (bon >= 1000 && bon <= 30000)
-                return true;
-            else
-                return false;
-        }
-        private bool ValidateWorkHrs(int work)
-        {
-            if (work >= 1 && work <= 15)
-                return true;
-            else
-                return false;
-        }
-
-        private void AddDataInList()
-        {
-            string name;
-            string email;
-            string contact;
-            string cnic;
-            int salary;
-            DateTime birthDate;
-            int bonus;
-            int workHrs;
-            string job = "";
-            string userName;
-            string password;
-
-
-            name = textBoxName.Text;
-            email = textBoxEmail.Text;
-            cnic = maskedTextBoxCNIC.Text;
-            contact = maskedTextBoxContact.Text;
-            salary = Convert.ToInt32(textBoxSalary.Text);
-            bonus = Convert.ToInt32(textBoxBonus.Text);
-            workHrs = Convert.ToInt32(textBoxworkHrs.Text);
-            userName = textBoxUserName.Text;
-            birthDate = dateTimePicker1.Value;
-            password = textBoxPassword.Text;
-            if (radioButton1.Checked)
-                job = radioButton1.Text;
-            if (radioButton2.Checked)
-                job = radioButton2.Text;
-            if (radioButton3.Checked)
-                job = radioButton3.Text;
-
-            Done task = new Done();
-            task.Show();
-
-
-
-        }
-
+       
         private void button9_Click(object sender, EventArgs e)
         {   
             //panel3.Controls.Add(vew);
@@ -300,8 +252,8 @@ namespace dashboard
 
         private void buttonUp_Click(object sender, EventArgs e)
         {
-         //   panel3.Controls.Add(upd);
-         //   panel3.Controls["EdtngEmp"].BringToFront();
+           //panel3.Controls.Add(upd);
+           //panel3.Controls["EdtngEmp"].BringToFront();
         }
     }
 }

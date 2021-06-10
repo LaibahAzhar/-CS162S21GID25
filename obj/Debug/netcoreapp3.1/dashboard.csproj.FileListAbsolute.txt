@@ -89,3 +89,5 @@ C:\Users\hp\OneDrive\Documents\2nd semester\OOP\Final OOP PROJECT\-CS162S21GID25
 C:\Users\hp\OneDrive\Documents\2nd semester\OOP\Final OOP PROJECT\-CS162S21GID25\-CS162S21GID25\bin\Debug\netcoreapp3.1\runtimes\osx-x64\native\SQLite.Interop.dll
 C:\Users\hp\OneDrive\Documents\2nd semester\OOP\Final OOP PROJECT\-CS162S21GID25\-CS162S21GID25\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\SQLite.Interop.dll
 C:\Users\hp\OneDrive\Documents\2nd semester\OOP\Final OOP PROJECT\-CS162S21GID25\-CS162S21GID25\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\SQLite.Interop.dll
+C:\Users\hp\OneDrive\Documents\2nd semester\OOP\Final OOP PROJECT\-CS162S21GID25\-CS162S21GID25\obj\Debug\netcoreapp3.1\dashboard.Employee.resources
+C:\Users\hp\OneDrive\Documents\2nd semester\OOP\Final OOP PROJECT\-CS162S21GID25\-CS162S21GID25\obj\Debug\netcoreapp3.1\dashboard.Receipt.resources

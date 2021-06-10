@@ -18,15 +18,15 @@ namespace dashboard
             InitializeComponent();
 
         }
-         
-      // static public string User { get; }
-            public void setUser(string person)
+
+        // static public string User { get; }
+        public void setUser(string person)
         {
-            if(person=="Admin")
+            if (person == "Admin")
             {
                 Login.User = "Admin";
             }
-            if(person=="Staff")
+            if (person == "Staff")
             {
                 Login.User = "Staff";
             }
@@ -36,28 +36,12 @@ namespace dashboard
         {
             bool success = false;
             SqlConnection con = new SqlConnection(Configuration.conection);
-            con.Open();
+
             string query = "SELECT * FROM AdminLogin_Table";
             SqlDataAdapter sda = new SqlDataAdapter(query, con);
             DataTable dt = new DataTable();
+            con.Open();
             sda.Fill(dt);
-
-           
-            
-               /* if (!(textBox3.Text != dt.Rows[0]["UserName"].ToString() && textBox1.Text != dt.Rows[0]["Password"].ToString()))
-                {
-                User = "Admin";
-                    this.Dispose();
-                    AdminPortal admn = new AdminPortal();
-                    admn.Show();
-
-                }
-                else
-                {
-                    MessageBox.Show("Invalid Details");
-                }
-            
-            con.Close();*/
 
             if (textBox3.Text == dt.Rows[0]["UserName"].ToString() && textBox1.Text == dt.Rows[0]["Password"].ToString())
             {
@@ -67,92 +51,41 @@ namespace dashboard
                 AdminPortal admn = new AdminPortal();
                 admn.Show();
                 success = true;
-                MessageBox.Show(User);
+              
             }
-            if (textBox3.Text != dt.Rows[0]["UserName"].ToString() && textBox1.Text != dt.Rows[0]["Password"].ToString())
-            {
-                
-                string query1 = "SELECT * FROM StaffTable";
-                SqlDataAdapter sda1 = new SqlDataAdapter(query1, con);
-                DataTable dt1 = new DataTable();
-                sda.Fill(dt1);
-                for (int i = 0; i < dt1.Rows.Count; i++)
-                {
-                    MessageBox.Show(dt1.Rows[i]["UserName"].ToString());
-                    if (textBox3.Text == dt1.Rows[i]["UserName"].ToString() && textBox1.Text == dt1.Rows[i]["Password"].ToString())                    {
-
-                        StaffPortal staff = new StaffPortal();
-                        setUser("Staff");
-                        success = true;
-                        UserName = dt.Rows[i]["UserName"].ToString();
-                        this.Dispose();
-                        staff.Show();
-
-                        break;
-                    }
-                }
-                if (success == false)
-                {
-                    WarnMsg warn = new WarnMsg();
-                    warn.Show();
-                }
-            }
-            //{
-            //    AdminPortal admn = new AdminPortal();
-            //    this.Dispose();
-            //    admn.Show();
-
-
-            //}
-
-            string query1 = "SELECT * FROM StaffLoginTable";
-            SqlDataAdapter sda1 = new SqlDataAdapter(query1, con);
-            DataTable dt1 = new DataTable();
-            DataSet dts = new DataSet();
-            con.Open();
-            sda1.Fill(dt1);
-
-            
-                for (int j = 0; j < dt1.Rows.Count; j++)
-                {
-                    if (textBox3.Text == dt.Rows[j]["UserName"].ToString() && textBox1.Text == dt.Rows[j]["Password"].ToString())
-                    { 
-                        StaffPortal stff = new StaffPortal();
-                        User = "Staff";
-                        this.Dispose();
-                        stff.Show();
-
-                    }
-                }
-            
             con.Close();
 
-            /* string query1 = "SELECT * FROM StaffLoginTable";
-             SqlDataAdapter sda1 = new SqlDataAdapter(query1, con);
-             DataTable dt1 = new DataTable();
-             sda.Fill(dt1);
-             for (int i = 0; i < dt1.Rows.Count; i++)
-             {
-                 if (textBox3.Text == dt.Rows[i]["UserName"].ToString() && textBox1.Text == dt.Rows[i]["Password"].ToString())
-                 {
-                     StaffPortal stff = new StaffPortal();
-                     setUser("Staff");
-                     this.Dispose();
-                     stff.Show();
-                     break;
-                 }
-             }
-            */
-            //if(user !=" Admin" && user != "Staff")
-            //{
-            //    WarnMsg warn = new WarnMsg();
-            //    warn.Show();
-            //}
-        /*    StaffPortal stff = new StaffPortal();
-            setUser("Staff");
-            this.Dispose();
-            stff.Show();
-*/        }
+            try
+            {
+                string query1 = "SELECT * FROM StaffLoginTable";
+                SqlDataAdapter sda1 = new SqlDataAdapter(query1, con);
+                DataTable dt1 = new DataTable();
+                DataSet dts = new DataSet();
+                con.Open();
+                sda1.Fill(dt1);
+               
+                for (int j = 0; j < dt1.Rows.Count; j++)
+                {
+                    if (textBox3.Text == dt1.Rows[j]["UserName"].ToString() && textBox1.Text == dt1.Rows[j]["Password"].ToString())
+                    {
+                        setUser("Staff");
+                        StaffPortal stff = new StaffPortal();
+                        this.Dispose();
+                        stff.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid");
+                    }
+                }
+                con.Close();
+
+            }
+            catch (Exception ex)
+            {
+                string message = ex.Message;
+            }
+        }
 
         private void button2_MouseUp(object sender, MouseEventArgs e)
         {
@@ -163,7 +96,7 @@ namespace dashboard
         {
             textBox1.Hide();
         }
-      
+
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -196,7 +129,7 @@ namespace dashboard
             DataSet dt = new DataSet();
             sda.Fill(dt);
             int i = dt.Tables[0].Rows.Count;
-            if (i>0)
+            if (i > 0)
             {
                 //MessageBox.Show("Done");
                 label3.Visible = false;
@@ -204,16 +137,7 @@ namespace dashboard
                 panel4.Visible = false;
             }
             con.Close();
+
         }
-        //public bool DoesTableContainRows(string tableName, SqlConnection connection)
-        //{
-        //    SqlCommand command = new SqlCommand($"Select * from tableName",connection);
-        //    SqlDataReader resultReader = new SqlDataReader(command.ExecuteReader());
-        //    resultReader = command.ExecuteReader();
-        //    // check whether or not a row was returned
-        //    bool containRows = resultReader.Read();
-        //    resultReader.Close();
-        //    return containRows;
-        //}
     }
 }

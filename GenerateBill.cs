@@ -40,25 +40,7 @@ namespace dashboard
         private void GenerateBill_Load(object sender, EventArgs e)
         {
             AutoCompleteTextBox();
-            /* table = new DataTable();
-             DataColumn dc1 = new DataColumn("MedicineName");
-             DataColumn dc2 = new DataColumn("Price");
-             DataColumn dc3 = new DataColumn("Quantity");
-             table.Columns.Add(dc1);
-             table.Columns.Add(dc2);
-             table.Columns.Add(dc3);
-             table.Rows.Add(dc1);
-             DataRow dr = table.NewRow();
-             dataGridView1.DataSource = table;*/
-           // SetValues();
-            //***********************************************************************************
-            string user = log.User;
-            //MessageBox.Show(user);
-
-        { // string user = log.getUser();
             string user = Login.User;
-           // string user = Login.User;
-            MessageBox.Show(Login.User);
             if (user == "Admin")
             {
                 labelAdmin.Visible = true;
@@ -216,18 +198,7 @@ namespace dashboard
 
         private void button4_Click(object sender, EventArgs e)
         {
-            this.Dispose();
-         /**   if(log.User == "Admin")
-            {   
-                AdminPortal adm = new AdminPortal();
-                adm.Show();
-            }
-            if(log.User == "Staff")
-            {
-                StaffPortal stff = new StaffPortal();
-                stff.Show();
-            }
-       **/ }
+            this.Dispose(); }
 
         private void button5_Click(object sender, EventArgs e)
         {
@@ -282,19 +253,7 @@ namespace dashboard
             {
                 string message = ex.Message;
             }
-            /*string mName = textBox3.Text;
-            SqlConnection con = new SqlConnection(Configuration.conection);
-            con.Open();
-            string query = "SELECT * FROM MedicineTable where MedicineName = '" + mName + "'";
 
-            SqlCommand sda = new SqlCommand(query, con);
-
-            if (textBox3.Text == mName)
-            {
-                SetValues();
-            }
-          
-            con.Close();*/
         }
     }
     

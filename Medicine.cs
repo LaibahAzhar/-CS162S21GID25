@@ -10,82 +10,13 @@ namespace dashboard
         public Medicine()
         {
             InitializeComponent();
-            medList = new List<Medicine>();
-
         }
 
 
         private static Medicine med;
         ViewMed view = new ViewMed();
-        private string medicineName;
-        private string medicineID;
-        private string chemicalName;
-        private DateTime manufacturingDate;
-        private DateTime expiryDate;
-        private string compnany;
-        private int marketPrice;
-        private int stock;
-        private int sellingPrice;
-        private string category;
-        private string status;
-        static private List<Medicine> medList;
-        public static Medicine getObject()
-        {
-            if (med == null)
-            {
-                med = new Medicine();
-            }
-            return med;
-        }
-        public List<Medicine> GetList()
-        {
-            return medList;
-        }
-        public string MedicineName
-        {
-            get; set;
-        }
-        public string MedicineID
-        {
-            get; set;
-        }
-        public int Stock
-        {
-            get; set;
-        }
-        public string ChemicalName
-        {
-            get; set;
-        }
-        public string Company
-        {
-            get; set;
-        }
-        public int MarketPrice
-        {
-            get; set;
-        }
-        public int SellingPrice
-        {
-            get; set;
-        }
-        public string Category
-        {
-            get; set;
-        }
-        public string Status
-        {
-            get; set;
-        }
-        public DateTime ManufacturingDate
-        {
-            get; set;
-        }
-        public DateTime ExpiryDate
-        {
-            get; set;
-        }
-
+        
+        
         WarnMsg warns = new WarnMsg();
         private bool CheckEmpty()
         {
@@ -214,136 +145,6 @@ namespace dashboard
 
         private void button6_Click(object sender, EventArgs e)
         {
-            if (CheckEmpty() == false)
-            {
-                warns.Show();
-            }
-            else
-            {
-                SqlConnection con = new SqlConnection(Configuration.conection);
-                string name = "";
-                string id;
-                string cName;
-                string comp;
-                int mPrice;
-                DateTime mDate;
-                DateTime eDate;
-                int stk;
-                string sats;
-                int sPrice;
-
-                //*******************************************************************************************
-
-                AddDataInList();
-
-
-                //get data into local variables from the textBoxes, DateTimePicker etc
-                name = textBox1.Text;
-                id = textBox4.Text;
-                cName = textBox3.Text;
-                comp = textBox2.Text;
-                mPrice = Int32.Parse(textBox6.Text);
-                stk = Int32.Parse(textBox7.Text);
-                mDate = dateTimePicker2.Value;
-                eDate = dateTimePicker1.Value;
-                sPrice = Int32.Parse(textBox5.Text);
-                bool isChecked = radioButton1.Checked;
-                if (isChecked)
-                    sats = radioButton1.Text;
-                else
-                    sats = radioButton2.Text;
-
-                //       ********************DataBASE******************************
-                //add to DataBase
-                try
-                {
-                    con.Open();
-
-                    string insertCommand = "INSERT INTO MedicineTable (MedicineName,MedicineID,ChemicalName,Stock,ManufacturingDate,ExpiryDate,MarketPrice,SellingPrice,Company,Status) VALUES (@MedicineName,@MedicineID,@ChemicalName ,@Stock ,@ManufacturingDate,@ExpiryDate ,@MarketPrice,@SellingPrice,@Company ,@Status )";
-                    using (SqlCommand cmd = new SqlCommand(insertCommand, con))
-                    {
-                        cmd.Parameters.Clear();
-                        cmd.Parameters.AddWithValue("@MedicineName", name);
-                        cmd.Parameters.AddWithValue("@MedicineID", id);
-                        cmd.Parameters.AddWithValue("@ChemicalName", cName);
-                        cmd.Parameters.AddWithValue("@Stock", stk);
-                        cmd.Parameters.AddWithValue("@ManufacturingDate", mDate);
-                        cmd.Parameters.AddWithValue("@ExpiryDate", eDate);
-                        cmd.Parameters.AddWithValue("@MarketPrice", mPrice);
-                        cmd.Parameters.AddWithValue("@SellingPrice", sPrice);
-                        cmd.Parameters.AddWithValue("@Company", comp);
-                        cmd.Parameters.AddWithValue("@Status", sats);
-
-                        cmd.ExecuteNonQuery();
-
-
-                    }
-                    con.Close();
-                }
-                catch (Exception ex)
-                {
-                    string message = ex.Message;
-                }
-
-            }
-            setNullValuesToTextBoxes();
-        }
-
-
-        private bool ValidateName(string name)
-        {
-            bool flag = false;
-            for (int i = 0; i < name.Length; i++)
-            {
-                if (name[i] >= 'a' && name[i] <= 'z' || name[i] >= 'A' && name[i] <= 'Z' || name[i] == ' ')
-                    flag = true;
-                else
-                    return false;
-            }
-
-            return flag;
-        }
-        private bool ValidateCompanyName(string compName)
-        {
-            bool flag = false;
-            for (int i = 0; i < compName.Length; i++)
-            {
-                if (compName[i] >= 'a' && compName[i] <= 'z' || compName[i] >= 'A' && compName[i] <= 'Z' || compName[i] == ' ')
-                    flag = true;
-                else
-                    return false;
-            }
-
-            return flag;
-        }
-        private bool ValidateMedicineID(string id)
-        {
-            bool flag = false;
-            for (int i = 0; i < id.Length; i++)
-            {
-                if (id[i] >= 'a' && id[i] <= 'z' || id[i] >= 'A' && id[i] <= 'Z' || id[i] >= '0' && id[i] <= '9')
-                    flag = true;
-                else
-                    return false;
-            }
-
-            return flag;
-        }
-        private bool ValidateChemicalName(string chemName)
-        {
-            bool flag = false;
-            for (int i = 0; i < chemName.Length; i++)
-            {
-                if (chemName[i] >= 'a' && chemName[i] <= 'z' || chemName[i] >= 'A' && chemName[i] <= 'Z' || chemName[i] >= '0' && chemName[i] <= '9' || chemName[i] == ' ' || chemName[i] == ')' || chemName[i] == '(' || chemName[i] == '.')
-                    flag = true;
-                else
-                    return false;
-            }
-
-            return flag;
-        }
-        private void AddDataInList()
-        {
             string name;
             string id;
             string cName;
@@ -354,50 +155,97 @@ namespace dashboard
             DateTime eDate;
             int stk;
             string sats;
-            //get data into local variables from the textBoxes, DateTimePicker etc
-            name = textBox1.Text;
-            id = textBox4.Text;
-            cName = textBox3.Text;
-            comp = textBox2.Text;
-            mPrice = Int32.Parse(textBox6.Text);
-            stk = Int32.Parse(textBox7.Text);
-            mDate = dateTimePicker2.Value;
-            eDate = dateTimePicker1.Value;
-            sPrice = Int32.Parse(textBox5.Text);
-            bool isChecked = radioButton1.Checked;
-            if (isChecked)
-                sats = radioButton1.Text;
+            if (CheckEmpty() == false)
+            {
+                warns.Show();
+            }
             else
-                sats = radioButton2.Text;
-            //Set the values to he original attributes
-            med = new Medicine();
-            if (ValidateName(name))
-                med.MedicineName = name;
-            if (ValidateMedicineID(id))
-                med.MedicineID = id;
-            if (ValidateChemicalName(cName))
-                med.ChemicalName = cName;
-            if (ValidateCompanyName(comp))
-                med.Company = comp;
-            med.MarketPrice = mPrice;
-            med.Stock = stk;
-            med.ManufacturingDate = mDate;
-            med.ExpiryDate = eDate;
-            med.SellingPrice = sPrice;
-            //add to List
-            medList.Add(med);
-            Done task = new Done();
-            task.Show();
+            {
+                bool isChecked = radioButton1.Checked;
+                if (isChecked)
+                    sats = radioButton1.Text;
+                else
+                    sats = radioButton2.Text;
+                name = textBox1.Text;
+                id = textBox4.Text;
+                cName = textBox3.Text;
+                comp = textBox2.Text;
+                mPrice = Int32.Parse(textBox6.Text);
+                stk = Int32.Parse(textBox7.Text);
+                mDate = dateTimePicker2.Value;
+                eDate = dateTimePicker1.Value;
+                sPrice = Int32.Parse(textBox5.Text);
+                Validators validate = new Validators();
+                if (sats == "Public Medicine")
+                {
+                    PublicMedicine pubMed = new PublicMedicine();
 
+                    if (validate.ValidateName(name))
+                        pubMed.MedicineName = name;
+                    if (validate.ValidateMedicineID(id))
+                        pubMed.MedicineID = id;
+                    if (validate.ValidateChemicalName(cName))
+                        pubMed.ChemicalName = cName;
+                    if (validate.ValidateCompanyName(comp))
+                        pubMed.Company = comp;
+                    pubMed.MarketPrice = mPrice;
+                    pubMed.Stock = stk;
+                    pubMed.ManufacturingDate = mDate;
+                    pubMed.ExpiryDate = eDate;
+                    pubMed.SellingPrice = sPrice;
+                    pubMed.AddDataInList(pubMed);
+                    pubMed.AddDataInDataBase(pubMed);
+                }
+                if (sats == "Private Medicine")
+                {
+                    PrivateMedicine priMed = new PrivateMedicine();
+                    if (validate.ValidateName(name))
+                        priMed.MedicineName = name;
+                    if (validate.ValidateMedicineID(id))
+                        priMed.MedicineID = id;
+                    if (validate.ValidateChemicalName(cName))
+                        priMed.ChemicalName = cName;
+                    if (validate.ValidateCompanyName(comp))
+                        priMed.Company = comp;
+                    priMed.MarketPrice = mPrice;
+                    priMed.Stock = stk;
+                    priMed.ManufacturingDate = mDate;
+                    priMed.ExpiryDate = eDate;
+                    priMed.SellingPrice = sPrice;
+                    priMed.AddDataInList(priMed);
+                }
+               
+                //*******************************************************************************************
+
+                //med.AddDataInList();
+
+
+                //get data into local variables from the textBoxes, DateTimePicker etc
+
+                //add to List
+                Done task = new Done();
+                task.Show();
+
+
+
+                setNullValuesToTextBoxes();
+            }
         }
+
+
+       
+       
         private void setNullValuesToTextBoxes()
         {
             textBox1.Text = null;
             textBox4.Text = null;
             textBox3.Text = null;
+            textBox2.Text = null;
             textBox6.Text = null;
             textBox5.Text = null;
             textBox7.Text = null;
+            radioButton1.Checked = false;
+            radioButton2.Checked = false;
             //radioButton1.Text = null;
             //radioButton2.Text = null;
         }
@@ -426,7 +274,7 @@ namespace dashboard
         {
             string user = Login.User;
             // string user = Login.User;
-            MessageBox.Show(Login.User);
+           // MessageBox.Show(Login.User);
             if (user == "Admin")
             {
                 labelAdmin.Visible = true;

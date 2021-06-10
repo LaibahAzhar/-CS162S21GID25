@@ -52,7 +52,6 @@ namespace dashboard
             Medicine m = new Medicine();
             m.Show();
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             GenerateBill b = new GenerateBill();
@@ -220,7 +219,7 @@ namespace dashboard
         {
             string user = Login.User;
             // string user = Login.User;
-            MessageBox.Show(Login.User);
+           // MessageBox.Show(Login.User);
             if (user == "Admin")
             {
                 labelAdmin.Visible = true;
