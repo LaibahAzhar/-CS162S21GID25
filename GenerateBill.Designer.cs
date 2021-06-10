@@ -53,16 +53,7 @@ namespace dashboard
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.MedicineColum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.priceclm = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.QtyClm = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Addbtn = new System.Windows.Forms.DataGridViewButtonColumn();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.Bmed = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Bqty = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Bamount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label6 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -70,12 +61,12 @@ namespace dashboard
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -360,11 +351,14 @@ namespace dashboard
             // 
             // textBox3
             // 
+            this.textBox3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.textBox3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.textBox3.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBox3.Location = new System.Drawing.Point(519, 203);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(276, 26);
             this.textBox3.TabIndex = 8;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // label5
             // 
@@ -376,93 +370,22 @@ namespace dashboard
             this.label5.TabIndex = 7;
             this.label5.Text = "Search";
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(825, 203);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(65, 23);
-            this.comboBox1.TabIndex = 9;
-            this.comboBox1.Text = "Filter";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MedicineColum,
-            this.priceclm,
-            this.QtyClm,
-            this.Addbtn});
-            this.dataGridView1.Location = new System.Drawing.Point(349, 247);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(585, 45);
-            this.dataGridView1.TabIndex = 10;
-            // 
-            // MedicineColum
-            // 
-            this.MedicineColum.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.MedicineColum.HeaderText = "Medicine Name";
-            this.MedicineColum.Name = "MedicineColum";
-            this.MedicineColum.ReadOnly = true;
-            // 
-            // priceclm
-            // 
-            this.priceclm.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.priceclm.HeaderText = "Price per Unit";
-            this.priceclm.Name = "priceclm";
-            // 
-            // QtyClm
-            // 
-            this.QtyClm.HeaderText = "Quantity";
-            this.QtyClm.Name = "QtyClm";
-            this.QtyClm.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.QtyClm.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Addbtn
-            // 
-            this.Addbtn.HeaderText = "Add";
-            this.Addbtn.Name = "Addbtn";
-            // 
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Bmed,
-            this.Bqty,
-            this.Bamount});
-            this.dataGridView2.Location = new System.Drawing.Point(357, 339);
+            this.dataGridView2.Location = new System.Drawing.Point(330, 286);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowTemplate.Height = 25;
-            this.dataGridView2.Size = new System.Drawing.Size(577, 46);
+            this.dataGridView2.Size = new System.Drawing.Size(577, 114);
             this.dataGridView2.TabIndex = 11;
-            // 
-            // Bmed
-            // 
-            this.Bmed.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Bmed.HeaderText = "Medicine Name";
-            this.Bmed.Name = "Bmed";
-            this.Bmed.ReadOnly = true;
-            // 
-            // Bqty
-            // 
-            this.Bqty.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Bqty.HeaderText = "Qunatity";
-            this.Bqty.Name = "Bqty";
-            this.Bqty.ReadOnly = true;
-            // 
-            // Bamount
-            // 
-            this.Bamount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Bamount.HeaderText = "Amount";
-            this.Bamount.Name = "Bamount";
-            this.Bamount.ReadOnly = true;
+            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
+            this.dataGridView2.CellLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellLeave);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(376, 308);
+            this.label6.Location = new System.Drawing.Point(277, 255);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(78, 24);
             this.label6.TabIndex = 7;
@@ -530,12 +453,31 @@ namespace dashboard
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(175)))), ((int)(((byte)(5)))));
+            this.button8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button8.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button8.ForeColor = System.Drawing.Color.Black;
+            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
+            this.button8.Location = new System.Drawing.Point(812, 201);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(107, 29);
+            this.button8.TabIndex = 31;
+            this.button8.Text = "Select";
+            this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button6_Click);
+            // 
             // GenerateBill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HighlightText;
             this.ClientSize = new System.Drawing.Size(1004, 530);
+            this.Controls.Add(this.button8);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.label8);
@@ -543,8 +485,6 @@ namespace dashboard
             this.Controls.Add(this.label7);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -567,7 +507,6 @@ namespace dashboard
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -593,16 +532,7 @@ namespace dashboard
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MedicineColum;
-        private System.Windows.Forms.DataGridViewTextBoxColumn priceclm;
-        private System.Windows.Forms.DataGridViewTextBoxColumn QtyClm;
-        private System.Windows.Forms.DataGridViewButtonColumn Addbtn;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Bmed;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Bqty;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Bamount;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox textBox4;
@@ -615,5 +545,6 @@ namespace dashboard
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button button8;
     }
 }

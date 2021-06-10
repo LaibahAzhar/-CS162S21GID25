@@ -71,10 +71,8 @@ namespace dashboard
             {
                 
                 SqlConnection con = new SqlConnection(Configuration.conection);
-                
-                Medicine med = new Medicine();
-
                 string query = "SELECT * FROM MedicineTable";
+                string mName;
                 SqlDataAdapter sda = new SqlDataAdapter(query, con);
                 SqlDataReader myReader;
                 SqlCommand cmd = new SqlCommand(query, con);
@@ -82,9 +80,8 @@ namespace dashboard
                 myReader = cmd.ExecuteReader();
                 while (myReader.Read())
                 {
-                    string mName = myReader.GetString("MedicineName");
+                     mName = myReader.GetString("MedicineName");
                     comString.Add(mName);
-
                 }
                 myReader.Close();
                 con.Close();

@@ -26,19 +26,22 @@ namespace dashboard
             SqlDataAdapter sda = new SqlDataAdapter(query, con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
-                if (textBox3.Text == dt.Rows[0]["UserName"].ToString() && textBox1.Text == dt.Rows[0]["Password"].ToString())
+           
+            
+                if (!(textBox3.Text != dt.Rows[0]["UserName"].ToString() && textBox1.Text != dt.Rows[0]["Password"].ToString()))
                 {
                 User = "Admin";
-                this.Dispose();
-                AdminPortal admn = new AdminPortal();
-                admn.Show();
-               
-            }
-            else
-            {
-                //WarnMsg warn = new WarnMsg();
-                //   warn.Show();
-            }
+                    this.Dispose();
+                    AdminPortal admn = new AdminPortal();
+                    admn.Show();
+
+                }
+                else
+                {
+                    MessageBox.Show("Invalid Details");
+                }
+            
+            con.Close();
             //{
             //    AdminPortal admn = new AdminPortal();
             //    this.Dispose();
@@ -49,19 +52,24 @@ namespace dashboard
             string query1 = "SELECT * FROM StaffLoginTable";
             SqlDataAdapter sda1 = new SqlDataAdapter(query1, con);
             DataTable dt1 = new DataTable();
-            sda.Fill(dt1);
-            for (int i = 0; i < dt1.Rows.Count; i++)
-            {
-                if (textBox3.Text == dt.Rows[i]["UserName"].ToString() && textBox1.Text == dt.Rows[i]["Password"].ToString())
+            DataSet dts = new DataSet();
+            con.Open();
+            sda1.Fill(dt1);
+
+            
+                for (int j = 0; j < dt1.Rows.Count; j++)
                 {
-                    StaffPortal stff = new StaffPortal();
-                    User = "Staff";
-                    this.Dispose();
-                    stff.Show();
-                   
-                    break;
+                    if (textBox3.Text == dt.Rows[j]["UserName"].ToString() && textBox1.Text == dt.Rows[j]["Password"].ToString())
+                    { 
+                        StaffPortal stff = new StaffPortal();
+                        User = "Staff";
+                        this.Dispose();
+                        stff.Show();
+
+                    }
                 }
-            }
+            
+            con.Close();
 
             //if(user !=" Admin" && user != "Staff")
             //{
@@ -89,12 +97,7 @@ namespace dashboard
         {
             textBox4.Text = textBox1.Text;
         }
-        private void button3_Click(object sender, EventArgs e)
-        {
-            StaffPortal port = new StaffPortal();
-            port.Show();
 
-        }
 
         private void label6_Click(object sender, EventArgs e)
         {
