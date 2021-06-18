@@ -30,7 +30,7 @@ public void AddDataInDataBase(Staffs s)
                     cmd.Parameters.AddWithValue("@Bonus", s.Bonus);
                     cmd.Parameters.AddWithValue("@WorkingHrs", s.Workhr);
                     cmd.Parameters.AddWithValue("@ContactNmbr", s.Contact);
-                    cmd.Parameters.AddWithValue("@DOB", s.Dob);
+                    cmd.Parameters.AddWithValue("@DOB", (s.Dob).ToString());
                     cmd.Parameters.AddWithValue("@Job", s.Job);
                   //  cmd.Parameters.AddWithValue("@UserName", userName);
                    // cmd.Parameters.AddWithValue("@Password", password);

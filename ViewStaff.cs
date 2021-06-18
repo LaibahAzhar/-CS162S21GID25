@@ -15,15 +15,13 @@ namespace dashboard
         {
             InitializeComponent();
         }
-
+        
         private void Table_Load()
         {
             try
             {
                 SqlConnection con = new SqlConnection(Configuration.conection);
                 con.Open();
-                Staff stf= new Staff();
-
                 string query = "SELECT * FROM StaffTable";
                 SqlDataAdapter sda = new SqlDataAdapter(query, con);
                 DataTable dt = new DataTable();
@@ -42,8 +40,6 @@ namespace dashboard
             {
                 SqlConnection con = new SqlConnection(Configuration.conection);
                 con.Open();
-                Staff stf = new Staff();
-
                 string query = "SELECT * FROM StaffTable";
                 SqlDataAdapter sda = new SqlDataAdapter(query, con);
                 DataTable dt = new DataTable();

@@ -60,8 +60,8 @@ namespace dashboard
                     cmd.Parameters.AddWithValue("@Salary", p.Salary);
                     cmd.Parameters.AddWithValue("@Bonus", p.Bonus);
                     cmd.Parameters.AddWithValue("@WorkingHrs", p.Workhr);
-                    cmd.Parameters.AddWithValue("@ContactNmbr", p.Contact);
-                    cmd.Parameters.AddWithValue("@DOB", p.Dob);
+                    cmd.Parameters.AddWithValue("@ContactNmbr", p.Nmber);
+                    cmd.Parameters.AddWithValue("@DOB", (p.Dob).ToString());
                     cmd.Parameters.AddWithValue("@Job", p.Job);
                //     cmd.Parameters.AddWithValue("@UserName", userName);
                //     cmd.Parameters.AddWithValue("@Password", password);

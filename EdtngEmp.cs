@@ -14,7 +14,6 @@ namespace dashboard
 
             AutoCompleteText();
         }
-
         public void AutoCompleteText()
         {
             AutoCompleteStringCollection conString = new AutoCompleteStringCollection();
@@ -22,13 +21,11 @@ namespace dashboard
             try
             {
                 SqlConnection con = new SqlConnection(Configuration.conection);
-                con.Open();
-                Staff stf = new Staff();
-
                 string query = "SELECT * FROM StaffTable";
                 SqlDataAdapter sda = new SqlDataAdapter(query, con);
                 SqlDataReader reader;
                 SqlCommand cmd = new SqlCommand(query, con);
+                con.Open();
                 reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {

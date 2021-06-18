@@ -17,8 +17,8 @@ namespace dashboard
         {
             InitializeComponent();
         }
-       ViewStaff vew = new ViewStaff();
-       EdtngEmp upd = new EdtngEmp();
+        ViewStaff vew;
+        EdtngEmp upd;
         WarnMsg warning = new WarnMsg();
         private void button1_Click(object sender, EventArgs e)
         {
@@ -174,6 +174,7 @@ namespace dashboard
                     p.Nmber = contact;
                     p.UserName = userName;
                     p.Password = password;
+                    p.Job = job;
                     //added to list
                     p.AddDataInList(p);
                     //added to DataBase
@@ -198,6 +199,7 @@ namespace dashboard
                     a.Nmber = contact;
                     a.UserName = userName;
                     a.Password = password;
+                    a.Job = job;
                     //added to list
                     a.AddDataInList(a);
                     //added to DataBase
@@ -220,6 +222,7 @@ namespace dashboard
                         s.Workhr = workHrs;
                     s.CNIC = cnic;
                     s.Nmber = contact;
+					s.Job = job;
                    
                     //added to list
                     s.AddDataInList(s);
@@ -239,21 +242,46 @@ namespace dashboard
 
        
         private void button9_Click(object sender, EventArgs e)
-        {   
-            panel3.Controls.Add(vew);
-            panel3.Controls["ViewStaff"].BringToFront();
+        {
+            vew = new ViewStaff();
+            try
+            {
+                panel3.Controls.Add(getViewObject());
+                panel3.Controls["ViewStaff"].BringToFront();
+            }
+            catch (Exception ex)
+            {
+                string message = ex.Message;
+            }
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-           panel3.Controls.Remove(vew);
-           panel3.Controls.Remove(upd);
+
+            panel3.Controls.Remove(getEditingObject());
+            panel3.Controls.Remove(getViewObject());
         }
 
         private void buttonUp_Click(object sender, EventArgs e)
         {
-           panel3.Controls.Add(upd);
-           panel3.Controls["EdtngEmp"].BringToFront();
+            panel3.Controls.Add(getEditingObject());
+            panel3.Controls["EdtngEmp"].BringToFront();
+        }
+        private EdtngEmp getEditingObject()
+        {
+            if (upd == null)
+            {
+                upd=  new EdtngEmp();
+            }
+            return upd;
+        }
+        private ViewStaff getViewObject()
+        {
+            if (vew == null)
+            {
+                vew = new ViewStaff();
+            }
+            return vew;
         }
     }
 }

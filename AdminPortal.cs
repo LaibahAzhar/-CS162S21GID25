@@ -59,9 +59,17 @@ namespace dashboard
 
         private void staff_Click(object sender, EventArgs e)
         {
-            Employee stf = new Employee();
-            stf.Show();
-            this.Hide();
+            try
+            {
+                Employee stf = new Employee();
+                stf.Show();
+                this.Hide();
+
+            }
+            catch(Exception ex)
+            {
+                string message = ex.Message;
+            }
             
         }
 

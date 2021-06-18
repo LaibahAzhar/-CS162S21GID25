@@ -45,7 +45,7 @@ public void AddDataInDataBase( Accountants a)
                     cmd.Parameters.AddWithValue("@Bonus", a.Bonus);
                     cmd.Parameters.AddWithValue("@WorkingHrs", a.Workhr);
                     cmd.Parameters.AddWithValue("@ContactNmbr", a.Contact);
-                    cmd.Parameters.AddWithValue("@DOB", a.Dob);
+                    cmd.Parameters.AddWithValue("@DOB", (a.Dob).ToString());
                     cmd.Parameters.AddWithValue("@Job", a.Job);
 
                     cmd.ExecuteNonQuery();
