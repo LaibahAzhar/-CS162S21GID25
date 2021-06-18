@@ -17,8 +17,8 @@ namespace dashboard
         {
             InitializeComponent();
         }
-       // ViewStaff vew = new ViewStaff();
-       //EdtngEmp upd = new EdtngEmp();
+       ViewStaff vew = new ViewStaff();
+       EdtngEmp upd = new EdtngEmp();
         WarnMsg warning = new WarnMsg();
         private void button1_Click(object sender, EventArgs e)
         {
@@ -240,20 +240,20 @@ namespace dashboard
        
         private void button9_Click(object sender, EventArgs e)
         {   
-            //panel3.Controls.Add(vew);
-            //panel3.Controls["ViewStaff"].BringToFront();
+            panel3.Controls.Add(vew);
+            panel3.Controls["ViewStaff"].BringToFront();
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-           // panel3.Controls.Remove(vew);
-           // panel3.Controls.Remove(upd);
+           panel3.Controls.Remove(vew);
+           panel3.Controls.Remove(upd);
         }
 
         private void buttonUp_Click(object sender, EventArgs e)
         {
-           //panel3.Controls.Add(upd);
-           //panel3.Controls["EdtngEmp"].BringToFront();
+           panel3.Controls.Add(upd);
+           panel3.Controls["EdtngEmp"].BringToFront();
         }
     }
 }
