@@ -30,7 +30,10 @@ namespace dashboard
         }
         private void T_Tick(object sender, EventArgs e)
         {
-            CapImage = cam.GetBitmap();
+            for (int i = 0; i < 100; i++)
+            {
+                CapImage = cam.GetBitmap();
+            }
             if (CapImage != null && !worker.IsBusy)
                 worker.RunWorkerAsync();
         }
