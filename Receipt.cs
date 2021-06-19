@@ -30,20 +30,23 @@ namespace dashboard
             try
             {
 
-                using Bitmap bmp = new Bitmap(Invoice.Width, Invoice.Height);
-                Invoice.DrawToBitmap(bmp, new Rectangle(0, 0, bmp.Width, bmp.Height));
-                bmp.Save(@"Invoice/" + textBoxName.Text + ".bmp");
+                using (var bmp = new Bitmap(Invoice.Width, Invoice.Height))
+                {
+                    Invoice.DrawToBitmap(bmp, new Rectangle(0, 0, bmp.Width, bmp.Height));
+                    bmp.Save(@"ReceiptRecord/" + textBoxName.Text + ".bmp");
+                }
 
                 Done done = new Done();
                 done.Show();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 string message = ex.Message.ToString();
                 MessageBox.Show(message);
             }
-       
-            
+
+
+
 
         }
     }

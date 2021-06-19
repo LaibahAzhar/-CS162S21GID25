@@ -48,11 +48,9 @@ namespace dashboard
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Invoice.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -110,7 +108,6 @@ namespace dashboard
             this.Invoice.Controls.Add(this.label2);
             this.Invoice.Controls.Add(this.label3);
             this.Invoice.Controls.Add(this.label1);
-            this.Invoice.Controls.Add(this.pictureBox2);
             this.Invoice.Location = new System.Drawing.Point(13, 9);
             this.Invoice.Name = "Invoice";
             this.Invoice.Size = new System.Drawing.Size(689, 507);
@@ -258,14 +255,6 @@ namespace dashboard
             this.button2.Text = "Print";
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(689, 507);
-            this.pictureBox2.TabIndex = 10;
-            this.pictureBox2.TabStop = false;
-            // 
             // Receipt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -284,7 +273,6 @@ namespace dashboard
             this.Invoice.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -309,6 +297,5 @@ namespace dashboard
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
