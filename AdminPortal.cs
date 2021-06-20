@@ -75,7 +75,8 @@ namespace dashboard
 
         private void recordbtn_Click(object sender, EventArgs e)
         {
-
+            BillRecord rec = new BillRecord();
+            rec.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)

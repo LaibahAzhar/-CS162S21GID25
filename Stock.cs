@@ -216,7 +216,7 @@ namespace dashboard
         }
 
         private void Stock_Load(object sender, EventArgs e)
-        {
+        {   label2.Text = Login.UserName;
             string user = Login.User;
             // string user = Login.User;
            // MessageBox.Show(Login.User);

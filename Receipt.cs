@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using System.Threading.Tasks;
 using System.Linq;
 using System.IO;
+using System.Net.Mail;
 
 
 namespace dashboard
@@ -34,6 +35,7 @@ namespace dashboard
                 {
                     Invoice.DrawToBitmap(bmp, new Rectangle(0, 0, bmp.Width, bmp.Height));
                     bmp.Save(@"ReceiptRecord/" + textBoxName.Text + ".bmp");
+                    string file = @"ReceiptRecord/" + textBoxName.Text + ".bmp";
                 }
 
                 Done done = new Done();

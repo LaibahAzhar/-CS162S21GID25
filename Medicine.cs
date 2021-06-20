@@ -271,7 +271,7 @@ namespace dashboard
         }
 
         private void Medicine_Load(object sender, EventArgs e)
-        {
+        {   label2.Text = Login.UserName;
             string user = Login.User;
             // string user = Login.User;
            // MessageBox.Show(Login.User);
@@ -298,6 +298,12 @@ namespace dashboard
                 //disable staff button
                 staffBtn.Visible = false;
             }
+        }
+
+        private void billingBtn_Click(object sender, EventArgs e)
+        {
+            BillRecord rec = new BillRecord();
+            rec.Show();
         }
     }
 }
