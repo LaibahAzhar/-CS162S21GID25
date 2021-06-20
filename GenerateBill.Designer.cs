@@ -374,13 +374,14 @@ namespace dashboard
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(330, 286);
+            this.dataGridView2.Location = new System.Drawing.Point(400, 287);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowTemplate.Height = 25;
-            this.dataGridView2.Size = new System.Drawing.Size(577, 114);
+            this.dataGridView2.Size = new System.Drawing.Size(443, 114);
             this.dataGridView2.TabIndex = 11;
             this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
             this.dataGridView2.CellLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellLeave);
+            this.dataGridView2.CellStateChanged += new System.Windows.Forms.DataGridViewCellStateChangedEventHandler(this.dataGridView2_CellStateChanged);
             // 
             // label6
             // 
@@ -407,6 +408,7 @@ namespace dashboard
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(86, 26);
             this.textBox4.TabIndex = 14;
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // label7
             // 
@@ -463,7 +465,6 @@ namespace dashboard
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button8.ForeColor = System.Drawing.Color.Black;
-            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
             this.button8.Location = new System.Drawing.Point(812, 201);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(107, 29);
@@ -550,6 +551,5 @@ namespace dashboard
         private System.Windows.Forms.Button button8;
 
         private System.Windows.Forms.Label labelStaff;
-
     }
 }
