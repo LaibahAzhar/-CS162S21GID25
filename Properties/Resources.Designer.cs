@@ -63,6 +63,16 @@ namespace dashboard.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _20210620073848_hd {
+            get {
+                object obj = ResourceManager.GetObject("20210620073848_hd", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _2cd43b_a00114a6c68448c7a627432df9d634fc_mv2 {
             get {
                 object obj = ResourceManager.GetObject("2cd43b_a00114a6c68448c7a627432df9d634fc~mv2", resourceCulture);
@@ -136,6 +146,26 @@ namespace dashboard.Properties {
         internal static System.Drawing.Bitmap compliant {
             get {
                 object obj = ResourceManager.GetObject("compliant", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap download_1_ {
+            get {
+                object obj = ResourceManager.GetObject("download(1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap download_2_ {
+            get {
+                object obj = ResourceManager.GetObject("download(2)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

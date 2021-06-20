@@ -115,15 +115,15 @@ namespace dashboard
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button9);
             this.panel1.Controls.Add(this.button8);
-            this.panel1.Location = new System.Drawing.Point(0, -14);
+            this.panel1.Location = new System.Drawing.Point(0, -7);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1005, 59);
+            this.panel1.Size = new System.Drawing.Size(1005, 47);
             this.panel1.TabIndex = 62;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::dashboard.Properties.Resources.round_account_button_with_user_inside;
-            this.pictureBox2.Location = new System.Drawing.Point(819, 10);
+            this.pictureBox2.Location = new System.Drawing.Point(819, 4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(55, 47);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -135,7 +135,7 @@ namespace dashboard
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label2.Location = new System.Drawing.Point(880, 21);
+            this.label2.Location = new System.Drawing.Point(880, 13);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(102, 23);
             this.label2.TabIndex = 3;
@@ -172,7 +172,7 @@ namespace dashboard
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(586, 7);
+            this.button2.Location = new System.Drawing.Point(586, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(80, 52);
             this.button2.TabIndex = 4;
@@ -190,7 +190,7 @@ namespace dashboard
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button9.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button9.Location = new System.Drawing.Point(681, 7);
+            this.button9.Location = new System.Drawing.Point(681, 2);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(55, 52);
             this.button9.TabIndex = 4;
@@ -208,7 +208,7 @@ namespace dashboard
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button8.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button8.Location = new System.Drawing.Point(742, 8);
+            this.button8.Location = new System.Drawing.Point(742, 5);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(60, 51);
             this.button8.TabIndex = 4;
@@ -715,6 +715,7 @@ namespace dashboard
             this.billingBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.billingBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.billingBtn.UseVisualStyleBackColor = false;
+            this.billingBtn.Click += new System.EventHandler(this.billingBtn_Click);
             // 
             // button3
             // 
@@ -787,6 +788,7 @@ namespace dashboard
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Employee";
             this.Text = "Employee";
+            this.Load += new System.EventHandler(this.Employee_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

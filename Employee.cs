@@ -283,5 +283,17 @@ namespace dashboard
             }
             return vew;
         }
+
+        private void Employee_Load(object sender, EventArgs e)
+        {
+            label2.Text = Login.UserName;
+        }
+
+        private void billingBtn_Click(object sender, EventArgs e)
+        {
+
+            BillRecord rec = new BillRecord();
+            rec.Show();
+        }
     }
 }

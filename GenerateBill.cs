@@ -38,7 +38,7 @@ namespace dashboard
         }
 
         private void GenerateBill_Load(object sender, EventArgs e)
-        {
+        {   label2.Text = Login.UserName;
             AutoCompleteTextBox();
             string user = Login.User;
             if (user == "Admin")
@@ -203,6 +203,8 @@ namespace dashboard
         private void button5_Click(object sender, EventArgs e)
         {
 
+            BillRecord rec = new BillRecord();
+            rec.Show();
         }
         
         private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)

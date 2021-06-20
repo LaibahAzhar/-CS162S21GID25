@@ -39,6 +39,7 @@ namespace dashboard
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.labelStaff = new System.Windows.Forms.Label();
             this.labelAdmin = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button4 = new System.Windows.Forms.Button();
@@ -77,7 +78,6 @@ namespace dashboard
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.labelStaff = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -209,6 +209,19 @@ namespace dashboard
             this.panel2.Size = new System.Drawing.Size(259, 531);
             this.panel2.TabIndex = 33;
             // 
+            // labelStaff
+            // 
+            this.labelStaff.AutoSize = true;
+            this.labelStaff.Font = new System.Drawing.Font("Constantia", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelStaff.Location = new System.Drawing.Point(99, 149);
+            this.labelStaff.Name = "labelStaff";
+            this.labelStaff.Size = new System.Drawing.Size(96, 52);
+            this.labelStaff.TabIndex = 3;
+            this.labelStaff.Text = "Staff \r\nMember\r\n";
+            this.labelStaff.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelStaff.Visible = false;
+            this.labelStaff.Click += new System.EventHandler(this.labelStaff_Click);
+            // 
             // labelAdmin
             // 
             this.labelAdmin.AutoSize = true;
@@ -267,6 +280,7 @@ namespace dashboard
             this.billingBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.billingBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.billingBtn.UseVisualStyleBackColor = false;
+            this.billingBtn.Click += new System.EventHandler(this.billingBtn_Click);
             // 
             // button3
             // 
@@ -363,7 +377,7 @@ namespace dashboard
             this.panel3.Controls.Add(this.textBox2);
             this.panel3.Location = new System.Drawing.Point(258, 46);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(724, 487);
+            this.panel3.Size = new System.Drawing.Size(736, 487);
             this.panel3.TabIndex = 55;
             // 
             // label8
@@ -696,24 +710,11 @@ namespace dashboard
             this.textBox2.Size = new System.Drawing.Size(192, 26);
             this.textBox2.TabIndex = 80;
             // 
-            // labelStaff
-            // 
-            this.labelStaff.AutoSize = true;
-            this.labelStaff.Font = new System.Drawing.Font("Constantia", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelStaff.Location = new System.Drawing.Point(99, 149);
-            this.labelStaff.Name = "labelStaff";
-            this.labelStaff.Size = new System.Drawing.Size(96, 52);
-            this.labelStaff.TabIndex = 3;
-            this.labelStaff.Text = "Staff \r\nMember\r\n";
-            this.labelStaff.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.labelStaff.Visible = false;
-            this.labelStaff.Click += new System.EventHandler(this.labelStaff_Click);
-            // 
             // Medicine
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(980, 530);
+            this.ClientSize = new System.Drawing.Size(989, 530);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
